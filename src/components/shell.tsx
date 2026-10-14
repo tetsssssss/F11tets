@@ -197,7 +197,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </div>
           </Link>
           <span className="build-version">
-            UNIVERSE BUILD 0.3 <span>LOCAL SAVE</span>
+            UNIVERSE MARCO 61000 <span>LOCAL SAVE</span>
           </span>
         </div>
       </aside>

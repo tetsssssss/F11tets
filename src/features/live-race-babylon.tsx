@@ -14,6 +14,7 @@ import {
 } from '../presentation/broadcast-director';
 import { FpsGovernor, hardwareScaling, lowerQuality, type BabylonQuality } from '../presentation/babylon-quality';
 import { visualRaceAngle, visualRacePoint } from '../presentation/race-visual-focus';
+import { layoutRaceTags, TAG_H, TAG_W } from '../presentation/race-tag-layout';
 import { THEME_LOOK, sceneryPlan, themeFor, type SceneryItem, type SceneryKind } from '../presentation/scenery-plan';
 import { pitCrewVisible, safetyCarPose } from '../presentation/race-ceremony';
 
@@ -26,6 +27,8 @@ export type LiveRaceBabylonProps = {
   geometry: Track2DGeometry;
   cars: Car[];
   colors: Record<string, string>;
+  /** Driver short codes for the on-screen tags. */
+  codes?: Record<string, string>;
   /** Maps existing driver IDs to one of the 16 actual constructors. */
   teamIds: Record<string, string>;
   /** Mobile geometry has been quarter-turned for the same authoritative race map. */
@@ -374,7 +377,7 @@ function createCar(rt:ReturnType<typeof createScene>, B:any, id:string, color:st
   }).catch((error:any)=>console.warn('Modelo GLB indisponível, usando carro procedural:',teamId,error));
 }
 export default function LiveRaceBabylon(props:LiveRaceBabylonProps){
-  const canvas=useRef<HTMLCanvasElement>(null), fade=useRef<HTMLDivElement>(null), latest=useRef(props), onFailure=useRef(props.onFailure), onSelect=useRef(props.onSelect), onDowngrade=useRef(props.onQualityDowngrade);
+  const canvas=useRef<HTMLCanvasElement>(null), fade=useRef<HTMLDivElement>(null), tagLayer=useRef<HTMLDivElement>(null), latest=useRef(props), onFailure=useRef(props.onFailure), onSelect=useRef(props.onSelect), onDowngrade=useRef(props.onQualityDowngrade);
   const [ready,setReady]=useState(false),[fps,setFps]=useState(0);
   const duelVisible=props.shot.kind==='duelo' && props.shot.ids.length>1;
   latest.current=props;onFailure.current=props.onFailure;onSelect.current=props.onSelect;onDowngrade.current=props.onQualityDowngrade;
@@ -419,7 +422,17 @@ export default function LiveRaceBabylon(props:LiveRaceBabylonProps){
           const hit=current.scene.pickWithRay(tmpRay,(m:any)=>obstruction.test(m.name)&&m.isEnabled()&&m.visibility>.5);
           return !!hit?.hit;
         };
-        let frame=0,from=performance.now(),prev=from,debugAt=0;
+        const projectRect=(model:any)=>{
+          const view=current.engine.getRenderWidth(),viewH=current.engine.getRenderHeight(),cw=canvas.current?.clientWidth||1,ch=canvas.current?.clientHeight||1;
+          const transform=current.scene.getTransformMatrix(),vp=current.cam.viewport.toGlobal(view,viewH),m=model.root.getWorldMatrix();
+          let minX=1e9,minY=1e9,maxX=-1e9,maxY=-1e9;
+          for(const x of [-.8,.8])for(const y of [0,.9])for(const z of [-1.1,1.6]){
+            const q=B.Vector3.Project(B.Vector3.TransformCoordinates(new B.Vector3(x,y,z),m),B.Matrix.IdentityReadOnly,transform,vp);
+            minX=Math.min(minX,q.x);maxX=Math.max(maxX,q.x);minY=Math.min(minY,q.y);maxY=Math.max(maxY,q.y);
+          }
+          return {x:Math.round(minX*cw/view),y:Math.round(minY*ch/viewH),w:Math.round((maxX-minX)*cw/view),h:Math.round((maxY-minY)*ch/viewH)};
+        };
+        let frame=0,from=performance.now(),prev=from,debugAt=0,tagsAt=0;
         current.engine.runRenderLoop(()=>{
           if(cancelled || !rt)return;
           const p=latest.current,now=performance.now(),rawDt=Math.max(0,(now-prev)/1000),dt=Math.min(.06,rawDt),camDt=Math.min(.25,rawDt);prev=now;
@@ -569,25 +582,43 @@ export default function LiveRaceBabylon(props:LiveRaceBabylonProps){
             }
             frame=0;from=now;
           }
+          // Driver tags: only the cars the lens is holding (plus the selected/own car), laid out so they never overlap.
+          if(now-tagsAt>110&&tagLayer.current){
+            tagsAt=now;
+            const layer=tagLayer.current,cw=canvas.current?.clientWidth||1,ch=canvas.current?.clientHeight||1;
+            const wanted=new Set<string>([...p.shot.ids,...(p.selected?[p.selected]:[]),...p.own].slice(0,6));
+            const items:{id:string;x:number;y:number;position:number;priority:number}[]=[];
+            for(const id of wanted){
+              const model=current.models.get(id),car=byId.get(id);
+              if(!model||!car||!model.root.isEnabled())continue;
+              const r=projectRect(model);
+              if(r.x+r.w<0||r.y+r.h<0||r.x>cw||r.y>ch)continue;
+              items.push({id,x:r.x+r.w/2,y:r.y,position:car.position,priority:p.shot.ids.includes(id)?0:p.own.includes(id)?1:2});
+            }
+            const placed=layoutRaceTags(items,cw,ch,6);
+            for(const el of Array.from(layer.children) as HTMLElement[])if(!placed[el.dataset.id||''])el.style.display='none';
+            for(const item of items){
+              const spot=placed[item.id];if(!spot)continue;
+              let el=layer.querySelector(`[data-id="${item.id}"]`) as HTMLElement|null;
+              if(!el){el=document.createElement('div');el.className='race-babylon-tag';el.dataset.id=item.id;layer.appendChild(el);}
+              el.style.display='block';el.style.width=TAG_W+'px';el.style.minHeight=TAG_H+'px';
+              el.style.transform=`translate(${spot.x}px,${spot.y}px)`;el.style.borderColor=p.colors[item.id]||'#fff';
+              const text=`P${item.position} ${p.codes?.[item.id]??item.id.slice(0,3).toUpperCase()}`;
+              if(el.textContent!==text)el.textContent=text;
+            }
+          }
           if(now-debugAt>400&&typeof window!=='undefined'){
             debugAt=now;
             // QA/diagnostics only: projected car rectangles and frame stats, read-only.
-            const view=current.engine.getRenderWidth(),viewH=current.engine.getRenderHeight();
             const cw=canvas.current?.clientWidth||1,ch=canvas.current?.clientHeight||1;
-            const transform=current.scene.getTransformMatrix(),vp=current.cam.viewport.toGlobal(view,viewH);
             const rects:Record<string,{x:number;y:number;w:number;h:number}>={};
-            for(const [id,model] of current.models){
-              if(!model.root.isEnabled())continue;
-              const m=model.root.getWorldMatrix();let minX=1e9,minY=1e9,maxX=-1e9,maxY=-1e9;
-              for(const x of [-.8,.8])for(const y of [0,.9])for(const z of [-1.1,1.6]){
-                const q=B.Vector3.Project(B.Vector3.TransformCoordinates(new B.Vector3(x,y,z),m),B.Matrix.IdentityReadOnly,transform,vp);
-                minX=Math.min(minX,q.x);maxX=Math.max(maxX,q.x);minY=Math.min(minY,q.y);maxY=Math.max(maxY,q.y);
-              }
-              rects[id]={x:Math.round(minX*cw/view),y:Math.round(minY*ch/viewH),w:Math.round((maxX-minX)*cw/view),h:Math.round((maxY-minY)*ch/viewH)};
-            }
+            for(const [id,model] of current.models)if(model.root.isEnabled())rects[id]=projectRect(model);
+            // Sprint 03 diagnostics for focus cars: engine progress/elapsed vs the display-only lane offset.
+            const diag:Record<string,{progress:number;elapsed:number;laneOffset:number}>={};
+            for(const id of p.shot.ids){const car=byId.get(id);if(car)diag[id]={progress:Math.round(car.progress*10000)/10000,elapsed:Math.round(car.car.elapsed*1000)/1000,laneOffset:Math.round(((car.duel?.side??0)+(car.incident?.side??0))*100)/100};}
             (window as any).__f1Babylon={fps:Math.round(current.engine.getFps()),shot:p.shot,camera:p.camera,quality:p.quality,canvas:{w:cw,h:ch},
               drawCalls:instrumentation.drawCallsCounter.current,renderMs:Math.round(instrumentation.renderTimeCounter.average*10)/10,activeMeshes:current.scene.getActiveMeshes().length,
-              scenery:current.sceneryKit?{items:current.sceneryKit.items,meshes:current.sceneryKit.meshes,theme:current.theme}:null,cameraPos:rig.pos.asArray(),fov:rig.fov,cars:rects};
+              diag,scenery:current.sceneryKit?{items:current.sceneryKit.items,meshes:current.sceneryKit.meshes,theme:current.theme}:null,cameraPos:rig.pos.asArray(),fov:rig.fov,cars:rects};
           }
         });
         setReady(true);
@@ -601,6 +632,7 @@ export default function LiveRaceBabylon(props:LiveRaceBabylonProps){
   },[props.geometry]);
   return <div className="race-babylon" data-testid="race-babylon-webgl">
     <canvas ref={canvas} aria-label="Corrida real em Babylon.js WebGL" />
+    <div ref={tagLayer} className="race-babylon-tags" aria-hidden="true" />
     <div ref={fade} className="race-babylon-cut" aria-hidden="true" />
     {!ready && <div className="race-babylon-loading" role="status">Iniciando Babylon.js 3D…</div>}
     {ready && <div className="race-babylon-caption" aria-live="off">BABYLON.JS · 3D WEBGL · {duelVisible ? 'DISPUTA EM FOCO · ' : props.camera==='duelo' ? 'AGUARDANDO DISPUTA · ' : ''}{props.camera==='auto'?props.shot.label+' · ':''}{fps} FPS</div>}

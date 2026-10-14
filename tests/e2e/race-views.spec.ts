@@ -103,3 +103,49 @@ test('without WebGL the race keeps running in 2D with a notice', async ({ browse
   expect(await classification(page)).toEqual(order);
   await context.close();
 });
+
+test('rotating the phone keeps the 3D stage, cockpit and race running', async ({ browser }) => {
+  test.setTimeout(120000);
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
+  const page = await context.newPage();
+  const errors: string[] = [];
+  page.on('pageerror', (e) => errors.push(e.message));
+  await startRace(page);
+  await view(page, '3D BABYLON');
+  await expect.poll(() => page.evaluate(() => !!(window as any).__f1Babylon), { timeout: 30000 }).toBe(true);
+  const order = await classification(page);
+  for (const size of [{ width: 844, height: 390 }, { width: 390, height: 844 }, { width: 915, height: 412 }]) {
+    await page.setViewportSize(size);
+    await page.waitForTimeout(1200);
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+    expect(overflow, JSON.stringify(size)).toBeLessThanOrEqual(0);
+    const canvas = (await page.locator('.race-babylon canvas').boundingBox())!;
+    expect(canvas.width).toBeGreaterThan(200);
+    expect(canvas.height).toBeGreaterThan(150);
+    await expect(page.locator('.five-commands button').first()).toBeVisible();
+  }
+  expect(await classification(page)).toEqual(order);
+  expect(errors).toEqual([]);
+  await context.close();
+});
+
+test('reduced motion: cameras cut without fades and cars keep rendering', async ({ browser }) => {
+  test.setTimeout(120000);
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
+  const page = await context.newPage();
+  const errors: string[] = [];
+  page.on('pageerror', (e) => errors.push(e.message));
+  await startRace(page);
+  await view(page, '3D BABYLON');
+  await expect.poll(() => page.evaluate(() => !!(window as any).__f1Babylon), { timeout: 30000 }).toBe(true);
+  const select = page.getByLabel('Câmera Babylon');
+  for (const cam of ['seguir', 'aerea', 'tv']) {
+    await select.selectOption(cam);
+    await page.waitForTimeout(900);
+    const opacity = await page.locator('.race-babylon-cut').evaluate((el) => getComputedStyle(el).opacity + '/' + getComputedStyle(el).display);
+    expect(opacity === '0/none' || opacity === '0/block').toBeTruthy();
+  }
+  await expect.poll(() => page.evaluate(() => Object.keys((window as any).__f1Babylon?.cars ?? {}).length)).toBe(32);
+  expect(errors).toEqual([]);
+  await context.close();
+});

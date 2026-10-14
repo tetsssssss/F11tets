@@ -697,6 +697,7 @@ export default function LiveMap({
           cars={cars}
           colors={Object.fromEntries(cars.map(v => [v.id, teamById[driverById[v.id].teamId].color]))}
           teamIds={Object.fromEntries(cars.map(v => [v.id, driverById[v.id].teamId]))}
+          codes={Object.fromEntries(cars.map(v => [v.id, driverById[v.id].short]))}
           rotated={tall}
           selected={selected}
           own={own}

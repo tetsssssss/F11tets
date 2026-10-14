@@ -7629,3 +7629,5 @@ details[open] > summary .supplier-expand {
   .race-hud:not(.is-full):has(> .race-control.is-expanded) { height: auto; min-height: calc(100dvh - 87px); grid-template-rows: auto minmax(300px, 48dvh) auto auto; }
   .race-hud .hud-stage { min-height: 220px; }
 }
+.race-babylon-tags { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 4; }
+.race-babylon-tag { position: absolute; left: 0; top: 0; display: none; box-sizing: border-box; padding: 2px 5px; border-left: 3px solid #fff; border-radius: 4px; background: #0b161dd9; color: #f1f6f9; font: 800 11px/16px Inter, system-ui, sans-serif; letter-spacing: .03em; white-space: nowrap; text-align: center; will-change: transform; }

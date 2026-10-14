@@ -1,5 +1,5 @@
-/* F1 Universe PWA 60.100. Saves remain in browser storage and are never cached or posted here. */
-const STATIC_CACHE = 'f1-universe-static-60300-v1';
+/* F1 Universe PWA 61.000. Saves remain in browser storage and are never cached or posted here. */
+const STATIC_CACHE = 'f1-universe-static-61000-v1';
 const CORE = ['/', '/index.html', '/manifest.webmanifest', '/icons/icon-192.png', '/icons/icon-512.png'];
 self.addEventListener('install', event => {
  event.waitUntil(caches.open(STATIC_CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
