@@ -27,7 +27,8 @@ import {
 } from '../presentation/map-markers';
 import { surfaceOf, TrackArt } from './track-art';
 import { RaceScene3D } from './race-scene-3d';
-import LiveRaceBabylon, { type RaceBabylonCamera, type RaceBabylonQuality } from './live-race-babylon';
+import LiveRaceBabylon, { type RaceBabylonCamera, type RaceBabylonQuality, type RaceBabylonShot } from './live-race-babylon';
+import { BABYLON_CAMERA_CHOICES, BABYLON_CAMERA_LABELS, babylonShotFor } from '../presentation/broadcast-director';
 import type { RaceViewMode } from '../presentation/race-view-preference';
 import { settingsOf } from '../domain/gameplay/settings';
 import { pickPhotoSrc, resolvePersonPhoto, type Photo } from '../presentation/person-photo';
@@ -112,8 +113,10 @@ export default function LiveMap({
     [pan, setPan] = useState({ x: 0, y: 0 }),
     [cam, setCam] = useState({ x: bounds.cx, y: bounds.cy, z: 1 }),
     [quality, setQuality] = useState('medium'),
-    [babylonCamera, setBabylonCamera] = useState<RaceBabylonCamera>('tv'),
+    [babylonCamera, setBabylonCamera] = useState<RaceBabylonCamera>('auto'),
     [babylonQuality, setBabylonQuality] = useState<RaceBabylonQuality>('medio'),
+    [autoQuality, setAutoQuality] = useState(false),
+    [qualityNotice, setQualityNotice] = useState(''),
     [isoBattleView, setIsoBattleView] = useState(false),
     [markers, setMarkers] = useState<MarkerMode>('cars'),
     [toasts, setToasts] = useState<Toast[]>([]);
@@ -123,6 +126,14 @@ export default function LiveMap({
       if (stored && MARKER_MODES.includes(stored)) setMarkers(stored);
     } catch {}
   }, []);
+  useEffect(() => {
+    try { setAutoQuality(localStorage.getItem('f1.babylon.autoQuality') === '1'); } catch {}
+  }, []);
+  function chooseAutoQuality(value: boolean) {
+    setAutoQuality(value);
+    setQualityNotice('');
+    try { localStorage.setItem('f1.babylon.autoQuality', value ? '1' : '0'); } catch {}
+  }
   // An economical default keeps the tactical map responsive on small touch screens.
   // The user can still raise quality manually from the view toolbar.
   useEffect(() => {
@@ -142,6 +153,7 @@ export default function LiveMap({
     pinch = useRef<{ distance: number; zoom: number } | null>(null),
     canvas = useRef<SVGSVGElement>(null),
     onAir = useRef<Shot | undefined>(undefined),
+    babylonOnAir = useRef<Shot | undefined>(undefined),
     aim = useRef({ x: 0, y: 0, z: 1 }),
     ticks = useRef<{
       seed: number;
@@ -279,8 +291,20 @@ export default function LiveMap({
     h = view.h / scale;
   const cx = eye.x,
     cy = eye.y - inset / 2 / scale;
-  const fights = r.lap > 0 ? battles(r, cars) : [],
-    cameraFight = ((renderMode === 'iso' && isoBattleView) || (renderMode === 'babylon' && babylonCamera === 'duelo')) && fights[0] &&
+  const fights = r.lap > 0 ? battles(r, cars) : [];
+  // Babylon broadcast director: AUTO reuses pickShot's own decisions; a manual camera ignores them.
+  const babylonBattle = fights[0] ? [fights[0].attacker.id, fights[0].defender.id] : null;
+  let babylonShot: RaceBabylonShot = { kind: 'tv', ids: [], label: 'TV' };
+  if (renderMode === 'babylon') {
+    const nowMs = typeof performance === 'undefined' ? 0 : performance.now();
+    const auto = babylonCamera === 'auto'
+      ? pickShot('AUTO', { r, cars, own, selected, now: nowMs, previous: babylonOnAir.current })
+      : pickShot('FULL TRACK', { r, cars, own, selected, now: nowMs });
+    if (babylonCamera === 'auto') babylonOnAir.current = auto;
+    const follow = pickShot('FOLLOW DRIVER', { r, cars, own, selected, now: nowMs });
+    babylonShot = babylonShotFor(babylonCamera, { auto, follow, battleIds: babylonBattle, cars, selected, own });
+  }
+  const cameraFight = ((renderMode === 'iso' && isoBattleView) || (renderMode === 'babylon' && babylonShot.kind === 'duelo')) && fights[0] &&
       battleFocus(cars, [fights[0].attacker.id, fights[0].defender.id]) ? fights[0] : undefined,
     duel =
       cameraFight ?? (shot.ids.length > 1 && /battle|overtake/.test(shot.kind)
@@ -627,7 +651,9 @@ export default function LiveMap({
             <button type="button" className={renderMode === 'iso' ? 'selected' : ''} aria-pressed={renderMode === 'iso'} onClick={() => onRenderMode?.('iso')} title="Câmera 2.5D isométrica">2.5D</button>
             <button type="button" className={renderMode === 'babylon' ? 'selected' : ''} aria-pressed={renderMode === 'babylon'} onClick={() => onRenderMode?.('babylon')} title="Cena WebGL real em Babylon.js">3D BABYLON</button>
           </div>
-          {renderMode === 'babylon' && <label className="view-camera"><span>CÂMERA 3D</span><select aria-label="Câmera Babylon" value={babylonCamera} onChange={e => setBabylonCamera(e.target.value as RaceBabylonCamera)}><option value="tv">TV</option><option value="duelo">Disputa</option><option value="aerea">Aérea</option><option value="onboard">Onboard</option></select></label>}
+          {renderMode === 'babylon' && <label className="view-camera"><span>CÂMERA 3D</span><select aria-label="Câmera Babylon" value={babylonCamera} onChange={e => setBabylonCamera(e.target.value as RaceBabylonCamera)}>{BABYLON_CAMERA_CHOICES.map(choice => <option key={choice} value={choice}>{BABYLON_CAMERA_LABELS[choice]}</option>)}</select></label>}
+          {renderMode === 'babylon' && <label className="view-auto-quality" title="Reduz a qualidade 3D sozinho se a fluidez cair por vários segundos"><input type="checkbox" checked={autoQuality} onChange={e => chooseAutoQuality(e.target.checked)} /><span>AUTO-QUALIDADE</span></label>}
+          {renderMode === 'babylon' && qualityNotice && <span className="view-quality-notice" role="status">{qualityNotice}</span>}
           {renderMode === 'babylon' && <label className="view-quality"><span>QUALIDADE 3D</span><select aria-label="Qualidade Babylon" value={babylonQuality} onChange={e => setBabylonQuality(e.target.value as RaceBabylonQuality)}><option value="baixo">Baixa</option><option value="medio">Média</option><option value="alto">Alta</option><option value="ultra">Ultra</option></select></label>}
           {renderMode === '2d' && <label className="view-quality">
             <span>FPS</span>
@@ -675,8 +701,11 @@ export default function LiveMap({
           selected={selected}
           own={own}
           camera={babylonCamera}
-          battleIds={fights[0] ? [fights[0].attacker.id, fights[0].defender.id] : null}
+          shot={babylonShot}
+          battleIds={babylonBattle}
           quality={babylonQuality}
+          autoQuality={autoQuality}
+          onQualityDowngrade={(next) => { setBabylonQuality(next); setQualityNotice(`Qualidade 3D reduzida para ${next === 'baixo' ? 'Baixa' : 'Média'} para manter a fluidez.`); }}
           wet={water > 0.08}
           paused={r.paused || r.status !== 'RUNNING' || r.control === 'RED'}
           reduced={reduced}

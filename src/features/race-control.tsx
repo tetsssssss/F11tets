@@ -22,7 +22,7 @@ export function RaceControl({ race, driverName, teamName, carNumber, batteryOf, 
   const [tab, setTab] = useState<Tab>('MOMENTO');
   const [gapView, setGapView] = useState<GapView>('full');
   const [compareId, setCompareId] = useState<string | null>(null);
-  const [open, setOpen] = useState(() => typeof window === 'undefined' || (window.innerWidth > 900 && window.innerHeight > 520));
+  const [open, setOpen] = useState(() => typeof window === 'undefined' || (window.innerWidth > 900 && window.innerHeight >= 800));
   const order = [...race.cars].sort((a, b) =>
     (a.status === 'RUNNING' ? 0 : 1) - (b.status === 'RUNNING' ? 0 : 1) || b.lap - a.lap || a.elapsed - b.elapsed,
   );

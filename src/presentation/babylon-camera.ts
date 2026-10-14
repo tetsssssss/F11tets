@@ -16,11 +16,11 @@ export function incidentYawDelta(current: number, target: number, spinning: bool
 }
 
 /** Fade only nearby scenery in close shots so cars remain visible through pit structures. */
-export function sceneryVisibility(distance: number, camera: 'tv' | 'aerea' | 'onboard' | 'duelo', name = ''): number {
+export function sceneryVisibility(distance: number, camera: 'tv' | 'aerea' | 'onboard' | 'duelo' | 'pit', name = ''): number {
   // A dedicated battle shot must never put a grandstand between the lens and the duel.
   if (camera === 'duelo' && /^(?:pit_|grandstand)/.test(name)) return 0;
-  // Pit roofs are tall enough to fill a narrow mobile viewport even when faded.
-  if (camera !== 'aerea' && /^pit_(?:building|roof)/.test(name)) return 0;
+  // Pit roofs are tall enough to fill a narrow mobile viewport even when faded; the pit camera keeps garages as backdrop.
+  if (camera !== 'aerea' && camera !== 'pit' && /^pit_(?:building|roof)/.test(name)) return 0;
   if (camera === 'aerea' || !Number.isFinite(distance)) return 1;
   if (distance <= 8) return 0.12;
   if (distance >= 14) return 1;

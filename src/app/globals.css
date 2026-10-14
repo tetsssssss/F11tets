@@ -7616,3 +7616,16 @@ details[open] > summary .supplier-expand {
   .race-hud:not(.is-full) .strip-stat:not(.strip-pos) { display: none; }
   .race-hud:not(.is-full) .five-commands button { font-size: 10px; letter-spacing: 0; padding: 3px 0; }
 }
+
+/* MARCO 61000 — Babylon broadcast director UI. */
+.race-babylon { position: relative; }
+.race-babylon-cut { position: absolute; inset: 0; background: #000; opacity: 0; pointer-events: none; z-index: 5; will-change: opacity; }
+.view-auto-quality { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 8px; border: 1px solid #355063; border-radius: 7px; background: #13242d; color: #cfe0e8; font-size: 10px; font-weight: 800; letter-spacing: .03em; white-space: nowrap; cursor: pointer; }
+.view-auto-quality input { width: 18px; height: 18px; accent-color: #e5b363; }
+.view-quality-notice { align-self: center; color: #f4cf83; font-size: 11px; white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .race-babylon-cut { display: none; } }
+/* Short desktop/tablet windows: an opened Race Control grows the page instead of squashing the stage. */
+@media (min-width: 901px) and (max-height: 800px) {
+  .race-hud:not(.is-full):has(> .race-control.is-expanded) { height: auto; min-height: calc(100dvh - 87px); grid-template-rows: auto minmax(300px, 48dvh) auto auto; }
+  .race-hud .hud-stage { min-height: 220px; }
+}

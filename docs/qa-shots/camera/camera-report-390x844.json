@@ -1,0 +1,180 @@
+{
+ "report": [
+  {
+   "cam": "auto",
+   "lap": "3/58",
+   "shot": {
+    "kind": "duelo",
+    "ids": [
+     "kimi-antonelli",
+     "lando-norris"
+    ],
+    "label": "Disputa pela liderança"
+   },
+   "fps": 3,
+   "drawCalls": 15691,
+   "cars": 32,
+   "maxCarPx": 20277,
+   "focusSizes": [
+    {
+     "x": 140,
+     "y": 180,
+     "w": 94,
+     "h": 72
+    },
+    {
+     "x": 177,
+     "y": 172,
+     "w": 102,
+     "h": 58
+    }
+   ]
+  },
+  {
+   "cam": "tv",
+   "lap": "5/58",
+   "shot": {
+    "kind": "tv",
+    "ids": [
+     "lando-norris",
+     "max-verstappen"
+    ],
+    "label": "TV"
+   },
+   "fps": 7,
+   "drawCalls": 30635,
+   "cars": 32,
+   "maxCarPx": 38447,
+   "focusSizes": [
+    {
+     "x": 103,
+     "y": 196,
+     "w": 89,
+     "h": 58
+    },
+    {
+     "x": 93,
+     "y": 200,
+     "w": 90,
+     "h": 61
+    }
+   ]
+  },
+  {
+   "cam": "duelo",
+   "lap": "7/58",
+   "shot": {
+    "kind": "duelo",
+    "ids": [
+     "max-verstappen",
+     "lando-norris"
+    ],
+    "label": "Disputa"
+   },
+   "fps": 9,
+   "drawCalls": 43745,
+   "cars": 32,
+   "maxCarPx": 24404,
+   "focusSizes": [
+    {
+     "x": 187,
+     "y": 157,
+     "w": 76,
+     "h": 55
+    },
+    {
+     "x": 185,
+     "y": 155,
+     "w": 74,
+     "h": 54
+    }
+   ]
+  },
+  {
+   "cam": "seguir",
+   "lap": "9/58",
+   "shot": {
+    "kind": "seguir",
+    "ids": [
+     "lando-norris"
+    ],
+    "label": "Seguindo piloto"
+   },
+   "fps": 9,
+   "drawCalls": 57453,
+   "cars": 32,
+   "maxCarPx": 3613,
+   "focusSizes": [
+    {
+     "x": 137,
+     "y": 199,
+     "w": 73,
+     "h": 52
+    }
+   ]
+  },
+  {
+   "cam": "aerea",
+   "lap": "11/58",
+   "shot": {
+    "kind": "aerea",
+    "ids": [],
+    "label": "Estratégica"
+   },
+   "fps": 55,
+   "drawCalls": 72092,
+   "cars": 32,
+   "maxCarPx": 51,
+   "focusSizes": []
+  },
+  {
+   "cam": "pit",
+   "lap": "13/58",
+   "shot": {
+    "kind": "tv",
+    "ids": [
+     "lando-norris"
+    ],
+    "label": "TV"
+   },
+   "fps": 11,
+   "drawCalls": 87808,
+   "cars": 32,
+   "maxCarPx": 33968,
+   "focusSizes": [
+    {
+     "x": 104,
+     "y": 172,
+     "w": 128,
+     "h": 67
+    }
+   ]
+  },
+  {
+   "cam": "onboard",
+   "lap": "15/58",
+   "shot": {
+    "kind": "onboard",
+    "ids": [
+     "lando-norris"
+    ],
+    "label": "Onboard"
+   },
+   "fps": 10,
+   "drawCalls": 99170,
+   "cars": 32,
+   "maxCarPx": 637,
+   "focusSizes": [
+    {
+     "x": -128,
+     "y": -256,
+     "w": 637,
+     "h": 632
+    }
+   ]
+  }
+ ],
+ "errors": [
+  "Failed to load resource: the server responded with a status of 404 (Not Found)"
+ ]
+}
