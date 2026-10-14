@@ -36,7 +36,7 @@ const report = {
     'Sem benchmark em Xiaomi real; FPS de software nao representa o aparelho.',
     'Sem clipes de video de 15-30 s; apenas capturas e relatorios numericos.',
     'Especs E2E antigas (13 em desktop) continuam falhando como no baseline.',
-    'Cenario: kit generico por tema; arte especifica por circuito pendente.',
+    'Cenario: perfis estilizados nos 35 circuitos (nao replicas); geometria das pistas ainda provisional.',
   ],
   screenshots: fs.readdirSync('docs/qa-shots', { recursive: true }).filter((f) => String(f).endsWith('.png')).map((f) => 'docs/qa-shots/' + f),
 };

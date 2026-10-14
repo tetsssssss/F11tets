@@ -1,7 +1,7 @@
 {
  "milestone": "MARCO 61000",
  "baseline": "MARCO 60300 INCIDENTES",
- "generatedAt": "2026-10-14T19:46:18.412Z",
+ "generatedAt": "2026-10-14T20:26:58.502Z",
  "environment": {
   "node": "v22.22.0",
   "browser": "Chromium (Playwright build 1194)",
@@ -12,13 +12,13 @@
  "versions": {
   "package": "0.61.0",
   "serviceWorkerCache": "f1-universe-static-61000-v1",
-  "commit": "5ab3fbdcd873def52be9580e5a0b7d6fa836a129"
+  "commit": "7dae9712958957481f2e9cee05e30598acac76d7"
  },
  "unitTests": {
-  "total": 312,
-  "pass": 312,
+  "total": 315,
+  "pass": 315,
   "fail": 0,
-  "durationMs": 46835,
+  "durationMs": 52183,
   "baselineTotal": 281
  },
  "e2e": {
@@ -99,7 +99,7 @@
     "failedSpecs": []
    }
   },
-  "note": "Baseline 60300: 13 specs antigas falham em desktop e 13 em android (seletores/UI desatualizados; mesmas falhas apos as mudancas). Na rodada completa em paralelo (2 workers, carga alta, WebGL por software) alguns specs novos de race-views estouraram tempo; reexecutados sequencialmente (--workers=1) passaram 12/12 (6 desktop + 6 android), duas vezes seguidas. Um falso negativo intermitente de alinhamento do PIT foi tratado com polling no teste e realinhamento do HUD no codigo."
+  "note": "Baseline 60300: 13 specs antigas falham em desktop e 13 em android (seletores/UI desatualizados; mesmas falhas apos as mudancas). Na rodada completa em paralelo (2 workers, carga alta, WebGL por software) alguns specs novos de race-views estouraram tempo; reexecutados sequencialmente (--workers=1) passaram 12/12 (6 desktop + 6 android) repetidamente. Um falso negativo intermitente de alinhamento do PIT foi tratado com polling no teste e realinhamento do HUD no codigo."
  },
  "viewportMatrix": [
   {
@@ -448,8 +448,8 @@
  "hashes": {
   "src/presentation/broadcast-director.ts": "88f9deaac538b80826b3bdb8e606a97422e3acc1be6c3623f6f93f066c505f53",
   "src/presentation/babylon-quality.ts": "12d99f9d339e4ee90074eca05d7c0056f15fce6aebfcf6638b4537f4628104be",
-  "src/presentation/scenery-plan.ts": "75593395d34a6da371a2bffc1bbc60d8f28a1c0141af2861ced62e93d0a26e87",
-  "src/features/live-race-babylon.tsx": "03c4befdc6bae990568597a13e8dbeabb4e01df4182093a483881236940a7556",
+  "src/presentation/scenery-plan.ts": "9263348faf3d1251676b3456f0e2f7cd99173f6c40d0eacb84ae5b075bbde969",
+  "src/features/live-race-babylon.tsx": "b5488eb9cdc310eca540fd6b6038122b697a8d6fcee873797cf57f4330428374",
   "src/features/live-map.tsx": "9051a112110a569afd3996b490fc7c5f3f731132cc582e343edb84b29d2fda80",
   "src/features/live-race.tsx": "cb7a5a49c8c382755f8f04da72ee24661159324c5fb62534b8dbe1f553bbfb11",
   "src/app/globals.css": "912753563c69b66d0851ca1e1f4413ca9355ed1ad1e317fc532cf2863872037f",
@@ -466,7 +466,7 @@
   "Sem benchmark em Xiaomi real; FPS de software nao representa o aparelho.",
   "Sem clipes de video de 15-30 s; apenas capturas e relatorios numericos.",
   "Especs E2E antigas (13 em desktop) continuam falhando como no baseline.",
-  "Cenario: kit generico por tema; arte especifica por circuito pendente."
+  "Cenario: perfis estilizados nos 35 circuitos (nao replicas); geometria das pistas ainda provisional."
  ],
  "screenshots": [
   "docs/qa-shots/after/1366x900-2d.png",
@@ -502,6 +502,41 @@
   "docs/qa-shots/camera-tv/390x844-tv-canvas.png",
   "docs/qa-shots/camera-tv/390x844-tv.png",
   "docs/qa-shots/camera-tv/sheet.png",
+  "docs/qa-shots/scenery-all/gp-1-overview.png",
+  "docs/qa-shots/scenery-all/gp-10-overview.png",
+  "docs/qa-shots/scenery-all/gp-11-overview.png",
+  "docs/qa-shots/scenery-all/gp-12-overview.png",
+  "docs/qa-shots/scenery-all/gp-13-overview.png",
+  "docs/qa-shots/scenery-all/gp-14-overview.png",
+  "docs/qa-shots/scenery-all/gp-15-overview.png",
+  "docs/qa-shots/scenery-all/gp-16-overview.png",
+  "docs/qa-shots/scenery-all/gp-17-overview.png",
+  "docs/qa-shots/scenery-all/gp-18-overview.png",
+  "docs/qa-shots/scenery-all/gp-19-overview.png",
+  "docs/qa-shots/scenery-all/gp-2-overview.png",
+  "docs/qa-shots/scenery-all/gp-20-overview.png",
+  "docs/qa-shots/scenery-all/gp-21-overview.png",
+  "docs/qa-shots/scenery-all/gp-22-overview.png",
+  "docs/qa-shots/scenery-all/gp-23-overview.png",
+  "docs/qa-shots/scenery-all/gp-24-overview.png",
+  "docs/qa-shots/scenery-all/gp-25-overview.png",
+  "docs/qa-shots/scenery-all/gp-26-overview.png",
+  "docs/qa-shots/scenery-all/gp-27-overview.png",
+  "docs/qa-shots/scenery-all/gp-28-overview.png",
+  "docs/qa-shots/scenery-all/gp-29-overview.png",
+  "docs/qa-shots/scenery-all/gp-3-overview.png",
+  "docs/qa-shots/scenery-all/gp-30-overview.png",
+  "docs/qa-shots/scenery-all/gp-31-overview.png",
+  "docs/qa-shots/scenery-all/gp-32-overview.png",
+  "docs/qa-shots/scenery-all/gp-33-overview.png",
+  "docs/qa-shots/scenery-all/gp-34-overview.png",
+  "docs/qa-shots/scenery-all/gp-35-overview.png",
+  "docs/qa-shots/scenery-all/gp-4-overview.png",
+  "docs/qa-shots/scenery-all/gp-5-overview.png",
+  "docs/qa-shots/scenery-all/gp-6-overview.png",
+  "docs/qa-shots/scenery-all/gp-7-overview.png",
+  "docs/qa-shots/scenery-all/gp-8-overview.png",
+  "docs/qa-shots/scenery-all/gp-9-overview.png",
   "docs/qa-shots/scenery-gp-1/390x844-aerea-canvas.png",
   "docs/qa-shots/scenery-gp-1/390x844-aerea.png",
   "docs/qa-shots/scenery-gp-1/390x844-tv-canvas.png",
@@ -510,5 +545,12 @@
   "docs/qa-shots/scenery-gp-29/390x844-aerea.png",
   "docs/qa-shots/scenery-gp-29/390x844-tv-canvas.png",
   "docs/qa-shots/scenery-gp-29/390x844-tv.png"
- ]
+ ],
+ "scenery": {
+  "circuitsWithOwnProfile": 35,
+  "looks": 11,
+  "kinds": 16,
+  "overviewScreenshots": "docs/qa-shots/scenery-all/gp-1..35-overview.png",
+  "rendering": "software (SwiftShader), alto quality, oblique QA camera"
+ }
 }

@@ -1,0 +1,282 @@
+{
+ "gp-1": {
+  "scenery": {
+   "items": 236,
+   "meshes": 20,
+   "theme": "park"
+  },
+  "drawCalls": 657
+ },
+ "gp-2": {
+  "scenery": {
+   "items": 124,
+   "meshes": 28,
+   "theme": "urban"
+  },
+  "drawCalls": 92
+ },
+ "gp-3": {
+  "scenery": {
+   "items": 203,
+   "meshes": 39,
+   "theme": "pine"
+  },
+  "drawCalls": 365
+ },
+ "gp-4": {
+  "scenery": {
+   "items": 78,
+   "meshes": 34,
+   "theme": "coast"
+  },
+  "drawCalls": 322
+ },
+ "gp-5": {
+  "scenery": {
+   "items": 74,
+   "meshes": 34,
+   "theme": "desert"
+  },
+  "drawCalls": 543
+ },
+ "gp-6": {
+  "scenery": {
+   "items": 117,
+   "meshes": 36,
+   "theme": "coast"
+  },
+  "drawCalls": 747
+ },
+ "gp-7": {
+  "scenery": {
+   "items": 77,
+   "meshes": 32,
+   "theme": "desert"
+  },
+  "drawCalls": 638
+ },
+ "gp-8": {
+  "scenery": {
+   "items": 102,
+   "meshes": 36,
+   "theme": "plains"
+  },
+  "drawCalls": 518
+ },
+ "gp-9": {
+  "scenery": {
+   "items": 150,
+   "meshes": 38,
+   "theme": "tropical"
+  },
+  "drawCalls": 577
+ },
+ "gp-10": {
+  "scenery": {
+   "items": 135,
+   "meshes": 34,
+   "theme": "plains"
+  },
+  "drawCalls": 460
+ },
+ "gp-11": {
+  "scenery": {
+   "items": 61,
+   "meshes": 22,
+   "theme": "plains"
+  },
+  "drawCalls": 85
+ },
+ "gp-12": {
+  "scenery": {
+   "items": 190,
+   "meshes": 32,
+   "theme": "plains"
+  },
+  "drawCalls": 564
+ },
+ "gp-13": {
+  "scenery": {
+   "items": 77,
+   "meshes": 28,
+   "theme": "dunes"
+  },
+  "drawCalls": 553
+ },
+ "gp-14": {
+  "scenery": {
+   "items": 119,
+   "meshes": 39,
+   "theme": "plains"
+  },
+  "drawCalls": 543
+ },
+ "gp-15": {
+  "scenery": {
+   "items": 127,
+   "meshes": 42,
+   "theme": "harbor"
+  },
+  "drawCalls": 488
+ },
+ "gp-16": {
+  "scenery": {
+   "items": 174,
+   "meshes": 28,
+   "theme": "alpine"
+  },
+  "drawCalls": 92
+ },
+ "gp-17": {
+  "scenery": {
+   "items": 192,
+   "meshes": 30,
+   "theme": "park"
+  },
+  "drawCalls": 592
+ },
+ "gp-18": {
+  "scenery": {
+   "items": 75,
+   "meshes": 34,
+   "theme": "dunes"
+  },
+  "drawCalls": 619
+ },
+ "gp-19": {
+  "scenery": {
+   "items": 173,
+   "meshes": 26,
+   "theme": "alpine"
+  },
+  "drawCalls": 488
+ },
+ "gp-20": {
+  "scenery": {
+   "items": 88,
+   "meshes": 30,
+   "theme": "plains"
+  },
+  "drawCalls": 617
+ },
+ "gp-21": {
+  "scenery": {
+   "items": 194,
+   "meshes": 28,
+   "theme": "pine"
+  },
+  "drawCalls": 590
+ },
+ "gp-22": {
+  "scenery": {
+   "items": 246,
+   "meshes": 24,
+   "theme": "pine"
+  },
+  "drawCalls": 111
+ },
+ "gp-23": {
+  "scenery": {
+   "items": 92,
+   "meshes": 28,
+   "theme": "plains"
+  },
+  "drawCalls": 514
+ },
+ "gp-24": {
+  "scenery": {
+   "items": 76,
+   "meshes": 25,
+   "theme": "dunes"
+  },
+  "drawCalls": 476
+ },
+ "gp-25": {
+  "scenery": {
+   "items": 284,
+   "meshes": 20,
+   "theme": "park"
+  },
+  "drawCalls": 544
+ },
+ "gp-26": {
+  "scenery": {
+   "items": 129,
+   "meshes": 36,
+   "theme": "plains"
+  },
+  "drawCalls": 720
+ },
+ "gp-27": {
+  "scenery": {
+   "items": 92,
+   "meshes": 22,
+   "theme": "neon"
+  },
+  "drawCalls": 85
+ },
+ "gp-28": {
+  "scenery": {
+   "items": 118,
+   "meshes": 38,
+   "theme": "plains"
+  },
+  "drawCalls": 568
+ },
+ "gp-29": {
+  "scenery": {
+   "items": 121,
+   "meshes": 20,
+   "theme": "urban"
+  },
+  "drawCalls": 538
+ },
+ "gp-30": {
+  "scenery": {
+   "items": 185,
+   "meshes": 24,
+   "theme": "tropical"
+  },
+  "drawCalls": 531
+ },
+ "gp-31": {
+  "scenery": {
+   "items": 159,
+   "meshes": 24,
+   "theme": "tropical"
+  },
+  "drawCalls": 85
+ },
+ "gp-32": {
+  "scenery": {
+   "items": 91,
+   "meshes": 30,
+   "theme": "plains"
+  },
+  "drawCalls": 104
+ },
+ "gp-33": {
+  "scenery": {
+   "items": 102,
+   "meshes": 25,
+   "theme": "neon"
+  },
+  "drawCalls": 641
+ },
+ "gp-34": {
+  "scenery": {
+   "items": 145,
+   "meshes": 34,
+   "theme": "pine"
+  },
+  "drawCalls": 505
+ },
+ "gp-35": {
+  "scenery": {
+   "items": 90,
+   "meshes": 38,
+   "theme": "coast"
+  },
+  "drawCalls": 531
+ }
+}
