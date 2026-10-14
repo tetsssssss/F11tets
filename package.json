@@ -1,0 +1,49 @@
+{
+  "name": "f1-universe-2029",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3029",
+    "build": "next build",
+    "start": "next start -p 3029",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:e2e": "playwright test",
+    "export:universe": "tsx scripts/export-universe.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test:visual": "node scripts/visual-qa.mjs",
+    "audit:photos": "tsx scripts/audit-photos.ts",
+    "build:netlify": "vite build --config vite.netlify.config.ts",
+    "preview:netlify": "vite preview --config vite.netlify.config.ts --host 127.0.0.1",
+    "qa:montecarlo": "tsx scripts/qa-montecarlo.ts 2000 8",
+    "qa:soak": "tsx scripts/qa-season-soak.ts 3",
+    "qa:weekend": "tsx scripts/qa-weekend-integration.ts 2",
+    "qa:offline": "node scripts/qa-offline.mjs",
+    "build:offline": "node scripts/build-offline.mjs",
+    "test:mobile": "node scripts/verify-mobile.cjs"
+  },
+  "dependencies": {
+    "@fontsource/barlow-condensed": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "lucide-react": "1.49.0",
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "@babylonjs/core": "^8.0.0",
+    "@babylonjs/loaders": "^8.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "prettier": "^3.9.9",
+    "tailwindcss": "^4.2.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.3"
+  }
+}

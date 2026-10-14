@@ -1,0 +1,114 @@
+[
+  {
+    "id": "mclaren",
+    "name": "McLaren-Lotus",
+    "short": "MCL",
+    "color": "#ff9b43",
+    "secondary": "#15191d"
+  },
+  {
+    "id": "ferrari",
+    "name": "Ferrari",
+    "short": "FER",
+    "color": "#f34c54",
+    "secondary": "#ffe390"
+  },
+  {
+    "id": "mercedes",
+    "name": "Mercedes-AMG",
+    "short": "MER",
+    "color": "#5ee2c0",
+    "secondary": "#b5bbc0"
+  },
+  {
+    "id": "redbull",
+    "name": "Red Bull-Ford",
+    "short": "RBF",
+    "color": "#7698ff",
+    "secondary": "#ffd253"
+  },
+  {
+    "id": "williams",
+    "name": "Williams-BMW",
+    "short": "WIL",
+    "color": "#65b4ff",
+    "secondary": "#ffffff"
+  },
+  {
+    "id": "haas",
+    "name": "Haas-Maserati",
+    "short": "HAA",
+    "color": "#d6d9e0",
+    "secondary": "#ef5350"
+  },
+  {
+    "id": "audi",
+    "name": "Audi",
+    "short": "AUD",
+    "color": "#ff7759",
+    "secondary": "#c7cbd1"
+  },
+  {
+    "id": "alpine",
+    "name": "Alpine-Renault",
+    "short": "ALP",
+    "color": "#f19ad6",
+    "secondary": "#62acff"
+  },
+  {
+    "id": "aston",
+    "name": "Aston Martin-Honda",
+    "short": "AMR",
+    "color": "#69c6a5",
+    "secondary": "#d8fa69"
+  },
+  {
+    "id": "cadillac",
+    "name": "Cadillac-GM",
+    "short": "CAD",
+    "color": "#d9c693",
+    "secondary": "#2c354a"
+  },
+  {
+    "id": "hyundai",
+    "name": "Hyundai N",
+    "short": "HYN",
+    "color": "#a2d8f0",
+    "secondary": "#f45550"
+  },
+  {
+    "id": "kia",
+    "name": "Kia-Toyota",
+    "short": "KIA",
+    "color": "#b1b9c6",
+    "secondary": "#fa7660"
+  },
+  {
+    "id": "byd",
+    "name": "BYD",
+    "short": "BYD",
+    "color": "#ba99e5",
+    "secondary": "#e5e9f1"
+  },
+  {
+    "id": "porsche",
+    "name": "Porsche",
+    "short": "POR",
+    "color": "#e2bd7d",
+    "secondary": "#f4f0e4"
+  },
+  {
+    "id": "jaguar",
+    "name": "Jaguar-JLR",
+    "short": "JAG",
+    "color": "#85c997",
+    "secondary": "#e2bd7d"
+  },
+  {
+    "id": "bugatti",
+    "name": "Bugatti",
+    "short": "BUG",
+    "color": "#80bdff",
+    "secondary": "#262f52"
+  }
+]

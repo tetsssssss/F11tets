@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Pirelli",
+    "color": "#ffcc4c",
+    "strength": "Aquecimento / agressividade",
+    "values": [
+      94,
+      80,
+      77,
+      83
+    ]
+  },
+  {
+    "name": "Bridgestone",
+    "color": "#ef7777",
+    "strength": "Estabilidade",
+    "values": [
+      83,
+      95,
+      88,
+      86
+    ]
+  },
+  {
+    "name": "Michelin",
+    "color": "#83a9ff",
+    "strength": "Durabilidade",
+    "values": [
+      80,
+      87,
+      96,
+      85
+    ]
+  },
+  {
+    "name": "Continental",
+    "color": "#e9ad5f",
+    "strength": "Janela térmica",
+    "values": [
+      87,
+      85,
+      84,
+      96
+    ]
+  }
+]

@@ -1,0 +1,148 @@
+# DOCUMENT G — OPERATIONAL MASTER PROMPT FOR CODEX ASTRA (ENGLISH)
+
+> **Copy the full prompt below into Codex Astra and attach the latest source-code ZIP (`F1_UNIVERSE_2029_MARCO_60300_INCIDENTES_CODIGO_FONTE.zip`).** Also attach `F1_UNIVERSE_2029_MARCO_60300_INCIDENTES_NETLIFY_PWA.zip` as the deployment reference, along with engineering documents A–F if available. **The game has not been modified during the planning phase.** This prompt is for **real implementation**, not another conceptual report.
+
+---
+
+# F1 UNIVERSE 2029 — CODEX ASTRA MISSION: STRUCTURAL VISUAL UPGRADE TO MILESTONE 61000
+
+## I. Role and required outcome
+
+Act as the lead engineer of a multidisciplinary team specializing in TypeScript/React, Babylon.js 8, procedural 3D art, Android UX, motorsport broadcast camera direction, racing management games, WebGL performance, QA/Playwright, and PWA deployment. **Your assignment is now to implement and test improvements in the ACTUAL project**, incrementally, without restarting the application or rebuilding its universe from scratch. Inspect the implementation, edit real source files, compile, test, fix defects, and package the deliverables only after the relevant quality gates pass.
+
+The desired first impression on a Xiaomi phone: the race must no longer feel like a distant overhead map. It should feature closer TV-style cameras, readable battles through corners, recognizable cars, a believable 3D environment, and strategy/pit controls that do not get clipped. Use F1 Clash solely as a reference for **visual and UX principles**. **Do not copy** third-party logos, assets, textures, exact UI designs, track maps, or trademarks. Establish a distinct visual identity: a clear, attractive motorsport-management broadcast with readable data.
+
+### Mandatory source of truth
+
+Treat `F1_UNIVERSE_2029_MARCO_60300_INCIDENTES_CODIGO_FONTE.zip` as the **canonical baseline** and `F1_UNIVERSE_2029_MARCO_60300_INCIDENTES_NETLIFY_PWA.zip` as the deployment/assets reference. **Do not roll back to Milestone 59000 or 57000**: doing so could erase the incident-system improvements and other features already delivered in 60300. Do not invent source paths; verify them during your initial inventory. The proposed target label is **MARCO 61000**, but assign it only after meaningful development, builds, and tests. Never imply that 61,000 tasks were completed merely because of a version label.
+
+### Actual files identified in the previous inspection (verify again)
+
+- `src/features/live-race.tsx`: race flow, timing, Race Theater, playback speed, graphics-mode selection, Race Control.
+- `src/features/live-map.tsx`: `presentRace`, display modes, 2D cameras, frame/phase state, visualizer, Babylon bridge.
+- `src/features/live-race-babylon.tsx`: WebGL scene, GLB models/instances, TV/duel/aerial/onboard cameras, animations, quality settings.
+- `src/features/race-scene-3d.tsx`: **SVG-based 2.5D** mode. Do not force-replace it with Babylon.js.
+- `src/features/race-command-card.tsx`: five driver commands, tires, pit stops, radio.
+- `src/features/race-control.tsx`: Moment, GAP, Tires, Laps, Positions, Strategy, Weather, Telemetry tabs.
+- `src/presentation/race-camera.ts`, `babylon-camera.ts`, `cinematic-camera.ts`: camera selection and presets.
+- `src/presentation/race-presentation.ts`, `race-visual-focus.ts`, `race-render-adapter.ts`, `race-tag-layout.ts`, `circuit-geometry.ts`, `race-ceremony.ts`: projection, maps, visual offsets, labels, pit presentation.
+- `src/domain/simulation.ts`, `src/domain/simulation/race.ts`, `src/domain/gameplay/commands.ts`, `src/domain/gameplay/types.ts`: authoritative racing simulation.
+- `src/domain/save.ts`, `persistence.ts`, `save-writer.ts`, `src/components/save-provider.tsx`: v4 save and persistence system.
+- `src/app/globals.css`: responsive layout and HUD.
+- `public/assets/f1-3d/cars/*.glb`: **32 car files**, representing 16 teams with `mobile/high` variants; structurally valid in the prior inspection.
+- `public/assets/f1-3d/tracks/*.glb`: **35 track files**, structurally valid in the prior inspection.
+- `vite.netlify.config.ts`, `netlify/`, `public/manifest.webmanifest`, `public/sw.js`, `scripts/*`, `tests/*`.
+
+## II. First action: baseline and safety
+
+1. Inventory the directories, branches, saves, build outputs, scripts, and dependencies. Before editing any file, record `git status`, asset/save hashes, and the version; create a reversible branch/backup. **Never overwrite the original ZIP or existing career-save slots.**
+2. Run the baseline checks: install dependencies following the repository lockfile; run `npm run typecheck`, `npm test`, `npm run build:netlify`, and the E2E suite when Chromium is available. Record results **before** changing anything, including pre-existing failures. If script names differ, inspect `package.json` and use the real scripts. Do not invent commands.
+3. Start a local Netlify-preview server and reproduce a real Sprint or Grand Prix with 32 drivers. Capture **before** screenshots at 360×800, 390×844, 412×915, 430×932, 800×360, 915×412, and desktop resolutions. Inspect 2D, 2.5D, and 3D, Race Control, and pit stops. Capture DOM metrics (`scrollWidth`, element bounding rectangles, canvas dimensions).
+4. Validate the GLB files and PWA resources; preferably compare all 67 assets with the baseline deployment package. Do not download models of uncertain provenance or remove existing photos.
+5. Set up a visible task board with `PENDING`, `IN PROGRESS`, `COMPLETED`, `BLOCKED`, version, and test evidence for each task. Use native Codex progress/task tracking when available; otherwise maintain `docs/MARCO_61000_BACKLOG.md`. **Do not stop after writing the plan.**
+
+## III. NON-NEGOTIABLE simulation rule
+
+**ONE RACE. ONE SIMULATION ENGINE. THREE RENDERERS.** `RaceState` and `tickLive` remain authoritative for laps, gaps, elapsed time, tires, weather, pit events, flags, incidents, and results. Visual presentation must never change race time, ordering, results, saved positions, or RNG seeds. Start from `presentRace()` and `race-render-adapter.ts` to build a **read-only** presentation adapter. The 2D, 2.5D, and 3D modes all display the exact same race. Switching camera or visual mode must not remount the simulation engine, start a parallel race, advance a sector, or reset a save. Preserve 0.50× and 0.75× playback, AUTO, speeds through 16×, pause, +SECTOR, Race Control, and all five driver commands.
+
+Any lateral movement must reflect a presentation pose justified by simulation state (`duel`, incident, etc.), never a fabricated overtake. The existing 2D `fanOut` affects **markers**, not official coordinates/timing. Parity acceptance test: with the race paused, compare a normalized hash of the authoritative racing state and the classification before and after 2D → 2.5D → 3D → 2D. Hashes must be identical, except for local visual preferences. Repeat equivalent checks over identical tick sequences with real events.
+
+## IV. Implement in sprints, with tests after every sprint
+
+### SPRINT 01 — Fix mobile clipping and layout (P0)
+
+**Primary files:** `src/app/globals.css`, `src/features/live-race.tsx`, `race-command-card.tsx`, `race-control.tsx`, possibly `live-map.tsx`. Refactor the `.race-hud` CSS cascade: it currently includes `min-height:555px`, max-height rules, landscape media queries, and multiple layout regions. Do not assume these rules cause a bug unless you reproduce it. Target portrait design: compact top strip, dominant racing stage, driver controls along the bottom, and collapsible Race Control/timing drawers. Landscape: main racing stage plus a collapsible control column. In Constructor Mode, clearly separate or switch between the two drivers.
+
+Keep every existing control accessible inside drawers; do not remove functionality or DOM content just to fit the screen. Use `min-width:0`, `100dvh`/`100svh` with fallbacks, `ResizeObserver`, `env(safe-area-inset-*)`, and correctly sized canvas dimensions as appropriate. Aim for 44px touch targets when possible. Measure effective viewport sizes and clickable hitboxes; compare before/after screenshots. **Gate:** no unintended horizontal scrolling; PIT accessible; Race Control expands without making the race inaccessible; 2D/2.5D/3D switching works; desktop unaffected at all tested breakpoints.
+
+### SPRINT 02 — Babylon.js TV broadcast director (P0; greatest visual impact)
+
+**Primary files:** `src/presentation/race-camera.ts`, `babylon-camera.ts`, `src/features/live-map.tsx`, `live-race-babylon.tsx`. Create `src/presentation/broadcast-director.ts` only if extracting it reduces coupling. **Do not duplicate or rewrite `pickShot()` unnecessarily.** Reuse its existing AUTO decisions, battles, race events, starts, and priorities, adapting the selected `Shot` into the 3D camera system.
+
+Support TV broadcast, duel, close isometric, driver-follow, strategic/aerial, pit-lane, and legacy onboard cameras. A manually selected camera must remain active until the user returns to AUTO. The system should anticipate corners and frame groups of 2–4 cars. Initial **experimental settings, not measured existing values**: TV camera height y=3.5–7 units, behind=8–15 units, lateral offset=3–7 units, FOV 42–58°; follow camera y=2.8–5.5 units, behind=5–10 units, FOV 50–62°; a higher strategic view fitted to the group; pit camera moving through entry → stop → exit anchors. Adapt all values to the project's actual coordinate scale.
+
+**Fix frame-rate-dependent camera smoothing.** Replace fixed `Lerp(..., .09/.28)` factors with `alpha = 1 - exp(-dt / tau)` for both camera position and look-at target. Remove target snapping caused by `setTarget`; interpolate target as well. Proposed `tau`: 0.22–0.45 seconds, to be tuned. Use deliberate cuts with brief fades when angle changes are too large, rather than passing through barriers or buildings. If a camera is obstructed, evaluate an alternate anchor; preserve the existing `sceneryVisibility` fallback. Cameras must not influence race positions.
+
+**Tests:** 32-car race start; leader coverage; P1/P2 duel; P10/P11 duel; rain; Safety Car; manual camera versus AUTO; reduced-motion mode; device rotation; 30/60 FPS; record real 15–30-second clips. Do not report “TV camera complete” if the camera merely follows one car without meaningfully showing battles in real race scenarios.
+
+### SPRINT 03 — Larger, clearer cars without falsifying the race (P0)
+
+Map each car ID to its projected pixel position and bounding rectangle. Check on-screen dimensions and driver labels. Preliminary targets at 390×844: **TV** 50–110px apparent car length; **duel** 65–140px; **overview** 15–35px. These are tunable targets, not guaranteed outcomes. **Do not enlarge the car's physical geometry** just to make it appear larger. Prefer closer cameras, correct clipping, and framing inside the screen region not occupied by HUD. Reuse `layoutRaceTags` and expand it only if necessary; secondary labels may collapse contextually. Diagnose whether cars overlap in the simulation state, projected track map, or camera framing; instrument `elapsed`, `progress`, `laneVisualOffset`, `projectedRect`. **Gate:** in a corner with 5–8 cars in the same sector, at least the focused battle is distinguishable and timing data remains unchanged.
+
+### SPRINT 04 — Reuse GLB models and add procedural animation (P1)
+
+The baseline includes 16 teams and 32 GLBs with nodes resembling `FrontLeftWheel_`, `FrontRightWheel_`, `Rear*`, body meshes, and materials, **but no embedded animation clips**. Reuse these assets; do not rebuild every car in Blender unless inspection demonstrates a genuine need. Create appropriate wheel parent pivots; animate wheel rotation according to `omega = visualSpeed / visualWheelRadius`, deriving movement from interpolated display travel and keeping it decoupled from official results. Steer only the front wheels according to curvature, with a maximum suggested visual steering angle of ±18°. Add subtle curb vibration and cheap contact shadows. Pause and reduced-motion accessibility modes must stop nonessential micro-animations; 0.50× should scale corresponding animation tempo. When switching `high`/`mobile` quality, safely clear instances/caches or defer asset switching to a safe scene transition without losing race state.
+
+### SPRINT 05 — Lightweight 3D scenery, prioritized around the camera (P1)
+
+Use `public/assets/f1-3d/tracks` as the starting point. Prior inspection suggests roughly 190–232 meshes per circuit; verify draw calls, vertex colors, and material structure. Build a reusable scenery kit: curbs, barriers, guardrails, grandstands, trees, buildings, and pit facilities. Share meshes and use thin instances or mesh merges where appropriate. Implement and measure **two visually different pilot circuits first**, then roll out to additional circuits. Prioritize what a TV camera actually sees: a recognizable corner, track edge, environmental landmark, trees, and spectator area. Do not copy scenery or artwork from F1 Clash. Apply LOD, frustum culling, and graphic-quality profiles; use compact local textures and avoid mandatory CDN dependencies.
+
+### SPRINT 06 — Cinematic pit stops grounded in simulation (P1)
+
+Reuse `callPit()` and the real `now`, `next`, and `cancel` commands, together with the existing `pitPhase`/`pitStage` state and pit events. The HUD must clearly display tire-compound selection, scheduled status, confirmation, and permitted cancellation. Add pit-entry, pit-box, and pit-exit camera coverage; animate crew and tires procedurally, scaling approximately 4–12 crew actors by graphics profile. **Never invent a 2.18-second pit stop if the engine does not track that duration.** If pit stages are modeled, animate those stages and show only official durations actually available. Test compound changes, genuine sporting consequences, two pit calls for the same team, and cancellation. The post-stop order must come from the authoritative engine, never from the animation.
+
+### SPRINT 07 — Unified Babylon quality control and fallback (P1)
+
+The current implementation applies two different `setHardwareScalingLevel` formulas when quality changes. Consolidate them into one DPR/profile controller, updated exactly once per change unless an explicitly controlled exception is required. Audit materials created per driver, scene observers, asset containers, and `dispose()` calls. Do not create multiple engines or repeat preload operations on each tick. Optionally add a cooldown-based automatic quality downgrade if sustained FPS falls below the target, with appropriate user consent/settings. Provide a working **offline 2D fallback** when WebGL is unavailable or its context is lost; avoid mandatory remote `importBabylon()` if the bundled local engine is available. Review PWA/service-worker caching to avoid mismatched bundles and GLB assets after deployment. Test cold/warm starts and restoring from background.
+
+### SPRINT 08 — Integration, regression, and measurable QA (P0)
+
+Expand `tests/*.test.ts` and `tests/e2e/*.spec.ts` to cover:
+
+- Frame-rate-independent camera rig, battle focus, camera priority/cooldown/cuts, and reduced motion.
+- All 67 GLBs, 16 teams, 35 circuits, materials/vertex colors, and valid asset URLs.
+- Race-state parity between 2D/2.5D/Babylon, equivalent simulation ticks, mode switching without resets, and FPS behavior.
+- Pit workflows (`now`, `next`, `cancel`), tire compounds/events, and Race Control.
+- Save migration v1 → v4, existing save slots, reload while a race is active, and lossless migration.
+- Real screenshots for each portrait/landscape viewport, touch-target availability, horizontal scrolling, and safe areas.
+- Two-minute benchmark on a real Android device with 32 cars, battles, rain, pit stops, 2D ↔ 3D switching, FPS, and memory.
+- No WebGL, failing dynamic imports, and offline operation without CDN access.
+
+**A static screenshot is not evidence of 30 FPS.** Capture real session telemetry, including device/browser identification, p50/p95 FPS or frame times, render time, draw calls, failures, and constraints. Run tests, document failures, fix them, and rerun. Preserve the previous test suite and verify that changes to presentation do not alter sporting results.
+
+### SPRINT 09 — Build, delivery, and documentation (P0)
+
+Once the quality gates are satisfied, produce:
+
+- `F1_UNIVERSE_2029_MARCO_61000_NETLIFY_PWA.zip`: deployable root containing `index.html`, `assets/`, icons, manifest, service worker, `_redirects`, local resources, and all required GLBs. Must support direct drag-and-drop deployment to Netlify.
+- `F1_UNIVERSE_2029_MARCO_61000_CODIGO_FONTE.zip`: full TypeScript/React/CSS/GLB source, manifests, scripts, tests, documentation, and lockfile, excluding `node_modules`, secrets, and unnecessary temporary files.
+- `RELATORIO_VISUAL_MARCO_61000.md`: changes actually implemented, file by file, before/after evidence, remaining risks.
+- `GUIA_ANDROID_XIAOMI_61000.md`: open in Chrome, install to home screen as PWA, choose graphics quality, use controls, manage battery impact, and understand offline fallback.
+- `QA_MARCO_61000.json`: versions, tests, duration, FPS, hashes, save compatibility, failures, limitations, and real screenshot references.
+- `BACKLOG_MARCO_61000.md`: completed tasks, blockers, and next milestones.
+
+Validate checksums, extraction integrity, required GLBs, relative paths, deep links, and absence of mandatory localhost or paid-tool dependencies. If any phase remains unimplemented, **do not present Milestone 61000 as proof that the full project is complete**; deliver a clearly labeled partial version with an honest backlog instead.
+
+## V. Final blocking acceptance criteria
+
+1. No critical unintended horizontal clipping at tested mobile viewports.
+2. The race remains visible and manageable even with Race Control and two-driver controls.
+3. TV/duel/follow/strategic/pit cameras transition clearly and keep the relevant cars readable.
+4. All 32 cars remain represented; no fictitious positions or overtakes.
+5. GLB cars use suitable quality/LOD, with wheels animated consistently with visual movement.
+6. All 35 original circuits remain loadable, including those without newly added scenery.
+7. Pit calls change the actual race state and provide correct feedback rather than animation-only effects.
+8. Rain, Safety Car, incidents, and flags preserve their existing behavior.
+9. Existing 2D/2.5D/3D modes, 0.50×/0.75× slow motion, Race Control, and all five commands work.
+10. Previous v4 saves and slots remain intact; import/export and reload work.
+11. The WebGL-unavailable fallback preserves the ongoing race and classification.
+12. Low and balanced graphics profiles target 30 FPS on a real Xiaomi; report actual measurements and limitations honestly.
+13. Unit tests, the production Netlify build, and E2E tests pass; otherwise explicitly disclose blockers and do not claim final completion.
+14. Both ZIPs are produced **only after real implementation**, with complete assets and documentation.
+15. The technical report includes changed files, hashes, real screenshots, executed tests, and remaining tasks.
+
+## VI. Progress tracking and execution format
+
+After every phase, publish:
+
+```text
+PHASE: [number] — [description]
+STATUS: PENDING | IN PROGRESS | COMPLETED | BLOCKED
+MODIFIED: [real paths]
+TEST: [actual command, outcome, log/screenshot]
+REGRESSION: [what was compared]
+OPEN ISSUE/RISK: [facts]
+NEXT STEP: [concrete action]
+```
+
+**START IMPLEMENTING NOW**, in dependency order, and continue through the full workflow. Do not pause to request approval for safe, reversible fixes. Do not waste the budget on repeated assessments without editing the source code. Never replace actual implementation, tests, or deliverables with promises. Preserve the complete sporting simulation and the existing game universe. The goal is **not merely to recolor the race map**. It is to let the player experience and command a race through a credible, responsive motorsport broadcast.

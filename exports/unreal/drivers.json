@@ -1,0 +1,3458 @@
+[
+  {
+    "id": "lando-norris",
+    "name": "Lando Norris",
+    "short": "NOR",
+    "number": 1,
+    "country": "GB",
+    "flag": "🇬🇧",
+    "age": 29,
+    "rating": 94,
+    "potential": 97,
+    "teamId": "mclaren",
+    "contract": 2030,
+    "salary": 10.1,
+    "attributes": {
+      "Velocidade pura": 86,
+      "Classificação": 97,
+      "Ritmo de corrida": 91,
+      "Largada": 99,
+      "Frenagem": 96,
+      "Entrada de curva": 90,
+      "Meio de curva": 99,
+      "Saída de curva": 95,
+      "Controle do carro": 89,
+      "Chuva": 99,
+      "Consistência": 94,
+      "Concentração": 88,
+      "Inteligência de corrida": 99,
+      "Ultrapassagem": 93,
+      "Defesa": 87,
+      "Agressividade": 98,
+      "Gestão de pneus": 92,
+      "Gestão de energia": 86,
+      "Adaptabilidade": 97,
+      "Feedback técnico": 91
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 85,
+        "trend": -4
+      },
+      {
+        "label": "Confiança",
+        "value": 88,
+        "trend": -3
+      },
+      {
+        "label": "Moral",
+        "value": 91,
+        "trend": -2
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 94,
+        "trend": -1
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 86,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 89,
+        "trend": 1
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 92,
+        "trend": 2
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 95,
+        "trend": 3
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 87,
+        "trend": 4
+      },
+      {
+        "label": "Momentum",
+        "value": 90,
+        "trend": -4
+      },
+      {
+        "label": "Condição física",
+        "value": 93,
+        "trend": -3
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 85,
+        "trend": -2
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 83,
+      "Adaptação ao layout": 94,
+      "Confiança nas curvas-chave": 88,
+      "Domínio das frenagens": 99,
+      "Uso de zebras": 93,
+      "Ritmo nos setores críticos": 87,
+      "Histórico": 98,
+      "Capacidade de ultrapassagem": 92
+    }
+  },
+  {
+    "id": "arvid-lindblad",
+    "name": "Arvid Lindblad",
+    "short": "LIN",
+    "number": 41,
+    "country": "GB",
+    "flag": "🇬🇧",
+    "age": 21,
+    "rating": 80,
+    "potential": 96,
+    "teamId": "mclaren",
+    "contract": 2031,
+    "salary": 5.3,
+    "attributes": {
+      "Velocidade pura": 79,
+      "Classificação": 73,
+      "Ritmo de corrida": 84,
+      "Largada": 78,
+      "Frenagem": 72,
+      "Entrada de curva": 83,
+      "Meio de curva": 77,
+      "Saída de curva": 88,
+      "Controle do carro": 82,
+      "Chuva": 76,
+      "Consistência": 87,
+      "Concentração": 81,
+      "Inteligência de corrida": 75,
+      "Ultrapassagem": 86,
+      "Defesa": 80,
+      "Agressividade": 74,
+      "Gestão de pneus": 85,
+      "Gestão de energia": 79,
+      "Adaptabilidade": 73,
+      "Feedback técnico": 84
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 72,
+        "trend": -3
+      },
+      {
+        "label": "Confiança",
+        "value": 75,
+        "trend": -2
+      },
+      {
+        "label": "Moral",
+        "value": 78,
+        "trend": -1
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 81,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 73,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 76,
+        "trend": 2
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 79,
+        "trend": 3
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 71,
+        "trend": 4
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 74,
+        "trend": -4
+      },
+      {
+        "label": "Momentum",
+        "value": 77,
+        "trend": -3
+      },
+      {
+        "label": "Condição física",
+        "value": 80,
+        "trend": -2
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 72,
+        "trend": -1
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 76,
+      "Adaptação ao layout": 70,
+      "Confiança nas curvas-chave": 81,
+      "Domínio das frenagens": 75,
+      "Uso de zebras": 69,
+      "Ritmo nos setores críticos": 80,
+      "Histórico": 74,
+      "Capacidade de ultrapassagem": 85
+    }
+  },
+  {
+    "id": "kimi-antonelli",
+    "name": "Andrea Kimi Antonelli",
+    "short": "ANT",
+    "number": 12,
+    "country": "IT",
+    "flag": "🇮🇹",
+    "age": 22,
+    "rating": 95,
+    "potential": 99,
+    "teamId": "ferrari",
+    "contract": 2032,
+    "salary": 10.5,
+    "attributes": {
+      "Velocidade pura": 99,
+      "Classificação": 95,
+      "Ritmo de corrida": 89,
+      "Largada": 99,
+      "Frenagem": 94,
+      "Entrada de curva": 88,
+      "Meio de curva": 99,
+      "Saída de curva": 93,
+      "Controle do carro": 87,
+      "Chuva": 98,
+      "Consistência": 92,
+      "Concentração": 99,
+      "Inteligência de corrida": 97,
+      "Ultrapassagem": 91,
+      "Defesa": 99,
+      "Agressividade": 96,
+      "Gestão de pneus": 90,
+      "Gestão de energia": 99,
+      "Adaptabilidade": 95,
+      "Feedback técnico": 89
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 88,
+        "trend": -2
+      },
+      {
+        "label": "Confiança",
+        "value": 91,
+        "trend": -1
+      },
+      {
+        "label": "Moral",
+        "value": 94,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 86,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 89,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 92,
+        "trend": 3
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 95,
+        "trend": 4
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 87,
+        "trend": -4
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 90,
+        "trend": -3
+      },
+      {
+        "label": "Momentum",
+        "value": 93,
+        "trend": -2
+      },
+      {
+        "label": "Condição física",
+        "value": 96,
+        "trend": -1
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 88,
+        "trend": 0
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 98,
+      "Adaptação ao layout": 92,
+      "Confiança nas curvas-chave": 86,
+      "Domínio das frenagens": 97,
+      "Uso de zebras": 91,
+      "Ritmo nos setores críticos": 85,
+      "Histórico": 96,
+      "Capacidade de ultrapassagem": 90
+    }
+  },
+  {
+    "id": "alex-palou",
+    "name": "Alex Palou",
+    "short": "PAL",
+    "number": 10,
+    "country": "ES",
+    "flag": "🇪🇸",
+    "age": 31,
+    "rating": 87,
+    "potential": 91,
+    "teamId": "ferrari",
+    "contract": 2030,
+    "salary": 7.7,
+    "attributes": {
+      "Velocidade pura": 83,
+      "Classificação": 94,
+      "Ritmo de corrida": 88,
+      "Largada": 82,
+      "Frenagem": 93,
+      "Entrada de curva": 87,
+      "Meio de curva": 81,
+      "Saída de curva": 92,
+      "Controle do carro": 86,
+      "Chuva": 80,
+      "Consistência": 91,
+      "Concentração": 85,
+      "Inteligência de corrida": 79,
+      "Ultrapassagem": 90,
+      "Defesa": 84,
+      "Agressividade": 95,
+      "Gestão de pneus": 89,
+      "Gestão de energia": 83,
+      "Adaptabilidade": 94,
+      "Feedback técnico": 88
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 81,
+        "trend": -1
+      },
+      {
+        "label": "Confiança",
+        "value": 84,
+        "trend": 0
+      },
+      {
+        "label": "Moral",
+        "value": 87,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 79,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 82,
+        "trend": 3
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 85,
+        "trend": 4
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 88,
+        "trend": -4
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 80,
+        "trend": -3
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 83,
+        "trend": -2
+      },
+      {
+        "label": "Momentum",
+        "value": 86,
+        "trend": -1
+      },
+      {
+        "label": "Condição física",
+        "value": 78,
+        "trend": 0
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 81,
+        "trend": 1
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 80,
+      "Adaptação ao layout": 91,
+      "Confiança nas curvas-chave": 85,
+      "Domínio das frenagens": 79,
+      "Uso de zebras": 90,
+      "Ritmo nos setores críticos": 84,
+      "Histórico": 78,
+      "Capacidade de ultrapassagem": 89
+    }
+  },
+  {
+    "id": "max-verstappen",
+    "name": "Max Verstappen",
+    "short": "VER",
+    "number": 3,
+    "country": "NL",
+    "flag": "🇳🇱",
+    "age": 31,
+    "rating": 97,
+    "potential": 99,
+    "teamId": "mercedes",
+    "contract": 2031,
+    "salary": 11.2,
+    "attributes": {
+      "Velocidade pura": 99,
+      "Classificação": 94,
+      "Ritmo de corrida": 99,
+      "Largada": 99,
+      "Frenagem": 93,
+      "Entrada de curva": 99,
+      "Meio de curva": 98,
+      "Saída de curva": 92,
+      "Controle do carro": 99,
+      "Chuva": 97,
+      "Consistência": 91,
+      "Concentração": 99,
+      "Inteligência de corrida": 96,
+      "Ultrapassagem": 90,
+      "Defesa": 99,
+      "Agressividade": 95,
+      "Gestão de pneus": 89,
+      "Gestão de energia": 99,
+      "Adaptabilidade": 94,
+      "Feedback técnico": 99
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 92,
+        "trend": 0
+      },
+      {
+        "label": "Confiança",
+        "value": 95,
+        "trend": 1
+      },
+      {
+        "label": "Moral",
+        "value": 98,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 90,
+        "trend": 3
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 93,
+        "trend": 4
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 96,
+        "trend": -4
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 88,
+        "trend": -3
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 91,
+        "trend": -2
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 94,
+        "trend": -1
+      },
+      {
+        "label": "Momentum",
+        "value": 97,
+        "trend": 0
+      },
+      {
+        "label": "Condição física",
+        "value": 89,
+        "trend": 1
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 92,
+        "trend": 2
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 97,
+      "Adaptação ao layout": 91,
+      "Confiança nas curvas-chave": 99,
+      "Domínio das frenagens": 96,
+      "Uso de zebras": 90,
+      "Ritmo nos setores críticos": 99,
+      "Histórico": 95,
+      "Capacidade de ultrapassagem": 89
+    }
+  },
+  {
+    "id": "nikola-tsolov",
+    "name": "Nikola Tsolov",
+    "short": "TSO",
+    "number": 8,
+    "country": "BG",
+    "flag": "🇧🇬",
+    "age": 22,
+    "rating": 78,
+    "potential": 95,
+    "teamId": "mercedes",
+    "contract": 2032,
+    "salary": 4.6,
+    "attributes": {
+      "Velocidade pura": 71,
+      "Classificação": 82,
+      "Ritmo de corrida": 76,
+      "Largada": 70,
+      "Frenagem": 81,
+      "Entrada de curva": 75,
+      "Meio de curva": 86,
+      "Saída de curva": 80,
+      "Controle do carro": 74,
+      "Chuva": 85,
+      "Consistência": 79,
+      "Concentração": 73,
+      "Inteligência de corrida": 84,
+      "Ultrapassagem": 78,
+      "Defesa": 72,
+      "Agressividade": 83,
+      "Gestão de pneus": 77,
+      "Gestão de energia": 71,
+      "Adaptabilidade": 82,
+      "Feedback técnico": 76
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 74,
+        "trend": 1
+      },
+      {
+        "label": "Confiança",
+        "value": 77,
+        "trend": 2
+      },
+      {
+        "label": "Moral",
+        "value": 69,
+        "trend": 3
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 72,
+        "trend": 4
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 75,
+        "trend": -4
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 78,
+        "trend": -3
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 70,
+        "trend": -2
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 73,
+        "trend": -1
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 76,
+        "trend": 0
+      },
+      {
+        "label": "Momentum",
+        "value": 79,
+        "trend": 1
+      },
+      {
+        "label": "Condição física",
+        "value": 71,
+        "trend": 2
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 74,
+        "trend": 3
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 68,
+      "Adaptação ao layout": 79,
+      "Confiança nas curvas-chave": 73,
+      "Domínio das frenagens": 67,
+      "Uso de zebras": 78,
+      "Ritmo nos setores críticos": 72,
+      "Histórico": 83,
+      "Capacidade de ultrapassagem": 77
+    }
+  },
+  {
+    "id": "oscar-piastri",
+    "name": "Oscar Piastri",
+    "short": "PIA",
+    "number": 81,
+    "country": "AU",
+    "flag": "🇦🇺",
+    "age": 27,
+    "rating": 94,
+    "potential": 98,
+    "teamId": "redbull",
+    "contract": 2030,
+    "salary": 10.1,
+    "attributes": {
+      "Velocidade pura": 94,
+      "Classificação": 88,
+      "Ritmo de corrida": 99,
+      "Largada": 93,
+      "Frenagem": 87,
+      "Entrada de curva": 98,
+      "Meio de curva": 92,
+      "Saída de curva": 86,
+      "Controle do carro": 97,
+      "Chuva": 91,
+      "Consistência": 99,
+      "Concentração": 96,
+      "Inteligência de corrida": 90,
+      "Ultrapassagem": 99,
+      "Defesa": 95,
+      "Agressividade": 89,
+      "Gestão de pneus": 99,
+      "Gestão de energia": 94,
+      "Adaptabilidade": 88,
+      "Feedback técnico": 99
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 91,
+        "trend": 2
+      },
+      {
+        "label": "Confiança",
+        "value": 94,
+        "trend": 3
+      },
+      {
+        "label": "Moral",
+        "value": 86,
+        "trend": 4
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 89,
+        "trend": -4
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 92,
+        "trend": -3
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 95,
+        "trend": -2
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 87,
+        "trend": -1
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 90,
+        "trend": 0
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 93,
+        "trend": 1
+      },
+      {
+        "label": "Momentum",
+        "value": 85,
+        "trend": 2
+      },
+      {
+        "label": "Condição física",
+        "value": 88,
+        "trend": 3
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 91,
+        "trend": 4
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 91,
+      "Adaptação ao layout": 85,
+      "Confiança nas curvas-chave": 96,
+      "Domínio das frenagens": 90,
+      "Uso de zebras": 84,
+      "Ritmo nos setores críticos": 95,
+      "Histórico": 89,
+      "Capacidade de ultrapassagem": 83
+    }
+  },
+  {
+    "id": "sergio-perez",
+    "name": "Sergio Pérez",
+    "short": "PER",
+    "number": 11,
+    "country": "MX",
+    "flag": "🇲🇽",
+    "age": 39,
+    "rating": 84,
+    "potential": 86,
+    "teamId": "redbull",
+    "contract": 2031,
+    "salary": 6.7,
+    "attributes": {
+      "Velocidade pura": 91,
+      "Classificação": 85,
+      "Ritmo de corrida": 79,
+      "Largada": 90,
+      "Frenagem": 84,
+      "Entrada de curva": 78,
+      "Meio de curva": 89,
+      "Saída de curva": 83,
+      "Controle do carro": 77,
+      "Chuva": 88,
+      "Consistência": 82,
+      "Concentração": 76,
+      "Inteligência de corrida": 87,
+      "Ultrapassagem": 81,
+      "Defesa": 92,
+      "Agressividade": 86,
+      "Gestão de pneus": 80,
+      "Gestão de energia": 91,
+      "Adaptabilidade": 85,
+      "Feedback técnico": 79
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 82,
+        "trend": 3
+      },
+      {
+        "label": "Confiança",
+        "value": 85,
+        "trend": 4
+      },
+      {
+        "label": "Moral",
+        "value": 77,
+        "trend": -4
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 80,
+        "trend": -3
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 83,
+        "trend": -2
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 75,
+        "trend": -1
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 78,
+        "trend": 0
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 81,
+        "trend": 1
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 84,
+        "trend": 2
+      },
+      {
+        "label": "Momentum",
+        "value": 76,
+        "trend": 3
+      },
+      {
+        "label": "Condição física",
+        "value": 79,
+        "trend": 4
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 82,
+        "trend": -4
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 88,
+      "Adaptação ao layout": 82,
+      "Confiança nas curvas-chave": 76,
+      "Domínio das frenagens": 87,
+      "Uso de zebras": 81,
+      "Ritmo nos setores críticos": 75,
+      "Histórico": 86,
+      "Capacidade de ultrapassagem": 80
+    }
+  },
+  {
+    "id": "carlos-sainz",
+    "name": "Carlos Sainz",
+    "short": "SAI",
+    "number": 55,
+    "country": "ES",
+    "flag": "🇪🇸",
+    "age": 34,
+    "rating": 90,
+    "potential": 93,
+    "teamId": "williams",
+    "contract": 2032,
+    "salary": 8.8,
+    "attributes": {
+      "Velocidade pura": 87,
+      "Classificação": 98,
+      "Ritmo de corrida": 92,
+      "Largada": 86,
+      "Frenagem": 97,
+      "Entrada de curva": 91,
+      "Meio de curva": 85,
+      "Saída de curva": 96,
+      "Controle do carro": 90,
+      "Chuva": 84,
+      "Consistência": 95,
+      "Concentração": 89,
+      "Inteligência de corrida": 83,
+      "Ultrapassagem": 94,
+      "Defesa": 88,
+      "Agressividade": 82,
+      "Gestão de pneus": 93,
+      "Gestão de energia": 87,
+      "Adaptabilidade": 98,
+      "Feedback técnico": 92
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 89,
+        "trend": 4
+      },
+      {
+        "label": "Confiança",
+        "value": 81,
+        "trend": -4
+      },
+      {
+        "label": "Moral",
+        "value": 84,
+        "trend": -3
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 87,
+        "trend": -2
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 90,
+        "trend": -1
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 82,
+        "trend": 0
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 85,
+        "trend": 1
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 88,
+        "trend": 2
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 91,
+        "trend": 3
+      },
+      {
+        "label": "Momentum",
+        "value": 83,
+        "trend": 4
+      },
+      {
+        "label": "Condição física",
+        "value": 86,
+        "trend": -4
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 89,
+        "trend": -3
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 84,
+      "Adaptação ao layout": 95,
+      "Confiança nas curvas-chave": 89,
+      "Domínio das frenagens": 83,
+      "Uso de zebras": 94,
+      "Ritmo nos setores críticos": 88,
+      "Histórico": 82,
+      "Capacidade de ultrapassagem": 93
+    }
+  },
+  {
+    "id": "oliver-bearman",
+    "name": "Oliver Bearman",
+    "short": "BEA",
+    "number": 87,
+    "country": "GB",
+    "flag": "🇬🇧",
+    "age": 23,
+    "rating": 85,
+    "potential": 96,
+    "teamId": "williams",
+    "contract": 2030,
+    "salary": 7,
+    "attributes": {
+      "Velocidade pura": 89,
+      "Classificação": 83,
+      "Ritmo de corrida": 77,
+      "Largada": 88,
+      "Frenagem": 82,
+      "Entrada de curva": 93,
+      "Meio de curva": 87,
+      "Saída de curva": 81,
+      "Controle do carro": 92,
+      "Chuva": 86,
+      "Consistência": 80,
+      "Concentração": 91,
+      "Inteligência de corrida": 85,
+      "Ultrapassagem": 79,
+      "Defesa": 90,
+      "Agressividade": 84,
+      "Gestão de pneus": 78,
+      "Gestão de energia": 89,
+      "Adaptabilidade": 83,
+      "Feedback técnico": 77
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 85,
+        "trend": -4
+      },
+      {
+        "label": "Confiança",
+        "value": 77,
+        "trend": -3
+      },
+      {
+        "label": "Moral",
+        "value": 80,
+        "trend": -2
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 83,
+        "trend": -1
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 86,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 78,
+        "trend": 1
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 81,
+        "trend": 2
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 84,
+        "trend": 3
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 76,
+        "trend": 4
+      },
+      {
+        "label": "Momentum",
+        "value": 79,
+        "trend": -4
+      },
+      {
+        "label": "Condição física",
+        "value": 82,
+        "trend": -3
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 85,
+        "trend": -2
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 86,
+      "Adaptação ao layout": 80,
+      "Confiança nas curvas-chave": 74,
+      "Domínio das frenagens": 85,
+      "Uso de zebras": 79,
+      "Ritmo nos setores críticos": 90,
+      "Histórico": 84,
+      "Capacidade de ultrapassagem": 78
+    }
+  },
+  {
+    "id": "alexander-albon",
+    "name": "Alexander Albon",
+    "short": "ALB",
+    "number": 23,
+    "country": "TH",
+    "flag": "🇹🇭",
+    "age": 32,
+    "rating": 86,
+    "potential": 90,
+    "teamId": "haas",
+    "contract": 2031,
+    "salary": 7.4,
+    "attributes": {
+      "Velocidade pura": 80,
+      "Classificação": 91,
+      "Ritmo de corrida": 85,
+      "Largada": 79,
+      "Frenagem": 90,
+      "Entrada de curva": 84,
+      "Meio de curva": 78,
+      "Saída de curva": 89,
+      "Controle do carro": 83,
+      "Chuva": 94,
+      "Consistência": 88,
+      "Concentração": 82,
+      "Inteligência de corrida": 93,
+      "Ultrapassagem": 87,
+      "Defesa": 81,
+      "Agressividade": 92,
+      "Gestão de pneus": 86,
+      "Gestão de energia": 80,
+      "Adaptabilidade": 91,
+      "Feedback técnico": 85
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 87,
+        "trend": -3
+      },
+      {
+        "label": "Confiança",
+        "value": 79,
+        "trend": -2
+      },
+      {
+        "label": "Moral",
+        "value": 82,
+        "trend": -1
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 85,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 77,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 80,
+        "trend": 2
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 83,
+        "trend": 3
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 86,
+        "trend": 4
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 78,
+        "trend": -4
+      },
+      {
+        "label": "Momentum",
+        "value": 81,
+        "trend": -3
+      },
+      {
+        "label": "Condição física",
+        "value": 84,
+        "trend": -2
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 87,
+        "trend": -1
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 77,
+      "Adaptação ao layout": 88,
+      "Confiança nas curvas-chave": 82,
+      "Domínio das frenagens": 76,
+      "Uso de zebras": 87,
+      "Ritmo nos setores críticos": 81,
+      "Histórico": 75,
+      "Capacidade de ultrapassagem": 86
+    }
+  },
+  {
+    "id": "rafael-camara",
+    "name": "Rafael Câmara",
+    "short": "CAM",
+    "number": 28,
+    "country": "BR",
+    "flag": "🇧🇷",
+    "age": 23,
+    "rating": 79,
+    "potential": 94,
+    "teamId": "haas",
+    "contract": 2032,
+    "salary": 4.9,
+    "attributes": {
+      "Velocidade pura": 80,
+      "Classificação": 74,
+      "Ritmo de corrida": 85,
+      "Largada": 79,
+      "Frenagem": 73,
+      "Entrada de curva": 84,
+      "Meio de curva": 78,
+      "Saída de curva": 72,
+      "Controle do carro": 83,
+      "Chuva": 77,
+      "Consistência": 71,
+      "Concentração": 82,
+      "Inteligência de corrida": 76,
+      "Ultrapassagem": 87,
+      "Defesa": 81,
+      "Agressividade": 75,
+      "Gestão de pneus": 86,
+      "Gestão de energia": 80,
+      "Adaptabilidade": 74,
+      "Feedback técnico": 85
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 70,
+        "trend": -2
+      },
+      {
+        "label": "Confiança",
+        "value": 73,
+        "trend": -1
+      },
+      {
+        "label": "Moral",
+        "value": 76,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 79,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 71,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 74,
+        "trend": 3
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 77,
+        "trend": 4
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 80,
+        "trend": -4
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 72,
+        "trend": -3
+      },
+      {
+        "label": "Momentum",
+        "value": 75,
+        "trend": -2
+      },
+      {
+        "label": "Condição física",
+        "value": 78,
+        "trend": -1
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 70,
+        "trend": 0
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 77,
+      "Adaptação ao layout": 71,
+      "Confiança nas curvas-chave": 82,
+      "Domínio das frenagens": 76,
+      "Uso de zebras": 70,
+      "Ritmo nos setores críticos": 81,
+      "Histórico": 75,
+      "Capacidade de ultrapassagem": 69
+    }
+  },
+  {
+    "id": "gabriel-bortoleto",
+    "name": "Gabriel Bortoleto",
+    "short": "BOR",
+    "number": 5,
+    "country": "BR",
+    "flag": "🇧🇷",
+    "age": 24,
+    "rating": 86,
+    "potential": 96,
+    "teamId": "audi",
+    "contract": 2030,
+    "salary": 7.4,
+    "attributes": {
+      "Velocidade pura": 94,
+      "Classificação": 88,
+      "Ritmo de corrida": 82,
+      "Largada": 93,
+      "Frenagem": 87,
+      "Entrada de curva": 81,
+      "Meio de curva": 92,
+      "Saída de curva": 86,
+      "Controle do carro": 80,
+      "Chuva": 91,
+      "Consistência": 85,
+      "Concentração": 79,
+      "Inteligência de corrida": 90,
+      "Ultrapassagem": 84,
+      "Defesa": 78,
+      "Agressividade": 89,
+      "Gestão de pneus": 83,
+      "Gestão de energia": 94,
+      "Adaptabilidade": 88,
+      "Feedback técnico": 82
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 78,
+        "trend": -1
+      },
+      {
+        "label": "Confiança",
+        "value": 81,
+        "trend": 0
+      },
+      {
+        "label": "Moral",
+        "value": 84,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 87,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 79,
+        "trend": 3
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 82,
+        "trend": 4
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 85,
+        "trend": -4
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 77,
+        "trend": -3
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 80,
+        "trend": -2
+      },
+      {
+        "label": "Momentum",
+        "value": 83,
+        "trend": -1
+      },
+      {
+        "label": "Condição física",
+        "value": 86,
+        "trend": 0
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 78,
+        "trend": 1
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 91,
+      "Adaptação ao layout": 85,
+      "Confiança nas curvas-chave": 79,
+      "Domínio das frenagens": 90,
+      "Uso de zebras": 84,
+      "Ritmo nos setores críticos": 78,
+      "Histórico": 89,
+      "Capacidade de ultrapassagem": 83
+    }
+  },
+  {
+    "id": "franco-colapinto",
+    "name": "Franco Colapinto",
+    "short": "COL",
+    "number": 43,
+    "country": "AR",
+    "flag": "🇦🇷",
+    "age": 25,
+    "rating": 84,
+    "potential": 93,
+    "teamId": "audi",
+    "contract": 2031,
+    "salary": 6.7,
+    "attributes": {
+      "Velocidade pura": 82,
+      "Classificação": 76,
+      "Ritmo de corrida": 87,
+      "Largada": 81,
+      "Frenagem": 92,
+      "Entrada de curva": 86,
+      "Meio de curva": 80,
+      "Saída de curva": 91,
+      "Controle do carro": 85,
+      "Chuva": 79,
+      "Consistência": 90,
+      "Concentração": 84,
+      "Inteligência de corrida": 78,
+      "Ultrapassagem": 89,
+      "Defesa": 83,
+      "Agressividade": 77,
+      "Gestão de pneus": 88,
+      "Gestão de energia": 82,
+      "Adaptabilidade": 76,
+      "Feedback técnico": 87
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 77,
+        "trend": 0
+      },
+      {
+        "label": "Confiança",
+        "value": 80,
+        "trend": 1
+      },
+      {
+        "label": "Moral",
+        "value": 83,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 75,
+        "trend": 3
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 78,
+        "trend": 4
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 81,
+        "trend": -4
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 84,
+        "trend": -3
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 76,
+        "trend": -2
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 79,
+        "trend": -1
+      },
+      {
+        "label": "Momentum",
+        "value": 82,
+        "trend": 0
+      },
+      {
+        "label": "Condição física",
+        "value": 85,
+        "trend": 1
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 77,
+        "trend": 2
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 79,
+      "Adaptação ao layout": 73,
+      "Confiança nas curvas-chave": 84,
+      "Domínio das frenagens": 78,
+      "Uso de zebras": 89,
+      "Ritmo nos setores críticos": 83,
+      "Histórico": 77,
+      "Capacidade de ultrapassagem": 88
+    }
+  },
+  {
+    "id": "isack-hadjar",
+    "name": "Isack Hadjar",
+    "short": "HAD",
+    "number": 6,
+    "country": "FR",
+    "flag": "🇫🇷",
+    "age": 24,
+    "rating": 86,
+    "potential": 95,
+    "teamId": "alpine",
+    "contract": 2032,
+    "salary": 7.4,
+    "attributes": {
+      "Velocidade pura": 91,
+      "Classificação": 85,
+      "Ritmo de corrida": 79,
+      "Largada": 90,
+      "Frenagem": 84,
+      "Entrada de curva": 78,
+      "Meio de curva": 89,
+      "Saída de curva": 83,
+      "Controle do carro": 94,
+      "Chuva": 88,
+      "Consistência": 82,
+      "Concentração": 93,
+      "Inteligência de corrida": 87,
+      "Ultrapassagem": 81,
+      "Defesa": 92,
+      "Agressividade": 86,
+      "Gestão de pneus": 80,
+      "Gestão de energia": 91,
+      "Adaptabilidade": 85,
+      "Feedback técnico": 79
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 80,
+        "trend": 1
+      },
+      {
+        "label": "Confiança",
+        "value": 83,
+        "trend": 2
+      },
+      {
+        "label": "Moral",
+        "value": 86,
+        "trend": 3
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 78,
+        "trend": 4
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 81,
+        "trend": -4
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 84,
+        "trend": -3
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 87,
+        "trend": -2
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 79,
+        "trend": -1
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 82,
+        "trend": 0
+      },
+      {
+        "label": "Momentum",
+        "value": 85,
+        "trend": 1
+      },
+      {
+        "label": "Condição física",
+        "value": 77,
+        "trend": 2
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 80,
+        "trend": 3
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 88,
+      "Adaptação ao layout": 82,
+      "Confiança nas curvas-chave": 76,
+      "Domínio das frenagens": 87,
+      "Uso de zebras": 81,
+      "Ritmo nos setores críticos": 75,
+      "Histórico": 86,
+      "Capacidade de ultrapassagem": 80
+    }
+  },
+  {
+    "id": "pierre-gasly",
+    "name": "Pierre Gasly",
+    "short": "GAS",
+    "number": 21,
+    "country": "FR",
+    "flag": "🇫🇷",
+    "age": 33,
+    "rating": 86,
+    "potential": 90,
+    "teamId": "alpine",
+    "contract": 2030,
+    "salary": 7.4,
+    "attributes": {
+      "Velocidade pura": 81,
+      "Classificação": 92,
+      "Ritmo de corrida": 86,
+      "Largada": 80,
+      "Frenagem": 91,
+      "Entrada de curva": 85,
+      "Meio de curva": 79,
+      "Saída de curva": 90,
+      "Controle do carro": 84,
+      "Chuva": 78,
+      "Consistência": 89,
+      "Concentração": 83,
+      "Inteligência de corrida": 94,
+      "Ultrapassagem": 88,
+      "Defesa": 82,
+      "Agressividade": 93,
+      "Gestão de pneus": 87,
+      "Gestão de energia": 81,
+      "Adaptabilidade": 92,
+      "Feedback técnico": 86
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 81,
+        "trend": 2
+      },
+      {
+        "label": "Confiança",
+        "value": 84,
+        "trend": 3
+      },
+      {
+        "label": "Moral",
+        "value": 87,
+        "trend": 4
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 79,
+        "trend": -4
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 82,
+        "trend": -3
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 85,
+        "trend": -2
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 77,
+        "trend": -1
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 80,
+        "trend": 0
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 83,
+        "trend": 1
+      },
+      {
+        "label": "Momentum",
+        "value": 86,
+        "trend": 2
+      },
+      {
+        "label": "Condição física",
+        "value": 78,
+        "trend": 3
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 81,
+        "trend": 4
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 78,
+      "Adaptação ao layout": 89,
+      "Confiança nas curvas-chave": 83,
+      "Domínio das frenagens": 77,
+      "Uso de zebras": 88,
+      "Ritmo nos setores críticos": 82,
+      "Histórico": 76,
+      "Capacidade de ultrapassagem": 87
+    }
+  },
+  {
+    "id": "fernando-alonso",
+    "name": "Fernando Alonso",
+    "short": "ALO",
+    "number": 14,
+    "country": "ES",
+    "flag": "🇪🇸",
+    "age": 47,
+    "rating": 91,
+    "potential": 92,
+    "teamId": "aston",
+    "contract": 2031,
+    "salary": 9.1,
+    "attributes": {
+      "Velocidade pura": 93,
+      "Classificação": 87,
+      "Ritmo de corrida": 98,
+      "Largada": 92,
+      "Frenagem": 86,
+      "Entrada de curva": 97,
+      "Meio de curva": 91,
+      "Saída de curva": 85,
+      "Controle do carro": 96,
+      "Chuva": 90,
+      "Consistência": 84,
+      "Concentração": 95,
+      "Inteligência de corrida": 89,
+      "Ultrapassagem": 83,
+      "Defesa": 94,
+      "Agressividade": 88,
+      "Gestão de pneus": 99,
+      "Gestão de energia": 93,
+      "Adaptabilidade": 87,
+      "Feedback técnico": 98
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 87,
+        "trend": 3
+      },
+      {
+        "label": "Confiança",
+        "value": 90,
+        "trend": 4
+      },
+      {
+        "label": "Moral",
+        "value": 82,
+        "trend": -4
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 85,
+        "trend": -3
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 88,
+        "trend": -2
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 91,
+        "trend": -1
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 83,
+        "trend": 0
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 86,
+        "trend": 1
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 89,
+        "trend": 2
+      },
+      {
+        "label": "Momentum",
+        "value": 92,
+        "trend": 3
+      },
+      {
+        "label": "Condição física",
+        "value": 84,
+        "trend": 4
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 87,
+        "trend": -4
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 90,
+      "Adaptação ao layout": 84,
+      "Confiança nas curvas-chave": 95,
+      "Domínio das frenagens": 89,
+      "Uso de zebras": 83,
+      "Ritmo nos setores críticos": 94,
+      "Histórico": 88,
+      "Capacidade de ultrapassagem": 82
+    }
+  },
+  {
+    "id": "mari-boya",
+    "name": "Mari Boya",
+    "short": "BOY",
+    "number": 19,
+    "country": "ES",
+    "flag": "🇪🇸",
+    "age": 24,
+    "rating": 77,
+    "potential": 90,
+    "teamId": "aston",
+    "contract": 2032,
+    "salary": 4.2,
+    "attributes": {
+      "Velocidade pura": 69,
+      "Classificação": 80,
+      "Ritmo de corrida": 74,
+      "Largada": 85,
+      "Frenagem": 79,
+      "Entrada de curva": 73,
+      "Meio de curva": 84,
+      "Saída de curva": 78,
+      "Controle do carro": 72,
+      "Chuva": 83,
+      "Consistência": 77,
+      "Concentração": 71,
+      "Inteligência de corrida": 82,
+      "Ultrapassagem": 76,
+      "Defesa": 70,
+      "Agressividade": 81,
+      "Gestão de pneus": 75,
+      "Gestão de energia": 69,
+      "Adaptabilidade": 80,
+      "Feedback técnico": 74
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 74,
+        "trend": 4
+      },
+      {
+        "label": "Confiança",
+        "value": 77,
+        "trend": -4
+      },
+      {
+        "label": "Moral",
+        "value": 69,
+        "trend": -3
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 72,
+        "trend": -2
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 75,
+        "trend": -1
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 78,
+        "trend": 0
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 70,
+        "trend": 1
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 73,
+        "trend": 2
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 76,
+        "trend": 3
+      },
+      {
+        "label": "Momentum",
+        "value": 68,
+        "trend": 4
+      },
+      {
+        "label": "Condição física",
+        "value": 71,
+        "trend": -4
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 74,
+        "trend": -3
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 66,
+      "Adaptação ao layout": 77,
+      "Confiança nas curvas-chave": 71,
+      "Domínio das frenagens": 82,
+      "Uso de zebras": 76,
+      "Ritmo nos setores críticos": 70,
+      "Histórico": 81,
+      "Capacidade de ultrapassagem": 75
+    }
+  },
+  {
+    "id": "colton-herta",
+    "name": "Colton Herta",
+    "short": "HER",
+    "number": 26,
+    "country": "US",
+    "flag": "🇺🇸",
+    "age": 28,
+    "rating": 83,
+    "potential": 92,
+    "teamId": "cadillac",
+    "contract": 2030,
+    "salary": 6.3,
+    "attributes": {
+      "Velocidade pura": 82,
+      "Classificação": 76,
+      "Ritmo de corrida": 87,
+      "Largada": 81,
+      "Frenagem": 75,
+      "Entrada de curva": 86,
+      "Meio de curva": 80,
+      "Saída de curva": 91,
+      "Controle do carro": 85,
+      "Chuva": 79,
+      "Consistência": 90,
+      "Concentração": 84,
+      "Inteligência de corrida": 78,
+      "Ultrapassagem": 89,
+      "Defesa": 83,
+      "Agressividade": 77,
+      "Gestão de pneus": 88,
+      "Gestão de energia": 82,
+      "Adaptabilidade": 76,
+      "Feedback técnico": 87
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 81,
+        "trend": -4
+      },
+      {
+        "label": "Confiança",
+        "value": 84,
+        "trend": -3
+      },
+      {
+        "label": "Moral",
+        "value": 76,
+        "trend": -2
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 79,
+        "trend": -1
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 82,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 74,
+        "trend": 1
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 77,
+        "trend": 2
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 80,
+        "trend": 3
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 83,
+        "trend": 4
+      },
+      {
+        "label": "Momentum",
+        "value": 75,
+        "trend": -4
+      },
+      {
+        "label": "Condição física",
+        "value": 78,
+        "trend": -3
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 81,
+        "trend": -2
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 79,
+      "Adaptação ao layout": 73,
+      "Confiança nas curvas-chave": 84,
+      "Domínio das frenagens": 78,
+      "Uso de zebras": 72,
+      "Ritmo nos setores críticos": 83,
+      "Histórico": 77,
+      "Capacidade de ultrapassagem": 88
+    }
+  },
+  {
+    "id": "pato-oward",
+    "name": "Pato O'Ward",
+    "short": "OWA",
+    "number": 7,
+    "country": "MX",
+    "flag": "🇲🇽",
+    "age": 29,
+    "rating": 85,
+    "potential": 93,
+    "teamId": "cadillac",
+    "contract": 2031,
+    "salary": 7,
+    "attributes": {
+      "Velocidade pura": 91,
+      "Classificação": 85,
+      "Ritmo de corrida": 79,
+      "Largada": 90,
+      "Frenagem": 84,
+      "Entrada de curva": 78,
+      "Meio de curva": 89,
+      "Saída de curva": 83,
+      "Controle do carro": 77,
+      "Chuva": 88,
+      "Consistência": 82,
+      "Concentração": 93,
+      "Inteligência de corrida": 87,
+      "Ultrapassagem": 81,
+      "Defesa": 92,
+      "Agressividade": 86,
+      "Gestão de pneus": 80,
+      "Gestão de energia": 91,
+      "Adaptabilidade": 85,
+      "Feedback técnico": 79
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 84,
+        "trend": -3
+      },
+      {
+        "label": "Confiança",
+        "value": 76,
+        "trend": -2
+      },
+      {
+        "label": "Moral",
+        "value": 79,
+        "trend": -1
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 82,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 85,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 77,
+        "trend": 2
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 80,
+        "trend": 3
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 83,
+        "trend": 4
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 86,
+        "trend": -4
+      },
+      {
+        "label": "Momentum",
+        "value": 78,
+        "trend": -3
+      },
+      {
+        "label": "Condição física",
+        "value": 81,
+        "trend": -2
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 84,
+        "trend": -1
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 88,
+      "Adaptação ao layout": 82,
+      "Confiança nas curvas-chave": 76,
+      "Domínio das frenagens": 87,
+      "Uso de zebras": 81,
+      "Ritmo nos setores críticos": 75,
+      "Histórico": 86,
+      "Capacidade de ultrapassagem": 80
+    }
+  },
+  {
+    "id": "liam-lawson",
+    "name": "Liam Lawson",
+    "short": "LAW",
+    "number": 30,
+    "country": "NZ",
+    "flag": "🇳🇿",
+    "age": 27,
+    "rating": 82,
+    "potential": 91,
+    "teamId": "hyundai",
+    "contract": 2032,
+    "salary": 5.9,
+    "attributes": {
+      "Velocidade pura": 78,
+      "Classificação": 89,
+      "Ritmo de corrida": 83,
+      "Largada": 77,
+      "Frenagem": 88,
+      "Entrada de curva": 82,
+      "Meio de curva": 76,
+      "Saída de curva": 87,
+      "Controle do carro": 81,
+      "Chuva": 75,
+      "Consistência": 86,
+      "Concentração": 80,
+      "Inteligência de corrida": 74,
+      "Ultrapassagem": 85,
+      "Defesa": 79,
+      "Agressividade": 90,
+      "Gestão de pneus": 84,
+      "Gestão de energia": 78,
+      "Adaptabilidade": 89,
+      "Feedback técnico": 83
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 82,
+        "trend": -2
+      },
+      {
+        "label": "Confiança",
+        "value": 74,
+        "trend": -1
+      },
+      {
+        "label": "Moral",
+        "value": 77,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 80,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 83,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 75,
+        "trend": 3
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 78,
+        "trend": 4
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 81,
+        "trend": -4
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 73,
+        "trend": -3
+      },
+      {
+        "label": "Momentum",
+        "value": 76,
+        "trend": -2
+      },
+      {
+        "label": "Condição física",
+        "value": 79,
+        "trend": -1
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 82,
+        "trend": 0
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 75,
+      "Adaptação ao layout": 86,
+      "Confiança nas curvas-chave": 80,
+      "Domínio das frenagens": 74,
+      "Uso de zebras": 85,
+      "Ritmo nos setores críticos": 79,
+      "Histórico": 73,
+      "Capacidade de ultrapassagem": 84
+    }
+  },
+  {
+    "id": "jack-doohan",
+    "name": "Jack Doohan",
+    "short": "DOO",
+    "number": 61,
+    "country": "AU",
+    "flag": "🇦🇺",
+    "age": 26,
+    "rating": 79,
+    "potential": 89,
+    "teamId": "hyundai",
+    "contract": 2030,
+    "salary": 4.9,
+    "attributes": {
+      "Velocidade pura": 82,
+      "Classificação": 76,
+      "Ritmo de corrida": 87,
+      "Largada": 81,
+      "Frenagem": 75,
+      "Entrada de curva": 86,
+      "Meio de curva": 80,
+      "Saída de curva": 74,
+      "Controle do carro": 85,
+      "Chuva": 79,
+      "Consistência": 73,
+      "Concentração": 84,
+      "Inteligência de corrida": 78,
+      "Ultrapassagem": 72,
+      "Defesa": 83,
+      "Agressividade": 77,
+      "Gestão de pneus": 71,
+      "Gestão de energia": 82,
+      "Adaptabilidade": 76,
+      "Feedback técnico": 87
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 80,
+        "trend": -1
+      },
+      {
+        "label": "Confiança",
+        "value": 72,
+        "trend": 0
+      },
+      {
+        "label": "Moral",
+        "value": 75,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 78,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 70,
+        "trend": 3
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 73,
+        "trend": 4
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 76,
+        "trend": -4
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 79,
+        "trend": -3
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 71,
+        "trend": -2
+      },
+      {
+        "label": "Momentum",
+        "value": 74,
+        "trend": -1
+      },
+      {
+        "label": "Condição física",
+        "value": 77,
+        "trend": 0
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 80,
+        "trend": 1
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 79,
+      "Adaptação ao layout": 73,
+      "Confiança nas curvas-chave": 84,
+      "Domínio das frenagens": 78,
+      "Uso de zebras": 72,
+      "Ritmo nos setores críticos": 83,
+      "Histórico": 77,
+      "Capacidade de ultrapassagem": 71
+    }
+  },
+  {
+    "id": "yuki-tsunoda",
+    "name": "Yuki Tsunoda",
+    "short": "TSU",
+    "number": 22,
+    "country": "JP",
+    "flag": "🇯🇵",
+    "age": 28,
+    "rating": 84,
+    "potential": 89,
+    "teamId": "kia",
+    "contract": 2031,
+    "salary": 6.7,
+    "attributes": {
+      "Velocidade pura": 77,
+      "Classificação": 88,
+      "Ritmo de corrida": 82,
+      "Largada": 76,
+      "Frenagem": 87,
+      "Entrada de curva": 81,
+      "Meio de curva": 92,
+      "Saída de curva": 86,
+      "Controle do carro": 80,
+      "Chuva": 91,
+      "Consistência": 85,
+      "Concentração": 79,
+      "Inteligência de corrida": 90,
+      "Ultrapassagem": 84,
+      "Defesa": 78,
+      "Agressividade": 89,
+      "Gestão de pneus": 83,
+      "Gestão de energia": 77,
+      "Adaptabilidade": 88,
+      "Feedback técnico": 82
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 75,
+        "trend": 0
+      },
+      {
+        "label": "Confiança",
+        "value": 78,
+        "trend": 1
+      },
+      {
+        "label": "Moral",
+        "value": 81,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 84,
+        "trend": 3
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 76,
+        "trend": 4
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 79,
+        "trend": -4
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 82,
+        "trend": -3
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 85,
+        "trend": -2
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 77,
+        "trend": -1
+      },
+      {
+        "label": "Momentum",
+        "value": 80,
+        "trend": 0
+      },
+      {
+        "label": "Condição física",
+        "value": 83,
+        "trend": 1
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 75,
+        "trend": 2
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 74,
+      "Adaptação ao layout": 85,
+      "Confiança nas curvas-chave": 79,
+      "Domínio das frenagens": 73,
+      "Uso de zebras": 84,
+      "Ritmo nos setores críticos": 78,
+      "Histórico": 89,
+      "Capacidade de ultrapassagem": 83
+    }
+  },
+  {
+    "id": "felipe-drugovich",
+    "name": "Felipe Drugovich",
+    "short": "DRU",
+    "number": 34,
+    "country": "BR",
+    "flag": "🇧🇷",
+    "age": 28,
+    "rating": 81,
+    "potential": 91,
+    "teamId": "kia",
+    "contract": 2032,
+    "salary": 5.6,
+    "attributes": {
+      "Velocidade pura": 81,
+      "Classificação": 75,
+      "Ritmo de corrida": 86,
+      "Largada": 80,
+      "Frenagem": 74,
+      "Entrada de curva": 85,
+      "Meio de curva": 79,
+      "Saída de curva": 73,
+      "Controle do carro": 84,
+      "Chuva": 78,
+      "Consistência": 89,
+      "Concentração": 83,
+      "Inteligência de corrida": 77,
+      "Ultrapassagem": 88,
+      "Defesa": 82,
+      "Agressividade": 76,
+      "Gestão de pneus": 87,
+      "Gestão de energia": 81,
+      "Adaptabilidade": 75,
+      "Feedback técnico": 86
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 73,
+        "trend": 1
+      },
+      {
+        "label": "Confiança",
+        "value": 76,
+        "trend": 2
+      },
+      {
+        "label": "Moral",
+        "value": 79,
+        "trend": 3
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 82,
+        "trend": 4
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 74,
+        "trend": -4
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 77,
+        "trend": -3
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 80,
+        "trend": -2
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 72,
+        "trend": -1
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 75,
+        "trend": 0
+      },
+      {
+        "label": "Momentum",
+        "value": 78,
+        "trend": 1
+      },
+      {
+        "label": "Condição física",
+        "value": 81,
+        "trend": 2
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 73,
+        "trend": 3
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 78,
+      "Adaptação ao layout": 72,
+      "Confiança nas curvas-chave": 83,
+      "Domínio das frenagens": 77,
+      "Uso de zebras": 71,
+      "Ritmo nos setores críticos": 82,
+      "Histórico": 76,
+      "Capacidade de ultrapassagem": 70
+    }
+  },
+  {
+    "id": "zhou-guanyu",
+    "name": "Zhou Guanyu",
+    "short": "ZHO",
+    "number": 24,
+    "country": "CN",
+    "flag": "🇨🇳",
+    "age": 29,
+    "rating": 80,
+    "potential": 86,
+    "teamId": "byd",
+    "contract": 2030,
+    "salary": 5.3,
+    "attributes": {
+      "Velocidade pura": 87,
+      "Classificação": 81,
+      "Ritmo de corrida": 75,
+      "Largada": 86,
+      "Frenagem": 80,
+      "Entrada de curva": 74,
+      "Meio de curva": 85,
+      "Saída de curva": 79,
+      "Controle do carro": 73,
+      "Chuva": 84,
+      "Consistência": 78,
+      "Concentração": 72,
+      "Inteligência de corrida": 83,
+      "Ultrapassagem": 77,
+      "Defesa": 88,
+      "Agressividade": 82,
+      "Gestão de pneus": 76,
+      "Gestão de energia": 87,
+      "Adaptabilidade": 81,
+      "Feedback técnico": 75
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 73,
+        "trend": 2
+      },
+      {
+        "label": "Confiança",
+        "value": 76,
+        "trend": 3
+      },
+      {
+        "label": "Moral",
+        "value": 79,
+        "trend": 4
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 71,
+        "trend": -4
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 74,
+        "trend": -3
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 77,
+        "trend": -2
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 80,
+        "trend": -1
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 72,
+        "trend": 0
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 75,
+        "trend": 1
+      },
+      {
+        "label": "Momentum",
+        "value": 78,
+        "trend": 2
+      },
+      {
+        "label": "Condição física",
+        "value": 81,
+        "trend": 3
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 73,
+        "trend": 4
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 84,
+      "Adaptação ao layout": 78,
+      "Confiança nas curvas-chave": 72,
+      "Domínio das frenagens": 83,
+      "Uso de zebras": 77,
+      "Ritmo nos setores críticos": 71,
+      "Histórico": 82,
+      "Capacidade de ultrapassagem": 76
+    }
+  },
+  {
+    "id": "dino-beganovic",
+    "name": "Dino Beganovic",
+    "short": "BEG",
+    "number": 17,
+    "country": "SE",
+    "flag": "🇸🇪",
+    "age": 25,
+    "rating": 80,
+    "potential": 93,
+    "teamId": "byd",
+    "contract": 2031,
+    "salary": 5.3,
+    "attributes": {
+      "Velocidade pura": 77,
+      "Classificação": 88,
+      "Ritmo de corrida": 82,
+      "Largada": 76,
+      "Frenagem": 87,
+      "Entrada de curva": 81,
+      "Meio de curva": 75,
+      "Saída de curva": 86,
+      "Controle do carro": 80,
+      "Chuva": 74,
+      "Consistência": 85,
+      "Concentração": 79,
+      "Inteligência de corrida": 73,
+      "Ultrapassagem": 84,
+      "Defesa": 78,
+      "Agressividade": 72,
+      "Gestão de pneus": 83,
+      "Gestão de energia": 77,
+      "Adaptabilidade": 88,
+      "Feedback técnico": 82
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 74,
+        "trend": 3
+      },
+      {
+        "label": "Confiança",
+        "value": 77,
+        "trend": 4
+      },
+      {
+        "label": "Moral",
+        "value": 80,
+        "trend": -4
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 72,
+        "trend": -3
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 75,
+        "trend": -2
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 78,
+        "trend": -1
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 81,
+        "trend": 0
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 73,
+        "trend": 1
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 76,
+        "trend": 2
+      },
+      {
+        "label": "Momentum",
+        "value": 79,
+        "trend": 3
+      },
+      {
+        "label": "Condição física",
+        "value": 71,
+        "trend": 4
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 74,
+        "trend": -4
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 74,
+      "Adaptação ao layout": 85,
+      "Confiança nas curvas-chave": 79,
+      "Domínio das frenagens": 73,
+      "Uso de zebras": 84,
+      "Ritmo nos setores críticos": 78,
+      "Histórico": 72,
+      "Capacidade de ultrapassagem": 83
+    }
+  },
+  {
+    "id": "george-russell",
+    "name": "George Russell",
+    "short": "RUS",
+    "number": 63,
+    "country": "GB",
+    "flag": "🇬🇧",
+    "age": 31,
+    "rating": 92,
+    "potential": 96,
+    "teamId": "porsche",
+    "contract": 2032,
+    "salary": 9.5,
+    "attributes": {
+      "Velocidade pura": 96,
+      "Classificação": 90,
+      "Ritmo de corrida": 84,
+      "Largada": 95,
+      "Frenagem": 89,
+      "Entrada de curva": 99,
+      "Meio de curva": 94,
+      "Saída de curva": 88,
+      "Controle do carro": 99,
+      "Chuva": 93,
+      "Consistência": 87,
+      "Concentração": 98,
+      "Inteligência de corrida": 92,
+      "Ultrapassagem": 86,
+      "Defesa": 97,
+      "Agressividade": 91,
+      "Gestão de pneus": 85,
+      "Gestão de energia": 96,
+      "Adaptabilidade": 90,
+      "Feedback técnico": 84
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 87,
+        "trend": 4
+      },
+      {
+        "label": "Confiança",
+        "value": 90,
+        "trend": -4
+      },
+      {
+        "label": "Moral",
+        "value": 93,
+        "trend": -3
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 85,
+        "trend": -2
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 88,
+        "trend": -1
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 91,
+        "trend": 0
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 83,
+        "trend": 1
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 86,
+        "trend": 2
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 89,
+        "trend": 3
+      },
+      {
+        "label": "Momentum",
+        "value": 92,
+        "trend": 4
+      },
+      {
+        "label": "Condição física",
+        "value": 84,
+        "trend": -4
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 87,
+        "trend": -3
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 93,
+      "Adaptação ao layout": 87,
+      "Confiança nas curvas-chave": 81,
+      "Domínio das frenagens": 92,
+      "Uso de zebras": 86,
+      "Ritmo nos setores críticos": 97,
+      "Histórico": 91,
+      "Capacidade de ultrapassagem": 85
+    }
+  },
+  {
+    "id": "nico-hulkenberg",
+    "name": "Nico Hülkenberg",
+    "short": "HUL",
+    "number": 27,
+    "country": "DE",
+    "flag": "🇩🇪",
+    "age": 41,
+    "rating": 84,
+    "potential": 85,
+    "teamId": "porsche",
+    "contract": 2030,
+    "salary": 6.7,
+    "attributes": {
+      "Velocidade pura": 78,
+      "Classificação": 89,
+      "Ritmo de corrida": 83,
+      "Largada": 77,
+      "Frenagem": 88,
+      "Entrada de curva": 82,
+      "Meio de curva": 76,
+      "Saída de curva": 87,
+      "Controle do carro": 81,
+      "Chuva": 92,
+      "Consistência": 86,
+      "Concentração": 80,
+      "Inteligência de corrida": 91,
+      "Ultrapassagem": 85,
+      "Defesa": 79,
+      "Agressividade": 90,
+      "Gestão de pneus": 84,
+      "Gestão de energia": 78,
+      "Adaptabilidade": 89,
+      "Feedback técnico": 83
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 80,
+        "trend": -4
+      },
+      {
+        "label": "Confiança",
+        "value": 83,
+        "trend": -3
+      },
+      {
+        "label": "Moral",
+        "value": 75,
+        "trend": -2
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 78,
+        "trend": -1
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 81,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 84,
+        "trend": 1
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 76,
+        "trend": 2
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 79,
+        "trend": 3
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 82,
+        "trend": 4
+      },
+      {
+        "label": "Momentum",
+        "value": 85,
+        "trend": -4
+      },
+      {
+        "label": "Condição física",
+        "value": 77,
+        "trend": -3
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 80,
+        "trend": -2
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 75,
+      "Adaptação ao layout": 86,
+      "Confiança nas curvas-chave": 80,
+      "Domínio das frenagens": 74,
+      "Uso de zebras": 85,
+      "Ritmo nos setores críticos": 79,
+      "Histórico": 73,
+      "Capacidade de ultrapassagem": 84
+    }
+  },
+  {
+    "id": "lewis-hamilton",
+    "name": "Lewis Hamilton",
+    "short": "HAM",
+    "number": 44,
+    "country": "GB",
+    "flag": "🇬🇧",
+    "age": 44,
+    "rating": 91,
+    "potential": 93,
+    "teamId": "jaguar",
+    "contract": 2031,
+    "salary": 9.1,
+    "attributes": {
+      "Velocidade pura": 92,
+      "Classificação": 86,
+      "Ritmo de corrida": 97,
+      "Largada": 91,
+      "Frenagem": 85,
+      "Entrada de curva": 96,
+      "Meio de curva": 90,
+      "Saída de curva": 84,
+      "Controle do carro": 95,
+      "Chuva": 89,
+      "Consistência": 83,
+      "Concentração": 94,
+      "Inteligência de corrida": 88,
+      "Ultrapassagem": 99,
+      "Defesa": 93,
+      "Agressividade": 87,
+      "Gestão de pneus": 98,
+      "Gestão de energia": 92,
+      "Adaptabilidade": 86,
+      "Feedback técnico": 97
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 88,
+        "trend": -3
+      },
+      {
+        "label": "Confiança",
+        "value": 91,
+        "trend": -2
+      },
+      {
+        "label": "Moral",
+        "value": 83,
+        "trend": -1
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 86,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 89,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 92,
+        "trend": 2
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 84,
+        "trend": 3
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 87,
+        "trend": 4
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 90,
+        "trend": -4
+      },
+      {
+        "label": "Momentum",
+        "value": 82,
+        "trend": -3
+      },
+      {
+        "label": "Condição física",
+        "value": 85,
+        "trend": -2
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 88,
+        "trend": -1
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 89,
+      "Adaptação ao layout": 83,
+      "Confiança nas curvas-chave": 94,
+      "Domínio das frenagens": 88,
+      "Uso de zebras": 82,
+      "Ritmo nos setores críticos": 93,
+      "Histórico": 87,
+      "Capacidade de ultrapassagem": 81
+    }
+  },
+  {
+    "id": "valtteri-bottas",
+    "name": "Valtteri Bottas",
+    "short": "BOT",
+    "number": 77,
+    "country": "FI",
+    "flag": "🇫🇮",
+    "age": 39,
+    "rating": 83,
+    "potential": 85,
+    "teamId": "jaguar",
+    "contract": 2032,
+    "salary": 6.3,
+    "attributes": {
+      "Velocidade pura": 91,
+      "Classificação": 85,
+      "Ritmo de corrida": 79,
+      "Largada": 90,
+      "Frenagem": 84,
+      "Entrada de curva": 78,
+      "Meio de curva": 89,
+      "Saída de curva": 83,
+      "Controle do carro": 77,
+      "Chuva": 88,
+      "Consistência": 82,
+      "Concentração": 76,
+      "Inteligência de corrida": 87,
+      "Ultrapassagem": 81,
+      "Defesa": 75,
+      "Agressividade": 86,
+      "Gestão de pneus": 80,
+      "Gestão de energia": 91,
+      "Adaptabilidade": 85,
+      "Feedback técnico": 79
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 81,
+        "trend": -2
+      },
+      {
+        "label": "Confiança",
+        "value": 84,
+        "trend": -1
+      },
+      {
+        "label": "Moral",
+        "value": 76,
+        "trend": 0
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 79,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 82,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 74,
+        "trend": 3
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 77,
+        "trend": 4
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 80,
+        "trend": -4
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 83,
+        "trend": -3
+      },
+      {
+        "label": "Momentum",
+        "value": 75,
+        "trend": -2
+      },
+      {
+        "label": "Condição física",
+        "value": 78,
+        "trend": -1
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 81,
+        "trend": 0
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 88,
+      "Adaptação ao layout": 82,
+      "Confiança nas curvas-chave": 76,
+      "Domínio das frenagens": 87,
+      "Uso de zebras": 81,
+      "Ritmo nos setores críticos": 75,
+      "Histórico": 86,
+      "Capacidade de ultrapassagem": 80
+    }
+  },
+  {
+    "id": "charles-leclerc",
+    "name": "Charles Leclerc",
+    "short": "LEC",
+    "number": 16,
+    "country": "MC",
+    "flag": "🇲🇨",
+    "age": 31,
+    "rating": 94,
+    "potential": 98,
+    "teamId": "bugatti",
+    "contract": 2030,
+    "salary": 10.1,
+    "attributes": {
+      "Velocidade pura": 92,
+      "Classificação": 86,
+      "Ritmo de corrida": 97,
+      "Largada": 91,
+      "Frenagem": 99,
+      "Entrada de curva": 96,
+      "Meio de curva": 90,
+      "Saída de curva": 99,
+      "Controle do carro": 95,
+      "Chuva": 89,
+      "Consistência": 99,
+      "Concentração": 94,
+      "Inteligência de corrida": 88,
+      "Ultrapassagem": 99,
+      "Defesa": 93,
+      "Agressividade": 87,
+      "Gestão de pneus": 98,
+      "Gestão de energia": 92,
+      "Adaptabilidade": 86,
+      "Feedback técnico": 97
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 93,
+        "trend": -1
+      },
+      {
+        "label": "Confiança",
+        "value": 85,
+        "trend": 0
+      },
+      {
+        "label": "Moral",
+        "value": 88,
+        "trend": 1
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 91,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 94,
+        "trend": 3
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 86,
+        "trend": 4
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 89,
+        "trend": -4
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 92,
+        "trend": -3
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 95,
+        "trend": -2
+      },
+      {
+        "label": "Momentum",
+        "value": 87,
+        "trend": -1
+      },
+      {
+        "label": "Condição física",
+        "value": 90,
+        "trend": 0
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 93,
+        "trend": 1
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 89,
+      "Adaptação ao layout": 83,
+      "Confiança nas curvas-chave": 94,
+      "Domínio das frenagens": 88,
+      "Uso de zebras": 99,
+      "Ritmo nos setores críticos": 93,
+      "Histórico": 87,
+      "Capacidade de ultrapassagem": 98
+    }
+  },
+  {
+    "id": "esteban-ocon",
+    "name": "Esteban Ocon",
+    "short": "OCO",
+    "number": 31,
+    "country": "FR",
+    "flag": "🇫🇷",
+    "age": 32,
+    "rating": 85,
+    "potential": 90,
+    "teamId": "bugatti",
+    "contract": 2031,
+    "salary": 7,
+    "attributes": {
+      "Velocidade pura": 90,
+      "Classificação": 84,
+      "Ritmo de corrida": 78,
+      "Largada": 89,
+      "Frenagem": 83,
+      "Entrada de curva": 77,
+      "Meio de curva": 88,
+      "Saída de curva": 82,
+      "Controle do carro": 93,
+      "Chuva": 87,
+      "Consistência": 81,
+      "Concentração": 92,
+      "Inteligência de corrida": 86,
+      "Ultrapassagem": 80,
+      "Defesa": 91,
+      "Agressividade": 85,
+      "Gestão de pneus": 79,
+      "Gestão de energia": 90,
+      "Adaptabilidade": 84,
+      "Feedback técnico": 78
+    },
+    "dynamics": [
+      {
+        "label": "Forma atual",
+        "value": 85,
+        "trend": 0
+      },
+      {
+        "label": "Confiança",
+        "value": 77,
+        "trend": 1
+      },
+      {
+        "label": "Moral",
+        "value": 80,
+        "trend": 2
+      },
+      {
+        "label": "Entrosamento com carro",
+        "value": 83,
+        "trend": 3
+      },
+      {
+        "label": "Entrosamento com motor",
+        "value": 86,
+        "trend": 4
+      },
+      {
+        "label": "Entrosamento com engenheiro",
+        "value": 78,
+        "trend": -4
+      },
+      {
+        "label": "Domínio dos ajustes",
+        "value": 81,
+        "trend": -3
+      },
+      {
+        "label": "Gestão de pressão",
+        "value": 84,
+        "trend": -2
+      },
+      {
+        "label": "Conhecimento da pista",
+        "value": 76,
+        "trend": -1
+      },
+      {
+        "label": "Momentum",
+        "value": 79,
+        "trend": 0
+      },
+      {
+        "label": "Condição física",
+        "value": 82,
+        "trend": 1
+      },
+      {
+        "label": "Estado mental competitivo",
+        "value": 85,
+        "trend": 2
+      }
+    ],
+    "circuitAttributes": {
+      "Conhecimento da pista": 87,
+      "Adaptação ao layout": 81,
+      "Confiança nas curvas-chave": 75,
+      "Domínio das frenagens": 86,
+      "Uso de zebras": 80,
+      "Ritmo nos setores críticos": 74,
+      "Histórico": 85,
+      "Capacidade de ultrapassagem": 79
+    }
+  }
+]

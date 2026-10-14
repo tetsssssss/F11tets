@@ -1,0 +1,57 @@
+[
+  {
+    "season": 2029,
+    "champion": "max-verstappen",
+    "saveMegabytes": 50.608619,
+    "active": 32,
+    "pool": 56,
+    "archives": 1,
+    "negativeCashTeams": [],
+    "problems": [],
+    "elapsedSeconds": 19.113
+  },
+  {
+    "season": 2030,
+    "champion": "lando-norris",
+    "saveMegabytes": 99.69406,
+    "active": 32,
+    "pool": 64,
+    "archives": 2,
+    "negativeCashTeams": [],
+    "problems": [],
+    "elapsedSeconds": 43.212
+  },
+  {
+    "season": 2031,
+    "champion": "lando-norris",
+    "saveMegabytes": 148.421386,
+    "active": 32,
+    "pool": 72,
+    "archives": 3,
+    "negativeCashTeams": [],
+    "problems": [],
+    "elapsedSeconds": 73.353
+  },
+  {
+    "season": 2032,
+    "champion": "max-verstappen",
+    "saveMegabytes": 195.993633,
+    "active": 32,
+    "pool": 80,
+    "archives": 4,
+    "negativeCashTeams": [],
+    "problems": [],
+    "elapsedSeconds": 115.193
+  },
+  {
+    "season": 2033,
+    "champion": "lando-norris",
+    "saveMegabytes": 243.286989,
+    "active": 32,
+    "pool": 88,
+    "archives": 5,
+    "negativeCashTeams": [],
+    "problems": [],
+    "elapsedSeconds": 162.238
+  }
+]

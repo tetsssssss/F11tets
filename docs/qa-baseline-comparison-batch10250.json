@@ -1,0 +1,29 @@
+{
+  "races": 60,
+  "laps": 8,
+  "seconds": 1.35,
+  "distinctWinners": 4,
+  "topWinners": [
+    [
+      "max-verstappen",
+      40
+    ],
+    [
+      "lando-norris",
+      9
+    ],
+    [
+      "kimi-antonelli",
+      6
+    ],
+    [
+      "oscar-piastri",
+      5
+    ]
+  ],
+  "dnfs": 3,
+  "dsqs": 0,
+  "overtakeEvents": 9217,
+  "crashes": 0,
+  "provenance": "synthetic shortened 8-lap GP smoke test, NOT full-distance season simulation"
+}

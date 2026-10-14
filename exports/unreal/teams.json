@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "mclaren",
+    "name": "McLaren-Lotus",
+    "short": "MCL",
+    "color": "#ff9b43",
+    "secondary": "#15191d",
+    "engine": "Lotus",
+    "tires": "Pirelli",
+    "base": "Woking, Reino Unido",
+    "rating": 93,
+    "potential": 97,
+    "prestige": 95,
+    "battery": "Panasonic Energy",
+    "budget": 240,
+    "infrastructure": 91,
+    "attributes": {
+      "Aerodinâmica": 85,
+      "Eficiência aerodinâmica": 96,
+      "Curvas médias": 90,
+      "Curvas rápidas": 99,
+      "Chassi": 95,
+      "Suspensão": 89,
+      "Tração": 99,
+      "Frenagem": 94,
+      "Curvas lentas": 88,
+      "Velocidade de reta": 99,
+      "Confiabilidade": 93,
+      "Integração motor-chassi": 87,
+      "Refrigeração": 98,
+      "Gestão de pneus": 92,
+      "Aquecimento dos pneus": 86,
+      "Estratégia": 97,
+      "Pit stops": 91,
+      "Engenharia de pista": 85,
+      "Operação geral": 96,
+      "Desenvolvimento": 90
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 83,
+        "trend": -4
+      },
+      {
+        "label": "Momentum",
+        "value": 86,
+        "trend": -3
+      },
+      {
+        "label": "Moral",
+        "value": 89,
+        "trend": -2
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 92,
+        "trend": -1
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 84,
+        "trend": 0
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 87,
+        "trend": 1
+      },
+      {
+        "label": "Integração motor",
+        "value": 90,
+        "trend": 2
+      },
+      {
+        "label": "Integração pneus",
+        "value": 93,
+        "trend": 3
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 85,
+        "trend": 4
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 88,
+        "trend": -4
+      },
+      {
+        "label": "Pressão interna",
+        "value": 91,
+        "trend": -3
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 83,
+        "trend": -2
+      }
+    ]
+  },
+  {
+    "id": "ferrari",
+    "name": "Ferrari",
+    "short": "FER",
+    "color": "#f34c54",
+    "secondary": "#ffe390",
+    "engine": "Ferrari",
+    "tires": "Pirelli",
+    "base": "Maranello, Itália",
+    "rating": 92,
+    "potential": 98,
+    "prestige": 99,
+    "battery": "CATL",
+    "budget": 234,
+    "infrastructure": 90,
+    "attributes": {
+      "Aerodinâmica": 91,
+      "Eficiência aerodinâmica": 85,
+      "Curvas médias": 96,
+      "Curvas rápidas": 90,
+      "Chassi": 84,
+      "Suspensão": 95,
+      "Tração": 89,
+      "Frenagem": 99,
+      "Curvas lentas": 94,
+      "Velocidade de reta": 88,
+      "Confiabilidade": 99,
+      "Integração motor-chassi": 93,
+      "Refrigeração": 87,
+      "Gestão de pneus": 98,
+      "Aquecimento dos pneus": 92,
+      "Estratégia": 86,
+      "Pit stops": 97,
+      "Engenharia de pista": 91,
+      "Operação geral": 85,
+      "Desenvolvimento": 96
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 83,
+        "trend": -3
+      },
+      {
+        "label": "Momentum",
+        "value": 86,
+        "trend": -2
+      },
+      {
+        "label": "Moral",
+        "value": 89,
+        "trend": -1
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 92,
+        "trend": 0
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 84,
+        "trend": 1
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 87,
+        "trend": 2
+      },
+      {
+        "label": "Integração motor",
+        "value": 90,
+        "trend": 3
+      },
+      {
+        "label": "Integração pneus",
+        "value": 82,
+        "trend": 4
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 85,
+        "trend": -4
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 88,
+        "trend": -3
+      },
+      {
+        "label": "Pressão interna",
+        "value": 91,
+        "trend": -2
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 83,
+        "trend": -1
+      }
+    ]
+  },
+  {
+    "id": "mercedes",
+    "name": "Mercedes-AMG",
+    "short": "MER",
+    "color": "#5ee2c0",
+    "secondary": "#b5bbc0",
+    "engine": "Mercedes",
+    "tires": "Bridgestone",
+    "base": "Brackley, Reino Unido",
+    "rating": 94,
+    "potential": 98,
+    "prestige": 97,
+    "battery": "LG Energy Solution",
+    "budget": 228,
+    "infrastructure": 92,
+    "attributes": {
+      "Aerodinâmica": 99,
+      "Eficiência aerodinâmica": 94,
+      "Curvas médias": 88,
+      "Curvas rápidas": 99,
+      "Chassi": 93,
+      "Suspensão": 87,
+      "Tração": 98,
+      "Frenagem": 92,
+      "Curvas lentas": 86,
+      "Velocidade de reta": 97,
+      "Confiabilidade": 91,
+      "Integração motor-chassi": 99,
+      "Refrigeração": 96,
+      "Gestão de pneus": 90,
+      "Aquecimento dos pneus": 99,
+      "Estratégia": 95,
+      "Pit stops": 89,
+      "Engenharia de pista": 99,
+      "Operação geral": 94,
+      "Desenvolvimento": 88
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 86,
+        "trend": -2
+      },
+      {
+        "label": "Momentum",
+        "value": 89,
+        "trend": -1
+      },
+      {
+        "label": "Moral",
+        "value": 92,
+        "trend": 0
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 84,
+        "trend": 1
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 87,
+        "trend": 2
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 90,
+        "trend": 3
+      },
+      {
+        "label": "Integração motor",
+        "value": 93,
+        "trend": 4
+      },
+      {
+        "label": "Integração pneus",
+        "value": 85,
+        "trend": -4
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 88,
+        "trend": -3
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 91,
+        "trend": -2
+      },
+      {
+        "label": "Pressão interna",
+        "value": 94,
+        "trend": -1
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 86,
+        "trend": 0
+      }
+    ]
+  },
+  {
+    "id": "redbull",
+    "name": "Red Bull-Ford",
+    "short": "RBF",
+    "color": "#7698ff",
+    "secondary": "#ffd253",
+    "engine": "Ford",
+    "tires": "Pirelli",
+    "base": "Milton Keynes, Reino Unido",
+    "rating": 91,
+    "potential": 97,
+    "prestige": 95,
+    "battery": "Samsung SDI",
+    "budget": 222,
+    "infrastructure": 89,
+    "attributes": {
+      "Aerodinâmica": 87,
+      "Eficiência aerodinâmica": 98,
+      "Curvas médias": 92,
+      "Curvas rápidas": 86,
+      "Chassi": 97,
+      "Suspensão": 91,
+      "Tração": 85,
+      "Frenagem": 96,
+      "Curvas lentas": 90,
+      "Velocidade de reta": 84,
+      "Confiabilidade": 95,
+      "Integração motor-chassi": 89,
+      "Refrigeração": 83,
+      "Gestão de pneus": 94,
+      "Aquecimento dos pneus": 88,
+      "Estratégia": 99,
+      "Pit stops": 93,
+      "Engenharia de pista": 87,
+      "Operação geral": 98,
+      "Desenvolvimento": 92
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 84,
+        "trend": -1
+      },
+      {
+        "label": "Momentum",
+        "value": 87,
+        "trend": 0
+      },
+      {
+        "label": "Moral",
+        "value": 90,
+        "trend": 1
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 82,
+        "trend": 2
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 85,
+        "trend": 3
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 88,
+        "trend": 4
+      },
+      {
+        "label": "Integração motor",
+        "value": 91,
+        "trend": -4
+      },
+      {
+        "label": "Integração pneus",
+        "value": 83,
+        "trend": -3
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 86,
+        "trend": -2
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 89,
+        "trend": -1
+      },
+      {
+        "label": "Pressão interna",
+        "value": 81,
+        "trend": 0
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 84,
+        "trend": 1
+      }
+    ]
+  },
+  {
+    "id": "williams",
+    "name": "Williams-BMW",
+    "short": "WIL",
+    "color": "#65b4ff",
+    "secondary": "#ffffff",
+    "engine": "BMW",
+    "tires": "Michelin",
+    "base": "Grove, Reino Unido",
+    "rating": 85,
+    "potential": 93,
+    "prestige": 89,
+    "battery": "SK On",
+    "budget": 216,
+    "infrastructure": 83,
+    "attributes": {
+      "Aerodinâmica": 88,
+      "Eficiência aerodinâmica": 82,
+      "Curvas médias": 93,
+      "Curvas rápidas": 87,
+      "Chassi": 81,
+      "Suspensão": 92,
+      "Tração": 86,
+      "Frenagem": 80,
+      "Curvas lentas": 91,
+      "Velocidade de reta": 85,
+      "Confiabilidade": 79,
+      "Integração motor-chassi": 90,
+      "Refrigeração": 84,
+      "Gestão de pneus": 78,
+      "Aquecimento dos pneus": 89,
+      "Estratégia": 83,
+      "Pit stops": 77,
+      "Engenharia de pista": 88,
+      "Operação geral": 82,
+      "Desenvolvimento": 93
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 79,
+        "trend": 0
+      },
+      {
+        "label": "Momentum",
+        "value": 82,
+        "trend": 1
+      },
+      {
+        "label": "Moral",
+        "value": 85,
+        "trend": 2
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 77,
+        "trend": 3
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 80,
+        "trend": 4
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 83,
+        "trend": -4
+      },
+      {
+        "label": "Integração motor",
+        "value": 75,
+        "trend": -3
+      },
+      {
+        "label": "Integração pneus",
+        "value": 78,
+        "trend": -2
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 81,
+        "trend": -1
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 84,
+        "trend": 0
+      },
+      {
+        "label": "Pressão interna",
+        "value": 76,
+        "trend": 1
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 79,
+        "trend": 2
+      }
+    ]
+  },
+  {
+    "id": "haas",
+    "name": "Haas-Maserati",
+    "short": "HAA",
+    "color": "#d6d9e0",
+    "secondary": "#ef5350",
+    "engine": "Maserati",
+    "tires": "Continental",
+    "base": "Kannapolis, EUA",
+    "rating": 79,
+    "potential": 87,
+    "prestige": 71,
+    "battery": "Panasonic Energy",
+    "budget": 210,
+    "infrastructure": 77,
+    "attributes": {
+      "Aerodinâmica": 72,
+      "Eficiência aerodinâmica": 83,
+      "Curvas médias": 77,
+      "Curvas rápidas": 71,
+      "Chassi": 82,
+      "Suspensão": 76,
+      "Tração": 87,
+      "Frenagem": 81,
+      "Curvas lentas": 75,
+      "Velocidade de reta": 86,
+      "Confiabilidade": 80,
+      "Integração motor-chassi": 74,
+      "Refrigeração": 85,
+      "Gestão de pneus": 79,
+      "Aquecimento dos pneus": 73,
+      "Estratégia": 84,
+      "Pit stops": 78,
+      "Engenharia de pista": 72,
+      "Operação geral": 83,
+      "Desenvolvimento": 77
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 74,
+        "trend": 1
+      },
+      {
+        "label": "Momentum",
+        "value": 77,
+        "trend": 2
+      },
+      {
+        "label": "Moral",
+        "value": 69,
+        "trend": 3
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 72,
+        "trend": 4
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 75,
+        "trend": -4
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 78,
+        "trend": -3
+      },
+      {
+        "label": "Integração motor",
+        "value": 70,
+        "trend": -2
+      },
+      {
+        "label": "Integração pneus",
+        "value": 73,
+        "trend": -1
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 76,
+        "trend": 0
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 79,
+        "trend": 1
+      },
+      {
+        "label": "Pressão interna",
+        "value": 71,
+        "trend": 2
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 74,
+        "trend": 3
+      }
+    ]
+  },
+  {
+    "id": "audi",
+    "name": "Audi",
+    "short": "AUD",
+    "color": "#ff7759",
+    "secondary": "#c7cbd1",
+    "engine": "Audi",
+    "tires": "Continental",
+    "base": "Hinwil, Suíça",
+    "rating": 85,
+    "potential": 96,
+    "prestige": 85,
+    "battery": "CATL",
+    "budget": 204,
+    "infrastructure": 83,
+    "attributes": {
+      "Aerodinâmica": 85,
+      "Eficiência aerodinâmica": 79,
+      "Curvas médias": 90,
+      "Curvas rápidas": 84,
+      "Chassi": 78,
+      "Suspensão": 89,
+      "Tração": 83,
+      "Frenagem": 77,
+      "Curvas lentas": 88,
+      "Velocidade de reta": 82,
+      "Confiabilidade": 93,
+      "Integração motor-chassi": 87,
+      "Refrigeração": 81,
+      "Gestão de pneus": 92,
+      "Aquecimento dos pneus": 86,
+      "Estratégia": 80,
+      "Pit stops": 91,
+      "Engenharia de pista": 85,
+      "Operação geral": 79,
+      "Desenvolvimento": 90
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 81,
+        "trend": 2
+      },
+      {
+        "label": "Momentum",
+        "value": 84,
+        "trend": 3
+      },
+      {
+        "label": "Moral",
+        "value": 76,
+        "trend": 4
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 79,
+        "trend": -4
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 82,
+        "trend": -3
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 85,
+        "trend": -2
+      },
+      {
+        "label": "Integração motor",
+        "value": 77,
+        "trend": -1
+      },
+      {
+        "label": "Integração pneus",
+        "value": 80,
+        "trend": 0
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 83,
+        "trend": 1
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 75,
+        "trend": 2
+      },
+      {
+        "label": "Pressão interna",
+        "value": 78,
+        "trend": 3
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 81,
+        "trend": 4
+      }
+    ]
+  },
+  {
+    "id": "alpine",
+    "name": "Alpine-Renault",
+    "short": "ALP",
+    "color": "#f19ad6",
+    "secondary": "#62acff",
+    "engine": "Renault",
+    "tires": "Michelin",
+    "base": "Enstone, Reino Unido",
+    "rating": 82,
+    "potential": 90,
+    "prestige": 83,
+    "battery": "LG Energy Solution",
+    "budget": 198,
+    "infrastructure": 80,
+    "attributes": {
+      "Aerodinâmica": 89,
+      "Eficiência aerodinâmica": 83,
+      "Curvas médias": 77,
+      "Curvas rápidas": 88,
+      "Chassi": 82,
+      "Suspensão": 76,
+      "Tração": 87,
+      "Frenagem": 81,
+      "Curvas lentas": 75,
+      "Velocidade de reta": 86,
+      "Confiabilidade": 80,
+      "Integração motor-chassi": 74,
+      "Refrigeração": 85,
+      "Gestão de pneus": 79,
+      "Aquecimento dos pneus": 90,
+      "Estratégia": 84,
+      "Pit stops": 78,
+      "Engenharia de pista": 89,
+      "Operação geral": 83,
+      "Desenvolvimento": 77
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 79,
+        "trend": 3
+      },
+      {
+        "label": "Momentum",
+        "value": 82,
+        "trend": 4
+      },
+      {
+        "label": "Moral",
+        "value": 74,
+        "trend": -4
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 77,
+        "trend": -3
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 80,
+        "trend": -2
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 72,
+        "trend": -1
+      },
+      {
+        "label": "Integração motor",
+        "value": 75,
+        "trend": 0
+      },
+      {
+        "label": "Integração pneus",
+        "value": 78,
+        "trend": 1
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 81,
+        "trend": 2
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 73,
+        "trend": 3
+      },
+      {
+        "label": "Pressão interna",
+        "value": 76,
+        "trend": 4
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 79,
+        "trend": -4
+      }
+    ]
+  },
+  {
+    "id": "aston",
+    "name": "Aston Martin-Honda",
+    "short": "AMR",
+    "color": "#69c6a5",
+    "secondary": "#d8fa69",
+    "engine": "Honda",
+    "tires": "Bridgestone",
+    "base": "Silverstone, Reino Unido",
+    "rating": 86,
+    "potential": 94,
+    "prestige": 88,
+    "battery": "Samsung SDI",
+    "budget": 192,
+    "infrastructure": 84,
+    "attributes": {
+      "Aerodinâmica": 83,
+      "Eficiência aerodinâmica": 94,
+      "Curvas médias": 88,
+      "Curvas rápidas": 82,
+      "Chassi": 93,
+      "Suspensão": 87,
+      "Tração": 81,
+      "Frenagem": 92,
+      "Curvas lentas": 86,
+      "Velocidade de reta": 80,
+      "Confiabilidade": 91,
+      "Integração motor-chassi": 85,
+      "Refrigeração": 79,
+      "Gestão de pneus": 90,
+      "Aquecimento dos pneus": 84,
+      "Estratégia": 78,
+      "Pit stops": 89,
+      "Engenharia de pista": 83,
+      "Operação geral": 94,
+      "Desenvolvimento": 88
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 84,
+        "trend": 4
+      },
+      {
+        "label": "Momentum",
+        "value": 76,
+        "trend": -4
+      },
+      {
+        "label": "Moral",
+        "value": 79,
+        "trend": -3
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 82,
+        "trend": -2
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 85,
+        "trend": -1
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 77,
+        "trend": 0
+      },
+      {
+        "label": "Integração motor",
+        "value": 80,
+        "trend": 1
+      },
+      {
+        "label": "Integração pneus",
+        "value": 83,
+        "trend": 2
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 86,
+        "trend": 3
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 78,
+        "trend": 4
+      },
+      {
+        "label": "Pressão interna",
+        "value": 81,
+        "trend": -4
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 84,
+        "trend": -3
+      }
+    ]
+  },
+  {
+    "id": "cadillac",
+    "name": "Cadillac-GM",
+    "short": "CAD",
+    "color": "#d9c693",
+    "secondary": "#2c354a",
+    "engine": "GM/Cadillac",
+    "tires": "Michelin",
+    "base": "Fishers, EUA",
+    "rating": 79,
+    "potential": 91,
+    "prestige": 78,
+    "battery": "SK On",
+    "budget": 186,
+    "infrastructure": 77,
+    "attributes": {
+      "Aerodinâmica": 83,
+      "Eficiência aerodinâmica": 77,
+      "Curvas médias": 71,
+      "Curvas rápidas": 82,
+      "Chassi": 76,
+      "Suspensão": 87,
+      "Tração": 81,
+      "Frenagem": 75,
+      "Curvas lentas": 86,
+      "Velocidade de reta": 80,
+      "Confiabilidade": 74,
+      "Integração motor-chassi": 85,
+      "Refrigeração": 79,
+      "Gestão de pneus": 73,
+      "Aquecimento dos pneus": 84,
+      "Estratégia": 78,
+      "Pit stops": 72,
+      "Engenharia de pista": 83,
+      "Operação geral": 77,
+      "Desenvolvimento": 71
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 78,
+        "trend": -4
+      },
+      {
+        "label": "Momentum",
+        "value": 70,
+        "trend": -3
+      },
+      {
+        "label": "Moral",
+        "value": 73,
+        "trend": -2
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 76,
+        "trend": -1
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 79,
+        "trend": 0
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 71,
+        "trend": 1
+      },
+      {
+        "label": "Integração motor",
+        "value": 74,
+        "trend": 2
+      },
+      {
+        "label": "Integração pneus",
+        "value": 77,
+        "trend": 3
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 69,
+        "trend": 4
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 72,
+        "trend": -4
+      },
+      {
+        "label": "Pressão interna",
+        "value": 75,
+        "trend": -3
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 78,
+        "trend": -2
+      }
+    ]
+  },
+  {
+    "id": "hyundai",
+    "name": "Hyundai N",
+    "short": "HYN",
+    "color": "#a2d8f0",
+    "secondary": "#f45550",
+    "engine": "Hyundai",
+    "tires": "Continental",
+    "base": "Alzenau, Alemanha",
+    "rating": 78,
+    "potential": 89,
+    "prestige": 75,
+    "battery": "Panasonic Energy",
+    "budget": 180,
+    "infrastructure": 76,
+    "attributes": {
+      "Aerodinâmica": 72,
+      "Eficiência aerodinâmica": 83,
+      "Curvas médias": 77,
+      "Curvas rápidas": 71,
+      "Chassi": 82,
+      "Suspensão": 76,
+      "Tração": 70,
+      "Frenagem": 81,
+      "Curvas lentas": 75,
+      "Velocidade de reta": 86,
+      "Confiabilidade": 80,
+      "Integração motor-chassi": 74,
+      "Refrigeração": 85,
+      "Gestão de pneus": 79,
+      "Aquecimento dos pneus": 73,
+      "Estratégia": 84,
+      "Pit stops": 78,
+      "Engenharia de pista": 72,
+      "Operação geral": 83,
+      "Desenvolvimento": 77
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 78,
+        "trend": -3
+      },
+      {
+        "label": "Momentum",
+        "value": 70,
+        "trend": -2
+      },
+      {
+        "label": "Moral",
+        "value": 73,
+        "trend": -1
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 76,
+        "trend": 0
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 68,
+        "trend": 1
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 71,
+        "trend": 2
+      },
+      {
+        "label": "Integração motor",
+        "value": 74,
+        "trend": 3
+      },
+      {
+        "label": "Integração pneus",
+        "value": 77,
+        "trend": 4
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 69,
+        "trend": -4
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 72,
+        "trend": -3
+      },
+      {
+        "label": "Pressão interna",
+        "value": 75,
+        "trend": -2
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 78,
+        "trend": -1
+      }
+    ]
+  },
+  {
+    "id": "kia",
+    "name": "Kia-Toyota",
+    "short": "KIA",
+    "color": "#b1b9c6",
+    "secondary": "#fa7660",
+    "engine": "Toyota",
+    "tires": "Bridgestone",
+    "base": "Colônia, Alemanha",
+    "rating": 80,
+    "potential": 91,
+    "prestige": 77,
+    "battery": "CATL",
+    "budget": 174,
+    "infrastructure": 78,
+    "attributes": {
+      "Aerodinâmica": 81,
+      "Eficiência aerodinâmica": 75,
+      "Curvas médias": 86,
+      "Curvas rápidas": 80,
+      "Chassi": 74,
+      "Suspensão": 85,
+      "Tração": 79,
+      "Frenagem": 73,
+      "Curvas lentas": 84,
+      "Velocidade de reta": 78,
+      "Confiabilidade": 72,
+      "Integração motor-chassi": 83,
+      "Refrigeração": 77,
+      "Gestão de pneus": 88,
+      "Aquecimento dos pneus": 82,
+      "Estratégia": 76,
+      "Pit stops": 87,
+      "Engenharia de pista": 81,
+      "Operação geral": 75,
+      "Desenvolvimento": 86
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 70,
+        "trend": -2
+      },
+      {
+        "label": "Momentum",
+        "value": 73,
+        "trend": -1
+      },
+      {
+        "label": "Moral",
+        "value": 76,
+        "trend": 0
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 79,
+        "trend": 1
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 71,
+        "trend": 2
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 74,
+        "trend": 3
+      },
+      {
+        "label": "Integração motor",
+        "value": 77,
+        "trend": 4
+      },
+      {
+        "label": "Integração pneus",
+        "value": 80,
+        "trend": -4
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 72,
+        "trend": -3
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 75,
+        "trend": -2
+      },
+      {
+        "label": "Pressão interna",
+        "value": 78,
+        "trend": -1
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 70,
+        "trend": 0
+      }
+    ]
+  },
+  {
+    "id": "byd",
+    "name": "BYD",
+    "short": "BYD",
+    "color": "#ba99e5",
+    "secondary": "#e5e9f1",
+    "engine": "BYD",
+    "tires": "Continental",
+    "base": "Shenzhen, China",
+    "rating": 76,
+    "potential": 92,
+    "prestige": 70,
+    "battery": "LG Energy Solution",
+    "budget": 168,
+    "infrastructure": 74,
+    "attributes": {
+      "Aerodinâmica": 84,
+      "Eficiência aerodinâmica": 78,
+      "Curvas médias": 72,
+      "Curvas rápidas": 83,
+      "Chassi": 77,
+      "Suspensão": 71,
+      "Tração": 82,
+      "Frenagem": 76,
+      "Curvas lentas": 70,
+      "Velocidade de reta": 81,
+      "Confiabilidade": 75,
+      "Integração motor-chassi": 69,
+      "Refrigeração": 80,
+      "Gestão de pneus": 74,
+      "Aquecimento dos pneus": 68,
+      "Estratégia": 79,
+      "Pit stops": 73,
+      "Engenharia de pista": 84,
+      "Operação geral": 78,
+      "Desenvolvimento": 72
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 67,
+        "trend": -1
+      },
+      {
+        "label": "Momentum",
+        "value": 70,
+        "trend": 0
+      },
+      {
+        "label": "Moral",
+        "value": 73,
+        "trend": 1
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 76,
+        "trend": 2
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 68,
+        "trend": 3
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 71,
+        "trend": 4
+      },
+      {
+        "label": "Integração motor",
+        "value": 74,
+        "trend": -4
+      },
+      {
+        "label": "Integração pneus",
+        "value": 66,
+        "trend": -3
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 69,
+        "trend": -2
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 72,
+        "trend": -1
+      },
+      {
+        "label": "Pressão interna",
+        "value": 75,
+        "trend": 0
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 67,
+        "trend": 1
+      }
+    ]
+  },
+  {
+    "id": "porsche",
+    "name": "Porsche",
+    "short": "POR",
+    "color": "#e2bd7d",
+    "secondary": "#f4f0e4",
+    "engine": "Porsche",
+    "tires": "Michelin",
+    "base": "Weissach, Alemanha",
+    "rating": 89,
+    "potential": 98,
+    "prestige": 94,
+    "battery": "Samsung SDI",
+    "budget": 162,
+    "infrastructure": 87,
+    "attributes": {
+      "Aerodinâmica": 87,
+      "Eficiência aerodinâmica": 81,
+      "Curvas médias": 92,
+      "Curvas rápidas": 86,
+      "Chassi": 97,
+      "Suspensão": 91,
+      "Tração": 85,
+      "Frenagem": 96,
+      "Curvas lentas": 90,
+      "Velocidade de reta": 84,
+      "Confiabilidade": 95,
+      "Integração motor-chassi": 89,
+      "Refrigeração": 83,
+      "Gestão de pneus": 94,
+      "Aquecimento dos pneus": 88,
+      "Estratégia": 82,
+      "Pit stops": 93,
+      "Engenharia de pista": 87,
+      "Operação geral": 81,
+      "Desenvolvimento": 92
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 81,
+        "trend": 0
+      },
+      {
+        "label": "Momentum",
+        "value": 84,
+        "trend": 1
+      },
+      {
+        "label": "Moral",
+        "value": 87,
+        "trend": 2
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 79,
+        "trend": 3
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 82,
+        "trend": 4
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 85,
+        "trend": -4
+      },
+      {
+        "label": "Integração motor",
+        "value": 88,
+        "trend": -3
+      },
+      {
+        "label": "Integração pneus",
+        "value": 80,
+        "trend": -2
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 83,
+        "trend": -1
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 86,
+        "trend": 0
+      },
+      {
+        "label": "Pressão interna",
+        "value": 89,
+        "trend": 1
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 81,
+        "trend": 2
+      }
+    ]
+  },
+  {
+    "id": "jaguar",
+    "name": "Jaguar-JLR",
+    "short": "JAG",
+    "color": "#85c997",
+    "secondary": "#e2bd7d",
+    "engine": "Jaguar/JLR",
+    "tires": "Bridgestone",
+    "base": "Coventry, Reino Unido",
+    "rating": 83,
+    "potential": 93,
+    "prestige": 88,
+    "battery": "SK On",
+    "budget": 156,
+    "infrastructure": 81,
+    "attributes": {
+      "Aerodinâmica": 88,
+      "Eficiência aerodinâmica": 82,
+      "Curvas médias": 76,
+      "Curvas rápidas": 87,
+      "Chassi": 81,
+      "Suspensão": 75,
+      "Tração": 86,
+      "Frenagem": 80,
+      "Curvas lentas": 91,
+      "Velocidade de reta": 85,
+      "Confiabilidade": 79,
+      "Integração motor-chassi": 90,
+      "Refrigeração": 84,
+      "Gestão de pneus": 78,
+      "Aquecimento dos pneus": 89,
+      "Estratégia": 83,
+      "Pit stops": 77,
+      "Engenharia de pista": 88,
+      "Operação geral": 82,
+      "Desenvolvimento": 76
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 76,
+        "trend": 1
+      },
+      {
+        "label": "Momentum",
+        "value": 79,
+        "trend": 2
+      },
+      {
+        "label": "Moral",
+        "value": 82,
+        "trend": 3
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 74,
+        "trend": 4
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 77,
+        "trend": -4
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 80,
+        "trend": -3
+      },
+      {
+        "label": "Integração motor",
+        "value": 83,
+        "trend": -2
+      },
+      {
+        "label": "Integração pneus",
+        "value": 75,
+        "trend": -1
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 78,
+        "trend": 0
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 81,
+        "trend": 1
+      },
+      {
+        "label": "Pressão interna",
+        "value": 73,
+        "trend": 2
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 76,
+        "trend": 3
+      }
+    ]
+  },
+  {
+    "id": "bugatti",
+    "name": "Bugatti",
+    "short": "BUG",
+    "color": "#80bdff",
+    "secondary": "#262f52",
+    "engine": "Citroën/Peugeot",
+    "tires": "Michelin",
+    "base": "Molsheim, França",
+    "rating": 87,
+    "potential": 98,
+    "prestige": 92,
+    "battery": "Panasonic Energy",
+    "budget": 150,
+    "infrastructure": 85,
+    "attributes": {
+      "Aerodinâmica": 82,
+      "Eficiência aerodinâmica": 93,
+      "Curvas médias": 87,
+      "Curvas rápidas": 81,
+      "Chassi": 92,
+      "Suspensão": 86,
+      "Tração": 80,
+      "Frenagem": 91,
+      "Curvas lentas": 85,
+      "Velocidade de reta": 79,
+      "Confiabilidade": 90,
+      "Integração motor-chassi": 84,
+      "Refrigeração": 95,
+      "Gestão de pneus": 89,
+      "Aquecimento dos pneus": 83,
+      "Estratégia": 94,
+      "Pit stops": 88,
+      "Engenharia de pista": 82,
+      "Operação geral": 93,
+      "Desenvolvimento": 87
+    },
+    "dynamics": [
+      {
+        "label": "Forma técnica",
+        "value": 81,
+        "trend": 2
+      },
+      {
+        "label": "Momentum",
+        "value": 84,
+        "trend": 3
+      },
+      {
+        "label": "Moral",
+        "value": 87,
+        "trend": 4
+      },
+      {
+        "label": "Confiança no projeto",
+        "value": 79,
+        "trend": -4
+      },
+      {
+        "label": "Compreensão do carro",
+        "value": 82,
+        "trend": -3
+      },
+      {
+        "label": "Correlação CFD/túnel/pista",
+        "value": 85,
+        "trend": -2
+      },
+      {
+        "label": "Integração motor",
+        "value": 77,
+        "trend": -1
+      },
+      {
+        "label": "Integração pneus",
+        "value": 80,
+        "trend": 0
+      },
+      {
+        "label": "Eficiência de upgrades",
+        "value": 83,
+        "trend": 1
+      },
+      {
+        "label": "Execução operacional atual",
+        "value": 86,
+        "trend": 2
+      },
+      {
+        "label": "Pressão interna",
+        "value": 78,
+        "trend": 3
+      },
+      {
+        "label": "Estabilidade técnica",
+        "value": 81,
+        "trend": 4
+      }
+    ]
+  }
+]

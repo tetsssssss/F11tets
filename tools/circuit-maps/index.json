@@ -1,0 +1,212 @@
+[
+  {
+    "id": "gp-1",
+    "name": "Albert Park",
+    "geometryStatus": "provisional",
+    "points": 840
+  },
+  {
+    "id": "gp-2",
+    "name": "Shanghai International",
+    "geometryStatus": "provisional",
+    "points": 660
+  },
+  {
+    "id": "gp-3",
+    "name": "Suzuka",
+    "geometryStatus": "provisional",
+    "points": 780
+  },
+  {
+    "id": "gp-4",
+    "name": "Korea International",
+    "geometryStatus": "provisional",
+    "points": 780
+  },
+  {
+    "id": "gp-5",
+    "name": "Bahrain International",
+    "geometryStatus": "provisional",
+    "points": 600
+  },
+  {
+    "id": "gp-6",
+    "name": "Jeddah Corniche",
+    "geometryStatus": "provisional",
+    "points": 720
+  },
+  {
+    "id": "gp-7",
+    "name": "Lusail International",
+    "geometryStatus": "provisional",
+    "points": 660
+  },
+  {
+    "id": "gp-8",
+    "name": "Kyalami",
+    "geometryStatus": "provisional",
+    "points": 660
+  },
+  {
+    "id": "gp-9",
+    "name": "Miami International",
+    "geometryStatus": "provisional",
+    "points": 840
+  },
+  {
+    "id": "gp-10",
+    "name": "Hermanos Rodríguez",
+    "geometryStatus": "provisional",
+    "points": 720
+  },
+  {
+    "id": "gp-11",
+    "name": "Oscar y Juan Gálvez",
+    "geometryStatus": "provisional",
+    "points": 660
+  },
+  {
+    "id": "gp-12",
+    "name": "Interlagos",
+    "geometryStatus": "provisional",
+    "points": 600
+  },
+  {
+    "id": "gp-13",
+    "name": "Algarve International",
+    "geometryStatus": "provisional",
+    "points": 600
+  },
+  {
+    "id": "gp-14",
+    "name": "Barcelona-Catalunya",
+    "geometryStatus": "provisional",
+    "points": 840
+  },
+  {
+    "id": "gp-15",
+    "name": "Circuit de Monaco",
+    "geometryStatus": "provisional",
+    "points": 840
+  },
+  {
+    "id": "gp-16",
+    "name": "Imola",
+    "geometryStatus": "provisional",
+    "points": 840
+  },
+  {
+    "id": "gp-17",
+    "name": "Gilles Villeneuve",
+    "geometryStatus": "provisional",
+    "points": 840
+  },
+  {
+    "id": "gp-18",
+    "name": "Paul Ricard",
+    "geometryStatus": "provisional",
+    "points": 600
+  },
+  {
+    "id": "gp-19",
+    "name": "Red Bull Ring",
+    "geometryStatus": "provisional",
+    "points": 600
+  },
+  {
+    "id": "gp-20",
+    "name": "Silverstone",
+    "geometryStatus": "provisional",
+    "points": 780
+  },
+  {
+    "id": "gp-21",
+    "name": "Hockenheimring",
+    "geometryStatus": "provisional",
+    "points": 720
+  },
+  {
+    "id": "gp-22",
+    "name": "Spa-Francorchamps",
+    "geometryStatus": "provisional",
+    "points": 840
+  },
+  {
+    "id": "gp-23",
+    "name": "Hungaroring",
+    "geometryStatus": "provisional",
+    "points": 840
+  },
+  {
+    "id": "gp-24",
+    "name": "Zandvoort",
+    "geometryStatus": "provisional",
+    "points": 840
+  },
+  {
+    "id": "gp-25",
+    "name": "Monza",
+    "geometryStatus": "provisional",
+    "points": 660
+  },
+  {
+    "id": "gp-26",
+    "name": "Istanbul Park",
+    "geometryStatus": "provisional",
+    "points": 840
+  },
+  {
+    "id": "gp-27",
+    "name": "Baku City Circuit",
+    "geometryStatus": "provisional",
+    "points": 600
+  },
+  {
+    "id": "gp-28",
+    "name": "Buddh International",
+    "geometryStatus": "provisional",
+    "points": 660
+  },
+  {
+    "id": "gp-29",
+    "name": "Marina Bay",
+    "geometryStatus": "provisional",
+    "points": 840
+  },
+  {
+    "id": "gp-30",
+    "name": "Sepang International",
+    "geometryStatus": "provisional",
+    "points": 600
+  },
+  {
+    "id": "gp-31",
+    "name": "Chang International",
+    "geometryStatus": "provisional",
+    "points": 720
+  },
+  {
+    "id": "gp-32",
+    "name": "Circuit of the Americas",
+    "geometryStatus": "provisional",
+    "points": 600
+  },
+  {
+    "id": "gp-33",
+    "name": "Las Vegas Strip",
+    "geometryStatus": "provisional",
+    "points": 720
+  },
+  {
+    "id": "gp-34",
+    "name": "Fuji Speedway",
+    "geometryStatus": "provisional",
+    "points": 660
+  },
+  {
+    "id": "gp-35",
+    "name": "Yas Marina",
+    "geometryStatus": "provisional",
+    "points": 660
+  }
+]

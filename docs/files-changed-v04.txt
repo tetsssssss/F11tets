@@ -1,0 +1,119 @@
+ M .gitignore
+ M README.md
+ M docs/VALIDATION.md
+ M docs/screenshots/driver-android.png
+ M docs/screenshots/driver-desktop.png
+ M docs/screenshots/home-1366x768.png
+ M docs/screenshots/home-1920x1080.png
+ M docs/screenshots/home-390x844.png
+ M docs/screenshots/home-768x1024.png
+ M docs/screenshots/home-android.png
+ M docs/screenshots/home-desktop.png
+ M docs/screenshots/news-mobile.png
+ M docs/screenshots/race-android.png
+ M docs/screenshots/race-desktop.png
+ M docs/screenshots/team-android.png
+ M docs/screenshots/team-desktop.png
+ M exports/unreal/championship.json
+ M exports/unreal/circuits.json
+ M exports/unreal/drivers.json
+ M exports/unreal/schemaVersion.json
+ M exports/unreal/teams.json
+ M next-env.d.ts
+ M next.config.ts
+ M package-lock.json
+ M package.json
+ M playwright.config.ts
+ M src/app/[[...route]]/page.tsx
+ M src/app/globals.css
+ M src/components/save-provider.tsx
+ M src/components/shell.tsx
+ M src/components/ui.tsx
+ M src/components/visuals.tsx
+ M src/domain/export.ts
+ M src/domain/save.ts
+ M src/domain/selectors.ts
+ M src/domain/simulation.ts
+ M src/domain/types.ts
+ M src/features/competition.tsx
+ M src/features/development.tsx
+ M src/features/home.tsx
+ M src/features/profiles.tsx
+ M src/features/race.tsx
+ M src/features/settings.tsx
+ M src/features/weekend.tsx
+ M tests/domain.test.ts
+ M tests/e2e/universe.spec.ts
+ M tsconfig.json
+?? AGENT_HANDOFF.md
+?? F1_UNIVERSE_STATUS.md
+?? FOTOS_FALTANTES.txt
+?? NETLIFY_LEIA-ME.txt
+?? NEXT_AGENT_HANDOFF.md
+?? PHOTO_AUDIT_REPORT.md
+?? PROJECT_AUDIT.md
+?? PROTOTYPE_STATUS.md
+?? TRACK_2D_AUDIT.md
+?? VISUAL_AND_2D_STATUS.md
+?? assets/
+?? docs/files-changed-v04.txt
+?? docs/final-route-audit.json
+?? docs/initial-route-audit.json
+?? docs/screenshots/career-market-android.png
+?? docs/screenshots/career-market-desktop.png
+?? docs/screenshots/career-plan-android.png
+?? docs/screenshots/career-plan-desktop.png
+?? docs/screenshots/champions-android.png
+?? docs/screenshots/champions-desktop.png
+?? docs/screenshots/live-construtor-android.png
+?? docs/screenshots/live-construtor-desktop.png
+?? docs/screenshots/live-piloto-android.png
+?? docs/screenshots/live-piloto-desktop.png
+?? docs/screenshots/netlify-portrait-android.png
+?? docs/screenshots/netlify-portrait-desktop.png
+?? docs/screenshots/netlify-race-android.png
+?? docs/screenshots/netlify-race-desktop.png
+?? docs/soak-v04.json
+?? netlify.toml
+?? netlify/
+?? public/
+?? scripts/audit-photos.ts
+?? scripts/audit-routes.mjs
+?? scripts/audit-tracks.ts
+?? scripts/build-photos.ts
+?? scripts/discover-photos.ts
+?? scripts/download-photos.ts
+?? scripts/package-netlify.ps1
+?? scripts/package-photos.ts
+?? scripts/photo-credits.ts
+?? scripts/photo-finalize-inputs.ts
+?? scripts/photo-sources-extra.ts
+?? scripts/prepare-photo-inputs.ts
+?? scripts/soak-universe.ts
+?? src/components/person-portrait.tsx
+?? src/data/photo-manifest.json
+?? src/domain/gameplay/
+?? src/domain/legacy/
+?? src/domain/persistence.ts
+?? src/domain/simulation/
+?? src/domain/universe/
+?? src/features/career.tsx
+?? src/features/dev-race-2d.tsx
+?? src/features/dev.tsx
+?? src/features/live-map.tsx
+?? src/features/live-race.tsx
+?? src/features/new-game.tsx
+?? src/features/quick-race.tsx
+?? src/features/race-command-card.tsx
+?? src/features/recovery.tsx
+?? src/features/universe.tsx
+?? src/presentation/circuit-geometry.ts
+?? src/presentation/person-photo.ts
+?? src/presentation/race-presentation.ts
+?? tests/career.test.ts
+?? tests/e2e/career.spec.ts
+?? tests/e2e/gameplay.spec.ts
+?? tests/e2e/netlify-visual.spec.ts
+?? tests/gameplay.test.ts
+?? tests/presentation.test.ts
+?? vite.netlify.config.ts

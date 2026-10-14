@@ -1,0 +1,37 @@
+F1 UNIVERSE 2029 — PACOTE PARA NETLIFY
+Preparado em 06/10/2026.
+
+PUBLICAR E JOGAR
+1. Acesse https://app.netlify.com/drop e entre na sua conta.
+2. Arraste F1_UNIVERSE_2029_NETLIFY.zip para a área de publicação.
+   Se a interface pedir uma pasta, extraia o ZIP e envie a pasta que contém index.html.
+3. Abra o endereço fornecido pelo Netlify e escolha Piloto ou Construtor.
+4. O pacote já está compilado. Não precisa enviar código-fonte, node_modules ou instalar Node no Netlify.
+
+SAVES
+O progresso é salvo no navegador, em três slots. Use Configurações > Exportar save para fazer backup.
+O endereço do Netlify tem armazenamento separado do localhost. Para continuar uma carreira antiga,
+exporte no endereço antigo e importe o JSON em Configurações no site publicado.
+Mantenha o mesmo endereço do site ao atualizar. Apagar os dados do navegador pode apagar seus saves.
+Não há sincronização de saves entre computadores ou contas online.
+
+CONTEÚDO
+16 equipes, 32 titulares, 35 GPs, modos Piloto/Construtor/Espectador, corrida rápida,
+simulação local, fotos locais e fontes locais. Navegação com recarga direta das rotas via _redirects.
+O código de simulação é o mesmo do projeto Next.js; a entrada estática adapta apenas navegação/carregamento.
+
+FONTES DAS FOTOS
+assets/people/PHOTO_SOURCES.json contém procedência, autoria e licença por imagem.
+29 fotos têm licença de redistribuição não confirmada, indicada como unknown-license.
+O pacote não atribui a essas fotos uma licença livre. Duas imagens Wikimedia são CC BY-SA 4.0,
+com recorte identificado como adaptação; uma imagem está identificada como domínio público.
+Personagens fictícios usam ilustrações próprias. Uniformes históricos não alteram o grid alternativo de 2029.
+
+LIMITES DO PROTÓTIPO
+Os 35 traçados 2D são geometrias estilizadas provisórias, não mapas oficiais medidos.
+Reservas e engenheiros são fictícios/procedurais. Categorias de base são simulações anuais resumidas.
+Temporadas arquivadas preservam resultados, contratos, estatísticas e eventos. Na opção de telemetria
+resumida, frames de animação por volta são descartados no fechamento para limitar memória.
+Com telemetria completa, saves de muitas temporadas podem consumir bastante memória. Não existe 3D Unreal integrado.
+
+Documentação do Netlify: https://docs.netlify.com/start/quickstarts/netlify-drop-quickstart/

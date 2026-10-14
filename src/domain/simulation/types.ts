@@ -1,0 +1,240 @@
+import type { BatterySource, EngineSource, TyreSource } from './world';
+import type { Circuit, Driver, Engineer, Ratings, Result, Team, Weekend } from '../types';
+export type EnergyMode = 'Save' | 'Race' | 'Attack' | 'Boost' | 'Overtake';
+export type AeroMode = 'Corner' | 'Flow' | 'Straight' | 'Follow';
+export type Compound = 'H' | 'M' | 'S' | 'I' | 'W';
+export type RaceControl = 'GREEN' | 'YELLOW' | 'DOUBLE YELLOW' | 'VSC' | 'SC' | 'RED' | 'CHEQUERED';
+export type CircuitModel = Circuit & {
+  straights: number;
+  averageSpeed: number;
+  aero: number;
+  abrasion: number;
+  overtaking: number;
+  rainSensitivity: number;
+  frontWear: number;
+  rearWear: number;
+  braking: number;
+  regeneration: number;
+  power: number;
+  traction: number;
+};
+export type Decision = {
+  frontWing?: number;
+  rearWing?: number;
+  rideHeight?: number;
+  differential?: number;
+  brakeMigration?: number;
+  cooling?: number;
+  practiceFocus?: 'Long Run' | 'Qualifying' | 'Tyres' | 'Battery' | 'Aero' | 'Setup' | 'Rookie';
+  release?: 'early' | 'middle' | 'late';
+  suspension?: 'Macia' | 'Equilibrada' | 'Rígida';
+  brakes?: 'Conservadora' | 'Equilibrada' | 'Agressiva';
+  compound: Compound;
+  engineMap: 'Economy' | 'Race' | 'Quali';
+  energy: EnergyMode;
+  regen: number;
+  aero: AeroMode;
+  wing: number;
+  balance: number;
+  pace: 'Conservar' | 'Equilibrado' | 'Atacar';
+  pitLap: number;
+  orders: boolean;
+};
+export type Setup = {
+  confidence: number;
+  tyreUnderstanding: number;
+  batteryUnderstanding: number;
+  setsUsed: number;
+  learnedWing: number;
+  learnedBalance: number;
+};
+export type CarState = {
+  mileage: number;
+  wear: number;
+  temperature: number;
+  fuel: number;
+  battery: number;
+  batteryTemperature: number;
+  batteryWear: number;
+  damage: Record<string, number>;
+  upgradeSeconds: number;
+};
+export type Weather = {
+  condition: string;
+  air: number;
+  track: number;
+  wind: number;
+  humidity: number;
+  intensity: number;
+  water: number;
+  grip: number;
+  forecast: number;
+};
+export type TyreState = {
+  compound: Compound;
+  temperature: number;
+  wear: number;
+  graining: number;
+  overheating: number;
+  life: number;
+  punctureRisk: number;
+};
+export type PenaltyKind =
+  '5s' | '10s' | '15s' | 'Drive Through' | 'Stop-Go' | 'Grid Penalty' | 'DSQ';
+export type RaceEvent = {
+  lap: number;
+  driverId: string;
+  otherId?: string;
+  type: string;
+  detail: string;
+  severity?: 'leve' | 'moderado' | 'grave' | 'terminal';
+};
+// Compact lap snapshots, in running order. No visual layer fabricates telemetry.
+export type Telemetry = {
+  id: string;
+  position: number;
+  elapsed: number;
+  gap: number;
+  tyre: Compound;
+  tyreWear: number;
+  tyreTemp: number;
+  battery: number;
+  pits: number;
+  status: 'RUNNING' | 'DNF' | 'DSQ';
+  lap: number;
+  energy: EnergyMode;
+  aero: AeroMode;
+  tyreAge?: number;
+  lastLap?: number;
+  command?: string;
+  pit?: string;
+  sector?: number;
+  relativeSpeed?: number;
+};
+export type RaceFrame = { lap: number; control: RaceControl; weather: Weather; cars: Telemetry[] };
+export type RaceTape = {
+  compact?: boolean;
+  seed: number;
+  frames: RaceFrame[];
+  events: RaceEvent[];
+  decisions: Record<string, Decision>;
+  laps: number;
+};
+export type LedgerEntry = {
+  round: number;
+  season: number;
+  category: string;
+  amount: number;
+  detail: string;
+};
+export type Finance = { cash: number; income: number; expenses: number; ledger: LedgerEntry[] };
+export type Contract = {
+  id: string;
+  kind: 'driver' | 'engineer';
+  personId: string;
+  teamId: string;
+  until: number;
+  salary: number;
+  buyout: number;
+  status: 'active' | 'future' | 'expired';
+  option: boolean;
+  performanceClause: number;
+  replaceId?: string;
+};
+export type Upgrade = {
+  id: string;
+  projectId: string;
+  teamId: string;
+  start: number;
+  due: number;
+  cost: number;
+  expected: number;
+  actual: number | null;
+  status: 'active' | 'delivered';
+  progress: number;
+};
+export type Stats = {
+  starts: number;
+  wins: number;
+  podiums: number;
+  poles: number;
+  fastestLaps: number;
+  dnfs: number;
+  sprintWins: number;
+  points: number;
+  overtakes: number;
+  finishes: number[];
+  qualifying: number[];
+};
+export type News = {
+  id: string;
+  round: number;
+  season: number;
+  category: string;
+  title: string;
+  body: string;
+};
+export type Archive = {
+  snapshot?: import('../universe/types').SeasonSnapshot;
+  season: number;
+  driverChampion: string;
+  teamChampion: string;
+  points: Record<string, number>;
+  teamPoints: Record<string, number>;
+  stats: Record<string, Stats>;
+  weekends: Weekend[];
+};
+export type Interview = {
+  id: string;
+  driverId: string;
+  round: number;
+  answered: boolean;
+  answer?: string;
+};
+export type Universe = {
+  engineVersion: 2;
+  seasonSeed: number;
+  phase: 'season' | 'postseason';
+  drivers: Driver[];
+  teams: Team[];
+  engineers: Engineer[];
+  circuits: CircuitModel[];
+  engines: EngineSource[];
+  batteries: BatterySource[];
+  tyres: TyreSource[];
+  cars: Record<string, CarState>;
+  setups: Record<string, Setup>;
+  decisions: Record<string, Decision>;
+  knowledge: Record<string, Record<string, Ratings>>;
+  relationships: Record<string, Ratings>;
+  finances: Record<string, Finance>;
+  contracts: Contract[];
+  development: Upgrade[];
+  atr: Record<string, number>;
+  news: News[];
+  interviews: Interview[];
+  reputation: Record<string, number>;
+  stats: Record<string, Stats>;
+  teamStats: Record<string, Stats>;
+  teamPoints: Record<string, number>;
+  constructorBonus: Record<string, number>;
+  penalties: {
+    season: number;
+    round: number;
+    driverId: string;
+    kind: PenaltyKind;
+    seconds: number;
+    points: number;
+  }[];
+  discipline: Record<string, number>;
+  gridPenalties: Record<string, number>;
+  history: Archive[];
+  champions: { season: number; driver: string; team: string }[];
+  weather: Weather;
+  champion: string | null;
+  constructorChampion: string | null;
+  philosophies: Record<
+    string,
+    { risk: number; ambition: number; patience: number; development: number }
+  >;
+};

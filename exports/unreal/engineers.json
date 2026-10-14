@@ -1,0 +1,1698 @@
+[
+  {
+    "id": "eng-lando-norris",
+    "name": "Elliot Hayes",
+    "driverId": "lando-norris",
+    "teamId": "mclaren",
+    "fictional": true,
+    "rating": 80,
+    "synergy": 78,
+    "attributes": {
+      "Comunicação": 76,
+      "Leitura de corrida": 87,
+      "Acerto do carro": 81,
+      "Gestão estratégica": 92,
+      "Gestão de energia": 86,
+      "Análise de dados": 80,
+      "Gestão de pneus": 91,
+      "Reação sob pressão": 85,
+      "Conhecimento técnico": 79,
+      "Gestão do piloto": 90
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 77,
+        "trend": -4
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 80,
+        "trend": -3
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 83,
+        "trend": -2
+      },
+      {
+        "label": "Forma operacional",
+        "value": 86,
+        "trend": -1
+      },
+      {
+        "label": "Pressão",
+        "value": 78,
+        "trend": 0
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 81,
+        "trend": 1
+      }
+    ]
+  },
+  {
+    "id": "eng-arvid-lindblad",
+    "name": "Adrian Clarke",
+    "driverId": "arvid-lindblad",
+    "teamId": "mclaren",
+    "fictional": true,
+    "rating": 81,
+    "synergy": 79,
+    "attributes": {
+      "Comunicação": 84,
+      "Leitura de corrida": 78,
+      "Acerto do carro": 89,
+      "Gestão estratégica": 83,
+      "Gestão de energia": 77,
+      "Análise de dados": 88,
+      "Gestão de pneus": 82,
+      "Reação sob pressão": 93,
+      "Conhecimento técnico": 87,
+      "Gestão do piloto": 81
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 79,
+        "trend": -3
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 82,
+        "trend": -2
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 85,
+        "trend": -1
+      },
+      {
+        "label": "Forma operacional",
+        "value": 88,
+        "trend": 0
+      },
+      {
+        "label": "Pressão",
+        "value": 80,
+        "trend": 1
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 83,
+        "trend": 2
+      }
+    ]
+  },
+  {
+    "id": "eng-kimi-antonelli",
+    "name": "Matteo Bellandi",
+    "driverId": "kimi-antonelli",
+    "teamId": "ferrari",
+    "fictional": true,
+    "rating": 82,
+    "synergy": 80,
+    "attributes": {
+      "Comunicação": 92,
+      "Leitura de corrida": 86,
+      "Acerto do carro": 80,
+      "Gestão estratégica": 91,
+      "Gestão de energia": 85,
+      "Análise de dados": 79,
+      "Gestão de pneus": 90,
+      "Reação sob pressão": 84,
+      "Conhecimento técnico": 78,
+      "Gestão do piloto": 89
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 81,
+        "trend": -2
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 84,
+        "trend": -1
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 87,
+        "trend": 0
+      },
+      {
+        "label": "Forma operacional",
+        "value": 79,
+        "trend": 1
+      },
+      {
+        "label": "Pressão",
+        "value": 82,
+        "trend": 2
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 85,
+        "trend": 3
+      }
+    ]
+  },
+  {
+    "id": "eng-alex-palou",
+    "name": "Sofia Navarro",
+    "driverId": "alex-palou",
+    "teamId": "ferrari",
+    "fictional": true,
+    "rating": 83,
+    "synergy": 81,
+    "attributes": {
+      "Comunicação": 83,
+      "Leitura de corrida": 94,
+      "Acerto do carro": 88,
+      "Gestão estratégica": 82,
+      "Gestão de energia": 93,
+      "Análise de dados": 87,
+      "Gestão de pneus": 81,
+      "Reação sob pressão": 92,
+      "Conhecimento técnico": 86,
+      "Gestão do piloto": 80
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 83,
+        "trend": -1
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 86,
+        "trend": 0
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 89,
+        "trend": 1
+      },
+      {
+        "label": "Forma operacional",
+        "value": 81,
+        "trend": 2
+      },
+      {
+        "label": "Pressão",
+        "value": 84,
+        "trend": 3
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 87,
+        "trend": 4
+      }
+    ]
+  },
+  {
+    "id": "eng-max-verstappen",
+    "name": "Lukas Weber",
+    "driverId": "max-verstappen",
+    "teamId": "mercedes",
+    "fictional": true,
+    "rating": 84,
+    "synergy": 82,
+    "attributes": {
+      "Comunicação": 91,
+      "Leitura de corrida": 85,
+      "Acerto do carro": 96,
+      "Gestão estratégica": 90,
+      "Gestão de energia": 84,
+      "Análise de dados": 95,
+      "Gestão de pneus": 89,
+      "Reação sob pressão": 83,
+      "Conhecimento técnico": 94,
+      "Gestão do piloto": 88
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 85,
+        "trend": 0
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 88,
+        "trend": 1
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 91,
+        "trend": 2
+      },
+      {
+        "label": "Forma operacional",
+        "value": 83,
+        "trend": 3
+      },
+      {
+        "label": "Pressão",
+        "value": 86,
+        "trend": 4
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 89,
+        "trend": -4
+      }
+    ]
+  },
+  {
+    "id": "eng-nikola-tsolov",
+    "name": "Elena Voss",
+    "driverId": "nikola-tsolov",
+    "teamId": "mercedes",
+    "fictional": true,
+    "rating": 85,
+    "synergy": 83,
+    "attributes": {
+      "Comunicação": 82,
+      "Leitura de corrida": 93,
+      "Acerto do carro": 87,
+      "Gestão estratégica": 81,
+      "Gestão de energia": 92,
+      "Análise de dados": 86,
+      "Gestão de pneus": 97,
+      "Reação sob pressão": 91,
+      "Conhecimento técnico": 85,
+      "Gestão do piloto": 96
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 87,
+        "trend": 1
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 90,
+        "trend": 2
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 82,
+        "trend": 3
+      },
+      {
+        "label": "Forma operacional",
+        "value": 85,
+        "trend": 4
+      },
+      {
+        "label": "Pressão",
+        "value": 88,
+        "trend": -4
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 91,
+        "trend": -3
+      }
+    ]
+  },
+  {
+    "id": "eng-oscar-piastri",
+    "name": "Oliver Finch",
+    "driverId": "oscar-piastri",
+    "teamId": "redbull",
+    "fictional": true,
+    "rating": 86,
+    "synergy": 84,
+    "attributes": {
+      "Comunicação": 90,
+      "Leitura de corrida": 84,
+      "Acerto do carro": 95,
+      "Gestão estratégica": 89,
+      "Gestão de energia": 83,
+      "Análise de dados": 94,
+      "Gestão de pneus": 88,
+      "Reação sob pressão": 82,
+      "Conhecimento técnico": 93,
+      "Gestão do piloto": 87
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 89,
+        "trend": 2
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 92,
+        "trend": 3
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 84,
+        "trend": 4
+      },
+      {
+        "label": "Forma operacional",
+        "value": 87,
+        "trend": -4
+      },
+      {
+        "label": "Pressão",
+        "value": 90,
+        "trend": -3
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 93,
+        "trend": -2
+      }
+    ]
+  },
+  {
+    "id": "eng-sergio-perez",
+    "name": "Diego Salazar",
+    "driverId": "sergio-perez",
+    "teamId": "redbull",
+    "fictional": true,
+    "rating": 87,
+    "synergy": 85,
+    "attributes": {
+      "Comunicação": 98,
+      "Leitura de corrida": 92,
+      "Acerto do carro": 86,
+      "Gestão estratégica": 97,
+      "Gestão de energia": 91,
+      "Análise de dados": 85,
+      "Gestão de pneus": 96,
+      "Reação sob pressão": 90,
+      "Conhecimento técnico": 84,
+      "Gestão do piloto": 95
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 84,
+        "trend": 3
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 87,
+        "trend": 4
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 79,
+        "trend": -4
+      },
+      {
+        "label": "Forma operacional",
+        "value": 82,
+        "trend": -3
+      },
+      {
+        "label": "Pressão",
+        "value": 85,
+        "trend": -2
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 77,
+        "trend": -1
+      }
+    ]
+  },
+  {
+    "id": "eng-carlos-sainz",
+    "name": "Jonas Richter",
+    "driverId": "carlos-sainz",
+    "teamId": "williams",
+    "fictional": true,
+    "rating": 88,
+    "synergy": 86,
+    "attributes": {
+      "Comunicação": 81,
+      "Leitura de corrida": 92,
+      "Acerto do carro": 86,
+      "Gestão estratégica": 80,
+      "Gestão de energia": 91,
+      "Análise de dados": 85,
+      "Gestão de pneus": 79,
+      "Reação sob pressão": 90,
+      "Conhecimento técnico": 84,
+      "Gestão do piloto": 78
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 86,
+        "trend": 4
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 78,
+        "trend": -4
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 81,
+        "trend": -3
+      },
+      {
+        "label": "Forma operacional",
+        "value": 84,
+        "trend": -2
+      },
+      {
+        "label": "Pressão",
+        "value": 87,
+        "trend": -1
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 79,
+        "trend": 0
+      }
+    ]
+  },
+  {
+    "id": "eng-oliver-bearman",
+    "name": "Freya Collins",
+    "driverId": "oliver-bearman",
+    "teamId": "williams",
+    "fictional": true,
+    "rating": 89,
+    "synergy": 87,
+    "attributes": {
+      "Comunicação": 89,
+      "Leitura de corrida": 83,
+      "Acerto do carro": 77,
+      "Gestão estratégica": 88,
+      "Gestão de energia": 82,
+      "Análise de dados": 93,
+      "Gestão de pneus": 87,
+      "Reação sob pressão": 81,
+      "Conhecimento técnico": 92,
+      "Gestão do piloto": 86
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 88,
+        "trend": -4
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 80,
+        "trend": -3
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 83,
+        "trend": -2
+      },
+      {
+        "label": "Forma operacional",
+        "value": 86,
+        "trend": -1
+      },
+      {
+        "label": "Pressão",
+        "value": 89,
+        "trend": 0
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 81,
+        "trend": 1
+      }
+    ]
+  },
+  {
+    "id": "eng-alexander-albon",
+    "name": "Julian Moreau",
+    "driverId": "alexander-albon",
+    "teamId": "haas",
+    "fictional": true,
+    "rating": 90,
+    "synergy": 88,
+    "attributes": {
+      "Comunicação": 80,
+      "Leitura de corrida": 91,
+      "Acerto do carro": 85,
+      "Gestão estratégica": 79,
+      "Gestão de energia": 90,
+      "Análise de dados": 84,
+      "Gestão de pneus": 78,
+      "Reação sob pressão": 89,
+      "Conhecimento técnico": 83,
+      "Gestão do piloto": 94
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 90,
+        "trend": -3
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 82,
+        "trend": -2
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 85,
+        "trend": -1
+      },
+      {
+        "label": "Forma operacional",
+        "value": 88,
+        "trend": 0
+      },
+      {
+        "label": "Pressão",
+        "value": 80,
+        "trend": 1
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 83,
+        "trend": 2
+      }
+    ]
+  },
+  {
+    "id": "eng-rafael-camara",
+    "name": "Bruno Azevedo",
+    "driverId": "rafael-camara",
+    "teamId": "haas",
+    "fictional": true,
+    "rating": 91,
+    "synergy": 89,
+    "attributes": {
+      "Comunicação": 88,
+      "Leitura de corrida": 82,
+      "Acerto do carro": 93,
+      "Gestão estratégica": 87,
+      "Gestão de energia": 81,
+      "Análise de dados": 92,
+      "Gestão de pneus": 86,
+      "Reação sob pressão": 80,
+      "Conhecimento técnico": 91,
+      "Gestão do piloto": 85
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 81,
+        "trend": -2
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 84,
+        "trend": -1
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 87,
+        "trend": 0
+      },
+      {
+        "label": "Forma operacional",
+        "value": 90,
+        "trend": 1
+      },
+      {
+        "label": "Pressão",
+        "value": 82,
+        "trend": 2
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 85,
+        "trend": 3
+      }
+    ]
+  },
+  {
+    "id": "eng-gabriel-bortoleto",
+    "name": "Clara Meier",
+    "driverId": "gabriel-bortoleto",
+    "teamId": "audi",
+    "fictional": true,
+    "rating": 92,
+    "synergy": 90,
+    "attributes": {
+      "Comunicação": 96,
+      "Leitura de corrida": 90,
+      "Acerto do carro": 84,
+      "Gestão estratégica": 95,
+      "Gestão de energia": 89,
+      "Análise de dados": 83,
+      "Gestão de pneus": 94,
+      "Reação sob pressão": 88,
+      "Conhecimento técnico": 82,
+      "Gestão do piloto": 93
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 83,
+        "trend": -1
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 86,
+        "trend": 0
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 89,
+        "trend": 1
+      },
+      {
+        "label": "Forma operacional",
+        "value": 92,
+        "trend": 2
+      },
+      {
+        "label": "Pressão",
+        "value": 84,
+        "trend": 3
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 87,
+        "trend": 4
+      }
+    ]
+  },
+  {
+    "id": "eng-franco-colapinto",
+    "name": "Tomás Aguirre",
+    "driverId": "franco-colapinto",
+    "teamId": "audi",
+    "fictional": true,
+    "rating": 93,
+    "synergy": 91,
+    "attributes": {
+      "Comunicação": 87,
+      "Leitura de corrida": 81,
+      "Acerto do carro": 92,
+      "Gestão estratégica": 86,
+      "Gestão de energia": 97,
+      "Análise de dados": 91,
+      "Gestão de pneus": 85,
+      "Reação sob pressão": 96,
+      "Conhecimento técnico": 90,
+      "Gestão do piloto": 84
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 85,
+        "trend": 0
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 88,
+        "trend": 1
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 91,
+        "trend": 2
+      },
+      {
+        "label": "Forma operacional",
+        "value": 83,
+        "trend": 3
+      },
+      {
+        "label": "Pressão",
+        "value": 86,
+        "trend": 4
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 89,
+        "trend": -4
+      }
+    ]
+  },
+  {
+    "id": "eng-isack-hadjar",
+    "name": "Rémi Laurent",
+    "driverId": "isack-hadjar",
+    "teamId": "alpine",
+    "fictional": true,
+    "rating": 80,
+    "synergy": 92,
+    "attributes": {
+      "Comunicação": 95,
+      "Leitura de corrida": 89,
+      "Acerto do carro": 83,
+      "Gestão estratégica": 94,
+      "Gestão de energia": 88,
+      "Análise de dados": 82,
+      "Gestão de pneus": 93,
+      "Reação sob pressão": 87,
+      "Conhecimento técnico": 98,
+      "Gestão do piloto": 92
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 80,
+        "trend": 1
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 83,
+        "trend": 2
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 86,
+        "trend": 3
+      },
+      {
+        "label": "Forma operacional",
+        "value": 78,
+        "trend": 4
+      },
+      {
+        "label": "Pressão",
+        "value": 81,
+        "trend": -4
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 84,
+        "trend": -3
+      }
+    ]
+  },
+  {
+    "id": "eng-pierre-gasly",
+    "name": "Chloé Martin",
+    "driverId": "pierre-gasly",
+    "teamId": "alpine",
+    "fictional": true,
+    "rating": 81,
+    "synergy": 93,
+    "attributes": {
+      "Comunicação": 86,
+      "Leitura de corrida": 97,
+      "Acerto do carro": 91,
+      "Gestão estratégica": 85,
+      "Gestão de energia": 96,
+      "Análise de dados": 90,
+      "Gestão de pneus": 84,
+      "Reação sob pressão": 95,
+      "Conhecimento técnico": 89,
+      "Gestão do piloto": 83
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 82,
+        "trend": 2
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 85,
+        "trend": 3
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 88,
+        "trend": 4
+      },
+      {
+        "label": "Forma operacional",
+        "value": 80,
+        "trend": -4
+      },
+      {
+        "label": "Pressão",
+        "value": 83,
+        "trend": -3
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 86,
+        "trend": -2
+      }
+    ]
+  },
+  {
+    "id": "eng-fernando-alonso",
+    "name": "Hugo Serra",
+    "driverId": "fernando-alonso",
+    "teamId": "aston",
+    "fictional": true,
+    "rating": 82,
+    "synergy": 94,
+    "attributes": {
+      "Comunicação": 86,
+      "Leitura de corrida": 80,
+      "Acerto do carro": 91,
+      "Gestão estratégica": 85,
+      "Gestão de energia": 79,
+      "Análise de dados": 90,
+      "Gestão de pneus": 84,
+      "Reação sob pressão": 78,
+      "Conhecimento técnico": 89,
+      "Gestão do piloto": 83
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 84,
+        "trend": 3
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 87,
+        "trend": 4
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 79,
+        "trend": -4
+      },
+      {
+        "label": "Forma operacional",
+        "value": 82,
+        "trend": -3
+      },
+      {
+        "label": "Pressão",
+        "value": 85,
+        "trend": -2
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 88,
+        "trend": -1
+      }
+    ]
+  },
+  {
+    "id": "eng-mari-boya",
+    "name": "Lucía Vidal",
+    "driverId": "mari-boya",
+    "teamId": "aston",
+    "fictional": true,
+    "rating": 83,
+    "synergy": 78,
+    "attributes": {
+      "Comunicação": 77,
+      "Leitura de corrida": 88,
+      "Acerto do carro": 82,
+      "Gestão estratégica": 93,
+      "Gestão de energia": 87,
+      "Análise de dados": 81,
+      "Gestão de pneus": 92,
+      "Reação sob pressão": 86,
+      "Conhecimento técnico": 80,
+      "Gestão do piloto": 91
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 86,
+        "trend": 4
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 89,
+        "trend": -4
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 81,
+        "trend": -3
+      },
+      {
+        "label": "Forma operacional",
+        "value": 84,
+        "trend": -2
+      },
+      {
+        "label": "Pressão",
+        "value": 87,
+        "trend": -1
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 90,
+        "trend": 0
+      }
+    ]
+  },
+  {
+    "id": "eng-colton-herta",
+    "name": "Mason Cole",
+    "driverId": "colton-herta",
+    "teamId": "cadillac",
+    "fictional": true,
+    "rating": 84,
+    "synergy": 79,
+    "attributes": {
+      "Comunicação": 85,
+      "Leitura de corrida": 79,
+      "Acerto do carro": 90,
+      "Gestão estratégica": 84,
+      "Gestão de energia": 78,
+      "Análise de dados": 89,
+      "Gestão de pneus": 83,
+      "Reação sob pressão": 94,
+      "Conhecimento técnico": 88,
+      "Gestão do piloto": 82
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 88,
+        "trend": -4
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 91,
+        "trend": -3
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 83,
+        "trend": -2
+      },
+      {
+        "label": "Forma operacional",
+        "value": 86,
+        "trend": -1
+      },
+      {
+        "label": "Pressão",
+        "value": 89,
+        "trend": 0
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 81,
+        "trend": 1
+      }
+    ]
+  },
+  {
+    "id": "eng-pato-oward",
+    "name": "Gabriela Reyes",
+    "driverId": "pato-oward",
+    "teamId": "cadillac",
+    "fictional": true,
+    "rating": 85,
+    "synergy": 80,
+    "attributes": {
+      "Comunicação": 93,
+      "Leitura de corrida": 87,
+      "Acerto do carro": 81,
+      "Gestão estratégica": 92,
+      "Gestão de energia": 86,
+      "Análise de dados": 80,
+      "Gestão de pneus": 91,
+      "Reação sob pressão": 85,
+      "Conhecimento técnico": 79,
+      "Gestão do piloto": 90
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 90,
+        "trend": -3
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 82,
+        "trend": -2
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 85,
+        "trend": -1
+      },
+      {
+        "label": "Forma operacional",
+        "value": 88,
+        "trend": 0
+      },
+      {
+        "label": "Pressão",
+        "value": 91,
+        "trend": 1
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 83,
+        "trend": 2
+      }
+    ]
+  },
+  {
+    "id": "eng-liam-lawson",
+    "name": "Noah Kim",
+    "driverId": "liam-lawson",
+    "teamId": "hyundai",
+    "fictional": true,
+    "rating": 86,
+    "synergy": 81,
+    "attributes": {
+      "Comunicação": 84,
+      "Leitura de corrida": 95,
+      "Acerto do carro": 89,
+      "Gestão estratégica": 83,
+      "Gestão de energia": 94,
+      "Análise de dados": 88,
+      "Gestão de pneus": 82,
+      "Reação sob pressão": 93,
+      "Conhecimento técnico": 87,
+      "Gestão do piloto": 81
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 92,
+        "trend": -2
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 84,
+        "trend": -1
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 87,
+        "trend": 0
+      },
+      {
+        "label": "Forma operacional",
+        "value": 90,
+        "trend": 1
+      },
+      {
+        "label": "Pressão",
+        "value": 93,
+        "trend": 2
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 85,
+        "trend": 3
+      }
+    ]
+  },
+  {
+    "id": "eng-jack-doohan",
+    "name": "Ava Mitchell",
+    "driverId": "jack-doohan",
+    "teamId": "hyundai",
+    "fictional": true,
+    "rating": 87,
+    "synergy": 82,
+    "attributes": {
+      "Comunicação": 92,
+      "Leitura de corrida": 86,
+      "Acerto do carro": 97,
+      "Gestão estratégica": 91,
+      "Gestão de energia": 85,
+      "Análise de dados": 96,
+      "Gestão de pneus": 90,
+      "Reação sob pressão": 84,
+      "Conhecimento técnico": 95,
+      "Gestão do piloto": 89
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 87,
+        "trend": -1
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 79,
+        "trend": 0
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 82,
+        "trend": 1
+      },
+      {
+        "label": "Forma operacional",
+        "value": 85,
+        "trend": 2
+      },
+      {
+        "label": "Pressão",
+        "value": 77,
+        "trend": 3
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 80,
+        "trend": 4
+      }
+    ]
+  },
+  {
+    "id": "eng-yuki-tsunoda",
+    "name": "Haru Tanaka",
+    "driverId": "yuki-tsunoda",
+    "teamId": "kia",
+    "fictional": true,
+    "rating": 88,
+    "synergy": 83,
+    "attributes": {
+      "Comunicação": 83,
+      "Leitura de corrida": 94,
+      "Acerto do carro": 88,
+      "Gestão estratégica": 82,
+      "Gestão de energia": 93,
+      "Análise de dados": 87,
+      "Gestão de pneus": 98,
+      "Reação sob pressão": 92,
+      "Conhecimento técnico": 86,
+      "Gestão do piloto": 97
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 78,
+        "trend": 0
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 81,
+        "trend": 1
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 84,
+        "trend": 2
+      },
+      {
+        "label": "Forma operacional",
+        "value": 87,
+        "trend": 3
+      },
+      {
+        "label": "Pressão",
+        "value": 79,
+        "trend": 4
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 82,
+        "trend": -4
+      }
+    ]
+  },
+  {
+    "id": "eng-felipe-drugovich",
+    "name": "André Sampaio",
+    "driverId": "felipe-drugovich",
+    "teamId": "kia",
+    "fictional": true,
+    "rating": 89,
+    "synergy": 84,
+    "attributes": {
+      "Comunicação": 91,
+      "Leitura de corrida": 85,
+      "Acerto do carro": 96,
+      "Gestão estratégica": 90,
+      "Gestão de energia": 84,
+      "Análise de dados": 95,
+      "Gestão de pneus": 89,
+      "Reação sob pressão": 83,
+      "Conhecimento técnico": 94,
+      "Gestão do piloto": 88
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 80,
+        "trend": 1
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 83,
+        "trend": 2
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 86,
+        "trend": 3
+      },
+      {
+        "label": "Forma operacional",
+        "value": 89,
+        "trend": 4
+      },
+      {
+        "label": "Pressão",
+        "value": 81,
+        "trend": -4
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 84,
+        "trend": -3
+      }
+    ]
+  },
+  {
+    "id": "eng-zhou-guanyu",
+    "name": "Wei Chen",
+    "driverId": "zhou-guanyu",
+    "teamId": "byd",
+    "fictional": true,
+    "rating": 90,
+    "synergy": 85,
+    "attributes": {
+      "Comunicação": 91,
+      "Leitura de corrida": 85,
+      "Acerto do carro": 79,
+      "Gestão estratégica": 90,
+      "Gestão de energia": 84,
+      "Análise de dados": 78,
+      "Gestão de pneus": 89,
+      "Reação sob pressão": 83,
+      "Conhecimento técnico": 77,
+      "Gestão do piloto": 88
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 82,
+        "trend": 2
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 85,
+        "trend": 3
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 88,
+        "trend": 4
+      },
+      {
+        "label": "Forma operacional",
+        "value": 80,
+        "trend": -4
+      },
+      {
+        "label": "Pressão",
+        "value": 83,
+        "trend": -3
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 86,
+        "trend": -2
+      }
+    ]
+  },
+  {
+    "id": "eng-dino-beganovic",
+    "name": "Erik Lind",
+    "driverId": "dino-beganovic",
+    "teamId": "byd",
+    "fictional": true,
+    "rating": 91,
+    "synergy": 86,
+    "attributes": {
+      "Comunicação": 82,
+      "Leitura de corrida": 93,
+      "Acerto do carro": 87,
+      "Gestão estratégica": 81,
+      "Gestão de energia": 92,
+      "Análise de dados": 86,
+      "Gestão de pneus": 80,
+      "Reação sob pressão": 91,
+      "Conhecimento técnico": 85,
+      "Gestão do piloto": 79
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 84,
+        "trend": 3
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 87,
+        "trend": 4
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 90,
+        "trend": -4
+      },
+      {
+        "label": "Forma operacional",
+        "value": 82,
+        "trend": -3
+      },
+      {
+        "label": "Pressão",
+        "value": 85,
+        "trend": -2
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 88,
+        "trend": -1
+      }
+    ]
+  },
+  {
+    "id": "eng-george-russell",
+    "name": "Felix Hartmann",
+    "driverId": "george-russell",
+    "teamId": "porsche",
+    "fictional": true,
+    "rating": 92,
+    "synergy": 87,
+    "attributes": {
+      "Comunicação": 90,
+      "Leitura de corrida": 84,
+      "Acerto do carro": 78,
+      "Gestão estratégica": 89,
+      "Gestão de energia": 83,
+      "Análise de dados": 94,
+      "Gestão de pneus": 88,
+      "Reação sob pressão": 82,
+      "Conhecimento técnico": 93,
+      "Gestão do piloto": 87
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 86,
+        "trend": 4
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 89,
+        "trend": -4
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 92,
+        "trend": -3
+      },
+      {
+        "label": "Forma operacional",
+        "value": 84,
+        "trend": -2
+      },
+      {
+        "label": "Pressão",
+        "value": 87,
+        "trend": -1
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 90,
+        "trend": 0
+      }
+    ]
+  },
+  {
+    "id": "eng-nico-hulkenberg",
+    "name": "Mara Klein",
+    "driverId": "nico-hulkenberg",
+    "teamId": "porsche",
+    "fictional": true,
+    "rating": 93,
+    "synergy": 88,
+    "attributes": {
+      "Comunicação": 81,
+      "Leitura de corrida": 92,
+      "Acerto do carro": 86,
+      "Gestão estratégica": 80,
+      "Gestão de energia": 91,
+      "Análise de dados": 85,
+      "Gestão de pneus": 79,
+      "Reação sob pressão": 90,
+      "Conhecimento técnico": 84,
+      "Gestão do piloto": 95
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 88,
+        "trend": -4
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 91,
+        "trend": -3
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 83,
+        "trend": -2
+      },
+      {
+        "label": "Forma operacional",
+        "value": 86,
+        "trend": -1
+      },
+      {
+        "label": "Pressão",
+        "value": 89,
+        "trend": 0
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 92,
+        "trend": 1
+      }
+    ]
+  },
+  {
+    "id": "eng-lewis-hamilton",
+    "name": "Sebastian Reed",
+    "driverId": "lewis-hamilton",
+    "teamId": "jaguar",
+    "fictional": true,
+    "rating": 80,
+    "synergy": 89,
+    "attributes": {
+      "Comunicação": 89,
+      "Leitura de corrida": 83,
+      "Acerto do carro": 94,
+      "Gestão estratégica": 88,
+      "Gestão de energia": 82,
+      "Análise de dados": 93,
+      "Gestão de pneus": 87,
+      "Reação sob pressão": 81,
+      "Conhecimento técnico": 92,
+      "Gestão do piloto": 86
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 83,
+        "trend": -3
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 86,
+        "trend": -2
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 78,
+        "trend": -1
+      },
+      {
+        "label": "Forma operacional",
+        "value": 81,
+        "trend": 0
+      },
+      {
+        "label": "Pressão",
+        "value": 84,
+        "trend": 1
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 87,
+        "trend": 2
+      }
+    ]
+  },
+  {
+    "id": "eng-valtteri-bottas",
+    "name": "Aino Koski",
+    "driverId": "valtteri-bottas",
+    "teamId": "jaguar",
+    "fictional": true,
+    "rating": 81,
+    "synergy": 90,
+    "attributes": {
+      "Comunicação": 97,
+      "Leitura de corrida": 91,
+      "Acerto do carro": 85,
+      "Gestão estratégica": 96,
+      "Gestão de energia": 90,
+      "Análise de dados": 84,
+      "Gestão de pneus": 95,
+      "Reação sob pressão": 89,
+      "Conhecimento técnico": 83,
+      "Gestão do piloto": 94
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 85,
+        "trend": -2
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 88,
+        "trend": -1
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 80,
+        "trend": 0
+      },
+      {
+        "label": "Forma operacional",
+        "value": 83,
+        "trend": 1
+      },
+      {
+        "label": "Pressão",
+        "value": 86,
+        "trend": 2
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 78,
+        "trend": 3
+      }
+    ]
+  },
+  {
+    "id": "eng-charles-leclerc",
+    "name": "Antoine Delacroix",
+    "driverId": "charles-leclerc",
+    "teamId": "bugatti",
+    "fictional": true,
+    "rating": 82,
+    "synergy": 91,
+    "attributes": {
+      "Comunicação": 88,
+      "Leitura de corrida": 82,
+      "Acerto do carro": 93,
+      "Gestão estratégica": 87,
+      "Gestão de energia": 98,
+      "Análise de dados": 92,
+      "Gestão de pneus": 86,
+      "Reação sob pressão": 97,
+      "Conhecimento técnico": 91,
+      "Gestão do piloto": 85
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 87,
+        "trend": -1
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 79,
+        "trend": 0
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 82,
+        "trend": 1
+      },
+      {
+        "label": "Forma operacional",
+        "value": 85,
+        "trend": 2
+      },
+      {
+        "label": "Pressão",
+        "value": 88,
+        "trend": 3
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 80,
+        "trend": 4
+      }
+    ]
+  },
+  {
+    "id": "eng-esteban-ocon",
+    "name": "Camille Durand",
+    "driverId": "esteban-ocon",
+    "teamId": "bugatti",
+    "fictional": true,
+    "rating": 83,
+    "synergy": 92,
+    "attributes": {
+      "Comunicação": 96,
+      "Leitura de corrida": 90,
+      "Acerto do carro": 84,
+      "Gestão estratégica": 95,
+      "Gestão de energia": 89,
+      "Análise de dados": 83,
+      "Gestão de pneus": 94,
+      "Reação sob pressão": 88,
+      "Conhecimento técnico": 99,
+      "Gestão do piloto": 93
+    },
+    "dynamics": [
+      {
+        "label": "Entrosamento com piloto",
+        "value": 89,
+        "trend": 0
+      },
+      {
+        "label": "Confiança mútua",
+        "value": 81,
+        "trend": 1
+      },
+      {
+        "label": "Compreensão do carro atual",
+        "value": 84,
+        "trend": 2
+      },
+      {
+        "label": "Forma operacional",
+        "value": 87,
+        "trend": 3
+      },
+      {
+        "label": "Pressão",
+        "value": 90,
+        "trend": 4
+      },
+      {
+        "label": "Sincronia com equipe",
+        "value": 82,
+        "trend": -4
+      }
+    ]
+  }
+]

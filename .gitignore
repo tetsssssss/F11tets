@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.next-visual/
+dist-netlify/
+releases/
+*.tsbuildinfo
+test-results/
+test-results-*/
+playwright-report/
+*.log
+.env*

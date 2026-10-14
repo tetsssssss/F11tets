@@ -1,0 +1,194 @@
+[
+  {
+    "id": "engine-mclaren",
+    "name": "Lotus",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 85,
+      "Eficiência": 96,
+      "Confiabilidade": 90,
+      "Integração elétrica": 99
+    }
+  },
+  {
+    "id": "engine-ferrari",
+    "name": "Ferrari",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 91,
+      "Eficiência": 85,
+      "Confiabilidade": 96,
+      "Integração elétrica": 90
+    }
+  },
+  {
+    "id": "engine-mercedes",
+    "name": "Mercedes",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 99,
+      "Eficiência": 94,
+      "Confiabilidade": 88,
+      "Integração elétrica": 99
+    }
+  },
+  {
+    "id": "engine-redbull",
+    "name": "Ford",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 87,
+      "Eficiência": 98,
+      "Confiabilidade": 92,
+      "Integração elétrica": 86
+    }
+  },
+  {
+    "id": "engine-williams",
+    "name": "BMW",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 88,
+      "Eficiência": 82,
+      "Confiabilidade": 93,
+      "Integração elétrica": 87
+    }
+  },
+  {
+    "id": "engine-haas",
+    "name": "Maserati",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 72,
+      "Eficiência": 83,
+      "Confiabilidade": 77,
+      "Integração elétrica": 71
+    }
+  },
+  {
+    "id": "engine-audi",
+    "name": "Audi",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 85,
+      "Eficiência": 79,
+      "Confiabilidade": 90,
+      "Integração elétrica": 84
+    }
+  },
+  {
+    "id": "engine-alpine",
+    "name": "Renault",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 89,
+      "Eficiência": 83,
+      "Confiabilidade": 77,
+      "Integração elétrica": 88
+    }
+  },
+  {
+    "id": "engine-aston",
+    "name": "Honda",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 83,
+      "Eficiência": 94,
+      "Confiabilidade": 88,
+      "Integração elétrica": 82
+    }
+  },
+  {
+    "id": "engine-cadillac",
+    "name": "GM/Cadillac",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 83,
+      "Eficiência": 77,
+      "Confiabilidade": 71,
+      "Integração elétrica": 82
+    }
+  },
+  {
+    "id": "engine-hyundai",
+    "name": "Hyundai",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 72,
+      "Eficiência": 83,
+      "Confiabilidade": 77,
+      "Integração elétrica": 71
+    }
+  },
+  {
+    "id": "engine-kia",
+    "name": "Toyota",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 81,
+      "Eficiência": 75,
+      "Confiabilidade": 86,
+      "Integração elétrica": 80
+    }
+  },
+  {
+    "id": "engine-byd",
+    "name": "BYD",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 84,
+      "Eficiência": 78,
+      "Confiabilidade": 72,
+      "Integração elétrica": 83
+    }
+  },
+  {
+    "id": "engine-porsche",
+    "name": "Porsche",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 87,
+      "Eficiência": 81,
+      "Confiabilidade": 92,
+      "Integração elétrica": 86
+    }
+  },
+  {
+    "id": "engine-jaguar",
+    "name": "Jaguar/JLR",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 88,
+      "Eficiência": 82,
+      "Confiabilidade": 76,
+      "Integração elétrica": 87
+    }
+  },
+  {
+    "id": "engine-bugatti",
+    "name": "Citroën/Peugeot",
+    "architecture": "V8 híbrido",
+    "independent": true,
+    "attributes": {
+      "Potência": 82,
+      "Eficiência": 93,
+      "Confiabilidade": 87,
+      "Integração elétrica": 81
+    }
+  }
+]

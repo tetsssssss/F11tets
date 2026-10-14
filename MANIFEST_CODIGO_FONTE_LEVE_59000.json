@@ -1,0 +1,351 @@
+{
+  "project": "F1 Universe 2029",
+  "marco": "59000",
+  "source_original": "F1_UNIVERSE_2029_MARCO_59000_CODIGO_FONTE.zip",
+  "source_sha256": "7f11b52ee359dca0ac8b1bbc2adefd6c4932598ab3ec8e070166b53415216810",
+  "netlify_original": "F1_UNIVERSE_2029_MARCO_59000_NETLIFY_PWA.zip",
+  "omitted_duplicate_images_count": 67,
+  "omitted_duplicate_images": {
+    "public/assets/people/drivers/alex-palou_card.webp": {
+      "netlify_path": "assets/people/drivers/alex-palou_card.webp",
+      "sha256": "88b7e219a8d6870345632976dd684910d33b6638e7e9928efd400463e572234d",
+      "size": 52630
+    },
+    "public/assets/people/drivers/alex-palou_master.webp": {
+      "netlify_path": "assets/people/drivers/alex-palou_master.webp",
+      "sha256": "8907bc9906be0a03e624f38fd3ae3ebbb1de0c6716b568210d9c20979d936329",
+      "size": 161308
+    },
+    "public/assets/people/drivers/alexander-albon_card.webp": {
+      "netlify_path": "assets/people/drivers/alexander-albon_card.webp",
+      "sha256": "da226238b737d9dcf1900a1195a50f2b09d5302b9cc12af91e7052bf13e108f8",
+      "size": 34094
+    },
+    "public/assets/people/drivers/alexander-albon_master.webp": {
+      "netlify_path": "assets/people/drivers/alexander-albon_master.webp",
+      "sha256": "a86258e05f4083f767dba993d0d3196842fb40b62071e7219744328b1041ffb9",
+      "size": 84752
+    },
+    "public/assets/people/drivers/arvid-lindblad_card.webp": {
+      "netlify_path": "assets/people/drivers/arvid-lindblad_card.webp",
+      "sha256": "175221d9f447e66894b776b8941cfc7fe87c98401616a023640234c2bac0c031",
+      "size": 46058
+    },
+    "public/assets/people/drivers/arvid-lindblad_master.webp": {
+      "netlify_path": "assets/people/drivers/arvid-lindblad_master.webp",
+      "sha256": "6866e9fe52151bcc7c8f05bd6d11f72687c94e14c44ad3385107bb16cf0bdfa1",
+      "size": 122268
+    },
+    "public/assets/people/drivers/carlos-sainz_card.webp": {
+      "netlify_path": "assets/people/drivers/carlos-sainz_card.webp",
+      "sha256": "6cd871c4442ea675832778af9fcb51f5ead74f0603b8c251093d4c6cca511232",
+      "size": 34554
+    },
+    "public/assets/people/drivers/carlos-sainz_master.webp": {
+      "netlify_path": "assets/people/drivers/carlos-sainz_master.webp",
+      "sha256": "1841f00faa65be7a1810fe65b58694700f240d50cc55719641fd4f6d43fe38a9",
+      "size": 94652
+    },
+    "public/assets/people/drivers/charles-leclerc_card.webp": {
+      "netlify_path": "assets/people/drivers/charles-leclerc_card.webp",
+      "sha256": "5733f9c09d39082cc0e4d094ea3627eca6eb51c3b83e3874ecab7874a8c4ec47",
+      "size": 45226
+    },
+    "public/assets/people/drivers/charles-leclerc_master.webp": {
+      "netlify_path": "assets/people/drivers/charles-leclerc_master.webp",
+      "sha256": "03c3f3bbf94ddef61595ae44c3cd23364a9f5ecfa46385232c6e2d3b8e78f7d0",
+      "size": 118316
+    },
+    "public/assets/people/drivers/colton-herta_card.webp": {
+      "netlify_path": "assets/people/drivers/colton-herta_card.webp",
+      "sha256": "58baf22d1286f43370a7acc099b800dd804bef5dcc078bff71bb3058c02850f9",
+      "size": 40092
+    },
+    "public/assets/people/drivers/colton-herta_master.webp": {
+      "netlify_path": "assets/people/drivers/colton-herta_master.webp",
+      "sha256": "c2eeb34816b382cf4a52ba0187c4e2f50815b9676f9deab69231ff50d8b73513",
+      "size": 103518
+    },
+    "public/assets/people/drivers/dino-beganovic_card.webp": {
+      "netlify_path": "assets/people/drivers/dino-beganovic_card.webp",
+      "sha256": "4e127d82757e7ad0d1bd7d53b529a11aae322d7ef4760472d3fcfd5ca0357b0d",
+      "size": 37958
+    },
+    "public/assets/people/drivers/dino-beganovic_master.webp": {
+      "netlify_path": "assets/people/drivers/dino-beganovic_master.webp",
+      "sha256": "0cae5bf14fd4b976164ab657556e0339906b6fbe039cb1f60b09548c1e9dd375",
+      "size": 93994
+    },
+    "public/assets/people/drivers/esteban-ocon_card.webp": {
+      "netlify_path": "assets/people/drivers/esteban-ocon_card.webp",
+      "sha256": "4f57e305917744095381cc0bc7379fb443e3bc95fe3c0ada28105f5949cde714",
+      "size": 42384
+    },
+    "public/assets/people/drivers/esteban-ocon_master.webp": {
+      "netlify_path": "assets/people/drivers/esteban-ocon_master.webp",
+      "sha256": "fa80d75ab3d69a193548745327f661b280f68b94e98fb0c050baad51ab9864c0",
+      "size": 110728
+    },
+    "public/assets/people/drivers/felipe-drugovich_card.webp": {
+      "netlify_path": "assets/people/drivers/felipe-drugovich_card.webp",
+      "sha256": "8de3b7d024fe3ac684019d6a0a2f2933d4897e1ef1754d0f3d1ff817f4fc5a18",
+      "size": 30872
+    },
+    "public/assets/people/drivers/felipe-drugovich_master.webp": {
+      "netlify_path": "assets/people/drivers/felipe-drugovich_master.webp",
+      "sha256": "93b8ca9e38ab59024b836e9452be6eb5ba1a70896ea36e7752ae6979112acfc4",
+      "size": 42620
+    },
+    "public/assets/people/drivers/fernando-alonso_card.webp": {
+      "netlify_path": "assets/people/drivers/fernando-alonso_card.webp",
+      "sha256": "0027d90560e47a7c09c539e70697a085dbcf317eec48cbecaf04751a75292040",
+      "size": 58782
+    },
+    "public/assets/people/drivers/fernando-alonso_master.webp": {
+      "netlify_path": "assets/people/drivers/fernando-alonso_master.webp",
+      "sha256": "abbbc7b712b400f5b57bf7d90b65de0eaf3ed93a32b36bb9a97e092a65461c05",
+      "size": 187004
+    },
+    "public/assets/people/drivers/franco-colapinto_card.webp": {
+      "netlify_path": "assets/people/drivers/franco-colapinto_card.webp",
+      "sha256": "ef9bb3686732b0303b04ac7ed0dab9ec384cd0d73bcc629e8dd2b0dbc7887e29",
+      "size": 45112
+    },
+    "public/assets/people/drivers/franco-colapinto_master.webp": {
+      "netlify_path": "assets/people/drivers/franco-colapinto_master.webp",
+      "sha256": "951d1e859a02102633da816ad935582d2bafdd864240085dddb6a61e5d32bbb7",
+      "size": 121680
+    },
+    "public/assets/people/drivers/gabriel-bortoleto_card.webp": {
+      "netlify_path": "assets/people/drivers/gabriel-bortoleto_card.webp",
+      "sha256": "e9addff0568b2aef0342b0e402fdd118732a7075a6a7ac41efa5b23213488575",
+      "size": 43442
+    },
+    "public/assets/people/drivers/gabriel-bortoleto_master.webp": {
+      "netlify_path": "assets/people/drivers/gabriel-bortoleto_master.webp",
+      "sha256": "d3f0f72946dd1919f496e4ab8c1322f095d9a4752aa73a899411a053a997718d",
+      "size": 122094
+    },
+    "public/assets/people/drivers/george-russell_card.webp": {
+      "netlify_path": "assets/people/drivers/george-russell_card.webp",
+      "sha256": "b3cc400346227b5ec281bf81c95e80f949b7250eb8c07913f2685c5395f2710c",
+      "size": 39844
+    },
+    "public/assets/people/drivers/george-russell_master.webp": {
+      "netlify_path": "assets/people/drivers/george-russell_master.webp",
+      "sha256": "97ab2d3c4ca50b4beec966f32aae27df72a7997398fe556d2ab3b9c29729e9b1",
+      "size": 106794
+    },
+    "public/assets/people/drivers/isack-hadjar_card.webp": {
+      "netlify_path": "assets/people/drivers/isack-hadjar_card.webp",
+      "sha256": "c4bb7f5a3834731963e9e41f1ca7675824c3c4a3f96853d9494d77144041ee2e",
+      "size": 44072
+    },
+    "public/assets/people/drivers/isack-hadjar_master.webp": {
+      "netlify_path": "assets/people/drivers/isack-hadjar_master.webp",
+      "sha256": "2bdb062a2e2d193333dc9f125a97596ec953821b171f02570d10c92f4722a320",
+      "size": 115968
+    },
+    "public/assets/people/drivers/jack-doohan_card.webp": {
+      "netlify_path": "assets/people/drivers/jack-doohan_card.webp",
+      "sha256": "b3e83c9149b13d27b394e0d4e4d209c88f4f0622e4782b6851af70291fd96ea3",
+      "size": 35922
+    },
+    "public/assets/people/drivers/jack-doohan_master.webp": {
+      "netlify_path": "assets/people/drivers/jack-doohan_master.webp",
+      "sha256": "f000683936f17f99514a3fb03f170585444df8150b0db93db97323da750d7aee",
+      "size": 39684
+    },
+    "public/assets/people/drivers/kimi-antonelli_card.webp": {
+      "netlify_path": "assets/people/drivers/kimi-antonelli_card.webp",
+      "sha256": "6fdffebb2d0002779560eeceda004e684083ef140a48574a18612dfea9910415",
+      "size": 47632
+    },
+    "public/assets/people/drivers/kimi-antonelli_master.webp": {
+      "netlify_path": "assets/people/drivers/kimi-antonelli_master.webp",
+      "sha256": "5761529c990f2d2f311d5d9e90fd8cd5f459f6440d77ed6012a6b49dc73402b9",
+      "size": 136374
+    },
+    "public/assets/people/drivers/lando-norris_card.webp": {
+      "netlify_path": "assets/people/drivers/lando-norris_card.webp",
+      "sha256": "a6e30a42ffd91e0594b1ed5911392b0946230e3fe7447272abb39973024511a9",
+      "size": 42116
+    },
+    "public/assets/people/drivers/lando-norris_master.webp": {
+      "netlify_path": "assets/people/drivers/lando-norris_master.webp",
+      "sha256": "7671c538e962dbda9ff9d5c7356b21f25dff062d63efdd77e662b2fed70b7fc5",
+      "size": 113072
+    },
+    "public/assets/people/drivers/lewis-hamilton_card.webp": {
+      "netlify_path": "assets/people/drivers/lewis-hamilton_card.webp",
+      "sha256": "b4b8de91d73f616ecb5d8e6bc17af85f56d616eeece980f5e60713cf4c96e304",
+      "size": 44958
+    },
+    "public/assets/people/drivers/lewis-hamilton_master.webp": {
+      "netlify_path": "assets/people/drivers/lewis-hamilton_master.webp",
+      "sha256": "6abf9cd1553aac4710b52399289bee068d08221e7fb853f0d478770ed93ac29b",
+      "size": 120244
+    },
+    "public/assets/people/drivers/liam-lawson_card.webp": {
+      "netlify_path": "assets/people/drivers/liam-lawson_card.webp",
+      "sha256": "0d0ef954443aba63b08dd2ee1b4a17ecd8d80daf142ae0a05ecd46db13d2af82",
+      "size": 43632
+    },
+    "public/assets/people/drivers/liam-lawson_master.webp": {
+      "netlify_path": "assets/people/drivers/liam-lawson_master.webp",
+      "sha256": "121c2612b347a52f53bddd3ee5d8cbe44a6ae52f68b91107d006e986a5743362",
+      "size": 116890
+    },
+    "public/assets/people/drivers/mari-boya_card.webp": {
+      "netlify_path": "assets/people/drivers/mari-boya_card.webp",
+      "sha256": "87416431fa67c77d36fe450c499cea0e92dfc3ae8ac9412d4977eec9c727a7bf",
+      "size": 43464
+    },
+    "public/assets/people/drivers/mari-boya_master.webp": {
+      "netlify_path": "assets/people/drivers/mari-boya_master.webp",
+      "sha256": "281aff420f29665c8e1ad2998b0519ee0ef9424186dc272bc5322ac28a624084",
+      "size": 111252
+    },
+    "public/assets/people/drivers/max-verstappen_card.webp": {
+      "netlify_path": "assets/people/drivers/max-verstappen_card.webp",
+      "sha256": "d9d4a4c45583287ead96f400025b1c79bc62593c3325a180a450a034d312da25",
+      "size": 43404
+    },
+    "public/assets/people/drivers/max-verstappen_master.webp": {
+      "netlify_path": "assets/people/drivers/max-verstappen_master.webp",
+      "sha256": "ce6a61ea2641e5429f287d47133bfb79c62e2629bd21bbf1fb463aa24e111dca",
+      "size": 116726
+    },
+    "public/assets/people/drivers/nico-hulkenberg_card.webp": {
+      "netlify_path": "assets/people/drivers/nico-hulkenberg_card.webp",
+      "sha256": "62da977d2224873b683ce4cea726b402b69f213b0bdc44a68b0c01a5fcfd7d78",
+      "size": 37456
+    },
+    "public/assets/people/drivers/nico-hulkenberg_master.webp": {
+      "netlify_path": "assets/people/drivers/nico-hulkenberg_master.webp",
+      "sha256": "fbe6a323d65aa31bd9f095d595f7dbfa66c06043cd7e70250b53bd40d717ba48",
+      "size": 104614
+    },
+    "public/assets/people/drivers/nikola-tsolov_card.webp": {
+      "netlify_path": "assets/people/drivers/nikola-tsolov_card.webp",
+      "sha256": "e7a99102b2e45834b2f67aeeeb9c7288132e1629554bfddc5e949bcb1671505c",
+      "size": 46182
+    },
+    "public/assets/people/drivers/nikola-tsolov_master.webp": {
+      "netlify_path": "assets/people/drivers/nikola-tsolov_master.webp",
+      "sha256": "af7aeafd6c24ed4020769886be614ee081bc160200db35971ea9e276621c48f8",
+      "size": 118136
+    },
+    "public/assets/people/drivers/oliver-bearman_card.webp": {
+      "netlify_path": "assets/people/drivers/oliver-bearman_card.webp",
+      "sha256": "304e7282297dad53bcbbe167e16bce56ff81b965257f01a08515b954262b76b2",
+      "size": 42784
+    },
+    "public/assets/people/drivers/oliver-bearman_master.webp": {
+      "netlify_path": "assets/people/drivers/oliver-bearman_master.webp",
+      "sha256": "54a3424f8c578eaac4c42ced511ca3f31ba182aba3abccf1cd9f9ec2b0906a76",
+      "size": 116124
+    },
+    "public/assets/people/drivers/oscar-piastri_card.webp": {
+      "netlify_path": "assets/people/drivers/oscar-piastri_card.webp",
+      "sha256": "14983cc4cebe62e3fd6244c2a06fe47092feb9bec6a45ce378735bad8ed40f57",
+      "size": 45060
+    },
+    "public/assets/people/drivers/oscar-piastri_master.webp": {
+      "netlify_path": "assets/people/drivers/oscar-piastri_master.webp",
+      "sha256": "c4359c4da759a82b78f36c1113f24e8f455e5c0a43b763f4b1f8056de406db3e",
+      "size": 121964
+    },
+    "public/assets/people/drivers/pato-oward_card.webp": {
+      "netlify_path": "assets/people/drivers/pato-oward_card.webp",
+      "sha256": "d17b41ce4f3a155ce33ef233a27a2fb1fbee9e5ed6e6a81e1b1463dc1c689252",
+      "size": 26516
+    },
+    "public/assets/people/drivers/pato-oward_master.webp": {
+      "netlify_path": "assets/people/drivers/pato-oward_master.webp",
+      "sha256": "4363828dde6b732efe8bec1f8b2453ae6d2d9fe8e829e8df0d8c35f25b13851f",
+      "size": 70764
+    },
+    "public/assets/people/drivers/pierre-gasly_card.webp": {
+      "netlify_path": "assets/people/drivers/pierre-gasly_card.webp",
+      "sha256": "8438bb0329a75490358a6579dd69b5708bb2f1ba826687d0e4f671649c719b8d",
+      "size": 42046
+    },
+    "public/assets/people/drivers/pierre-gasly_master.webp": {
+      "netlify_path": "assets/people/drivers/pierre-gasly_master.webp",
+      "sha256": "99b0611d2f1094f310e2bdb88beb3d6327fe8c2099484a33da29b0de0400149f",
+      "size": 115318
+    },
+    "public/assets/people/drivers/rafael-camara_card.webp": {
+      "netlify_path": "assets/people/drivers/rafael-camara_card.webp",
+      "sha256": "01fd479058977712353d673b39807c3154ebd820f81b49e4e8cace6914b463c7",
+      "size": 48024
+    },
+    "public/assets/people/drivers/rafael-camara_master.webp": {
+      "netlify_path": "assets/people/drivers/rafael-camara_master.webp",
+      "sha256": "317c23d7ced35d67ca8cdf6e9360de2c40ff7b737d40ddc8c1a4400ebcae7556",
+      "size": 117578
+    },
+    "public/assets/people/drivers/sergio-perez_card.webp": {
+      "netlify_path": "assets/people/drivers/sergio-perez_card.webp",
+      "sha256": "7bd9b90cf711be821862aede593414847f2ece802b47174aefc0f36cde035c0f",
+      "size": 37618
+    },
+    "public/assets/people/drivers/sergio-perez_master.webp": {
+      "netlify_path": "assets/people/drivers/sergio-perez_master.webp",
+      "sha256": "dfaa379ea2bda0527d6a964050b7f28398bd3fca8c1814ac97eb6840edc00811",
+      "size": 108266
+    },
+    "public/assets/people/drivers/valtteri-bottas_card.webp": {
+      "netlify_path": "assets/people/drivers/valtteri-bottas_card.webp",
+      "sha256": "46d3f8ba80e6cdbeaf147a902e1242d611a5677233fcb5404217279bf5e9981c",
+      "size": 38848
+    },
+    "public/assets/people/drivers/valtteri-bottas_master.webp": {
+      "netlify_path": "assets/people/drivers/valtteri-bottas_master.webp",
+      "sha256": "fa953fe6692c6cf5cccdb2c51bfefcdc06d804b3a68d9a707d57ea0ff9c6bad3",
+      "size": 111040
+    },
+    "public/assets/people/drivers/yuki-tsunoda_card.webp": {
+      "netlify_path": "assets/people/drivers/yuki-tsunoda_card.webp",
+      "sha256": "5cc78f48747a168aa9d956682a896b7c4a16ec1f99f7b171663e683035351472",
+      "size": 29584
+    },
+    "public/assets/people/drivers/yuki-tsunoda_master.webp": {
+      "netlify_path": "assets/people/drivers/yuki-tsunoda_master.webp",
+      "sha256": "d34567f16f94e24ca0095d4e826702d9f932c374bfc3c1502a55384eeebb2d5b",
+      "size": 100920
+    },
+    "public/assets/people/drivers/zhou-guanyu_card.webp": {
+      "netlify_path": "assets/people/drivers/zhou-guanyu_card.webp",
+      "sha256": "fecf98458a906a9989ccdaf1a9438bff90323b498afe2527def058742911f758",
+      "size": 28460
+    },
+    "public/assets/people/drivers/zhou-guanyu_master.webp": {
+      "netlify_path": "assets/people/drivers/zhou-guanyu_master.webp",
+      "sha256": "57a758b616320f2c360e47cdc6b9ddd619a2bc03d7fb874e81671e191478d39e",
+      "size": 86892
+    },
+    "public/assets/people/placeholder.svg": {
+      "netlify_path": "assets/people/placeholder.svg",
+      "sha256": "09428833e538c8e415e284ba6603c59740b86480374b75d8a999e063e97331f3",
+      "size": 328
+    },
+    "public/icons/icon-192.png": {
+      "netlify_path": "icons/icon-192.png",
+      "sha256": "13a0c436e3fc4c538377e3b9e4d3834da516d00e539ecf4b633032ca1e692726",
+      "size": 1844
+    },
+    "public/icons/icon-512.png": {
+      "netlify_path": "icons/icon-512.png",
+      "sha256": "2971acc86526cf7b245bbc556809e2d15c4c942828311ea340feaadeb0c1f27a",
+      "size": 4879
+    }
+  },
+  "supplemental_media_count": 167,
+  "supplemental_archives": [
+    "F1_UNIVERSE_2029_MARCO_59000_ASSETS_ORIGINAIS_PARTE_1.zip",
+    "F1_UNIVERSE_2029_MARCO_59000_ASSETS_ORIGINAIS_PARTE_2.zip"
+  ],
+  "note": "Fotos public/ omitidas são idênticas às do ZIP Netlify; glb diferentes foram preservados."
+}

@@ -1,0 +1,610 @@
+{
+  "lando-norris": {
+    "name": "Lando Norris",
+    "master": "/assets/people/drivers/lando-norris_master.webp",
+    "card": "/assets/people/drivers/lando-norris_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/lando-norris",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.22,
+      "y": 0,
+      "size": 0.56
+    }
+  },
+  "arvid-lindblad": {
+    "name": "Arvid Lindblad",
+    "master": "/assets/people/drivers/arvid-lindblad_master.webp",
+    "card": "/assets/people/drivers/arvid-lindblad_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/arvid-lindblad",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.225,
+      "y": 0,
+      "size": 0.55
+    }
+  },
+  "kimi-antonelli": {
+    "name": "Andrea Kimi Antonelli",
+    "master": "/assets/people/drivers/kimi-antonelli_master.webp",
+    "card": "/assets/people/drivers/kimi-antonelli_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/kimi-antonelli",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.16,
+      "y": 0.01,
+      "size": 0.58
+    }
+  },
+  "alex-palou": {
+    "name": "Alex Palou",
+    "master": "/assets/people/drivers/alex-palou_master.webp",
+    "card": "/assets/people/drivers/alex-palou_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alex_Palou_at_2024_Chevrolet_Detroit_Grand_Prix.jpg",
+    "masterSize": 1024,
+    "crop": {
+      "left": 322,
+      "top": 299,
+      "width": 1381,
+      "height": 1381
+    },
+    "face": {
+      "x": 0.19,
+      "y": 0.06,
+      "size": 0.52
+    }
+  },
+  "max-verstappen": {
+    "name": "Max Verstappen",
+    "master": "/assets/people/drivers/max-verstappen_master.webp",
+    "card": "/assets/people/drivers/max-verstappen_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/max-verstappen",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.175,
+      "y": 0,
+      "size": 0.55
+    }
+  },
+  "nikola-tsolov": {
+    "name": "Nikola Tsolov",
+    "master": "/assets/people/drivers/nikola-tsolov_master.webp",
+    "card": "/assets/people/drivers/nikola-tsolov_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.fiaformula2.com/en/drivers/nikola-tsolov",
+    "masterSize": 1024,
+    "crop": {
+      "left": 200,
+      "top": 0,
+      "width": 1600,
+      "height": 1600
+    },
+    "face": {
+      "x": 0.29,
+      "y": 0.04,
+      "size": 0.5
+    }
+  },
+  "oscar-piastri": {
+    "name": "Oscar Piastri",
+    "master": "/assets/people/drivers/oscar-piastri_master.webp",
+    "card": "/assets/people/drivers/oscar-piastri_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/oscar-piastri",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.25,
+      "y": 0.015,
+      "size": 0.52
+    }
+  },
+  "sergio-perez": {
+    "name": "Sergio Pérez",
+    "master": "/assets/people/drivers/sergio-perez_master.webp",
+    "card": "/assets/people/drivers/sergio-perez_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/sergio-perez",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.19,
+      "y": 0,
+      "size": 0.56
+    }
+  },
+  "carlos-sainz": {
+    "name": "Carlos Sainz",
+    "master": "/assets/people/drivers/carlos-sainz_master.webp",
+    "card": "/assets/people/drivers/carlos-sainz_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/carlos-sainz",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.225,
+      "y": 0.035,
+      "size": 0.55
+    }
+  },
+  "oliver-bearman": {
+    "name": "Oliver Bearman",
+    "master": "/assets/people/drivers/oliver-bearman_master.webp",
+    "card": "/assets/people/drivers/oliver-bearman_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/oliver-bearman",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.225,
+      "y": 0,
+      "size": 0.57
+    }
+  },
+  "alexander-albon": {
+    "name": "Alexander Albon",
+    "master": "/assets/people/drivers/alexander-albon_master.webp",
+    "card": "/assets/people/drivers/alexander-albon_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/alexander-albon",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.185,
+      "y": 0.035,
+      "size": 0.55
+    }
+  },
+  "rafael-camara": {
+    "name": "Rafael Câmara",
+    "master": "/assets/people/drivers/rafael-camara_master.webp",
+    "card": "/assets/people/drivers/rafael-camara_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.fiaformula2.com/en/drivers/rafael-camara",
+    "masterSize": 1024,
+    "crop": {
+      "left": 200,
+      "top": 0,
+      "width": 1600,
+      "height": 1600
+    },
+    "face": {
+      "x": 0.33,
+      "y": 0.035,
+      "size": 0.51
+    }
+  },
+  "gabriel-bortoleto": {
+    "name": "Gabriel Bortoleto",
+    "master": "/assets/people/drivers/gabriel-bortoleto_master.webp",
+    "card": "/assets/people/drivers/gabriel-bortoleto_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/gabriel-bortoleto",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.235,
+      "y": 0,
+      "size": 0.55
+    }
+  },
+  "franco-colapinto": {
+    "name": "Franco Colapinto",
+    "master": "/assets/people/drivers/franco-colapinto_master.webp",
+    "card": "/assets/people/drivers/franco-colapinto_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/franco-colapinto",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.22,
+      "y": 0,
+      "size": 0.56
+    }
+  },
+  "isack-hadjar": {
+    "name": "Isack Hadjar",
+    "master": "/assets/people/drivers/isack-hadjar_master.webp",
+    "card": "/assets/people/drivers/isack-hadjar_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/isack-hadjar",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.22,
+      "y": 0,
+      "size": 0.56
+    }
+  },
+  "pierre-gasly": {
+    "name": "Pierre Gasly",
+    "master": "/assets/people/drivers/pierre-gasly_master.webp",
+    "card": "/assets/people/drivers/pierre-gasly_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/pierre-gasly",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.1,
+      "y": 0.01,
+      "size": 0.57
+    }
+  },
+  "fernando-alonso": {
+    "name": "Fernando Alonso",
+    "master": "/assets/people/drivers/fernando-alonso_master.webp",
+    "card": "/assets/people/drivers/fernando-alonso_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/fernando-alonso",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.16,
+      "y": 0,
+      "size": 0.6
+    }
+  },
+  "mari-boya": {
+    "name": "Mari Boya",
+    "master": "/assets/people/drivers/mari-boya_master.webp",
+    "card": "/assets/people/drivers/mari-boya_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.fiaformula2.com/en/drivers/mari-boya",
+    "masterSize": 1024,
+    "crop": {
+      "left": 200,
+      "top": 0,
+      "width": 1600,
+      "height": 1600
+    },
+    "face": {
+      "x": 0.3,
+      "y": 0.035,
+      "size": 0.48
+    }
+  },
+  "colton-herta": {
+    "name": "Colton Herta",
+    "master": "/assets/people/drivers/colton-herta_master.webp",
+    "card": "/assets/people/drivers/colton-herta_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.fiaformula2.com/en/drivers/colton-herta",
+    "masterSize": 1024,
+    "crop": {
+      "left": 200,
+      "top": 0,
+      "width": 1600,
+      "height": 1600
+    },
+    "face": {
+      "x": 0.3,
+      "y": 0.015,
+      "size": 0.52
+    }
+  },
+  "pato-oward": {
+    "name": "Pato O'Ward",
+    "master": "/assets/people/drivers/pato-oward_master.webp",
+    "card": "/assets/people/drivers/pato-oward_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.mclaren.com/racing/team/pato-oward/",
+    "masterSize": 1024,
+    "crop": {
+      "left": 320,
+      "top": 0,
+      "width": 1200,
+      "height": 1080
+    },
+    "face": {
+      "x": 0.22,
+      "y": 0.09,
+      "size": 0.61
+    }
+  },
+  "liam-lawson": {
+    "name": "Liam Lawson",
+    "master": "/assets/people/drivers/liam-lawson_master.webp",
+    "card": "/assets/people/drivers/liam-lawson_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/liam-lawson",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.21,
+      "y": 0.01,
+      "size": 0.58
+    }
+  },
+  "jack-doohan": {
+    "name": "Jack Doohan",
+    "master": "/assets/people/drivers/jack-doohan_master.webp",
+    "card": "/assets/people/drivers/jack-doohan_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.haasf1team.com/season/team/jack-doohan",
+    "masterSize": 540,
+    "crop": {
+      "left": 450,
+      "top": 24,
+      "width": 540,
+      "height": 540
+    },
+    "face": {
+      "x": 0.24,
+      "y": 0.045,
+      "size": 0.5
+    }
+  },
+  "yuki-tsunoda": {
+    "name": "Yuki Tsunoda",
+    "master": "/assets/people/drivers/yuki-tsunoda_master.webp",
+    "card": "/assets/people/drivers/yuki-tsunoda_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yuki_Tsunoda_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A8096).jpg",
+    "masterSize": 1024,
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 1916,
+      "height": 2874
+    },
+    "face": {
+      "x": 0.185,
+      "y": 0.07,
+      "size": 0.6
+    }
+  },
+  "felipe-drugovich": {
+    "name": "Felipe Drugovich",
+    "master": "/assets/people/drivers/felipe-drugovich_master.webp",
+    "card": "/assets/people/drivers/felipe-drugovich_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.fiaformulae.com/en/drivers/felipe-drugovich",
+    "masterSize": 627,
+    "crop": {
+      "left": 379,
+      "top": 23,
+      "width": 627,
+      "height": 627
+    },
+    "face": {
+      "x": 0.185,
+      "y": 0.03,
+      "size": 0.58
+    }
+  },
+  "zhou-guanyu": {
+    "name": "Zhou Guanyu",
+    "master": "/assets/people/drivers/zhou-guanyu_master.webp",
+    "card": "/assets/people/drivers/zhou-guanyu_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhou_Guanyu_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A7999).jpg",
+    "masterSize": 1024,
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 2540,
+      "height": 3811
+    },
+    "face": {
+      "x": 0.155,
+      "y": 0.03,
+      "size": 0.68
+    }
+  },
+  "dino-beganovic": {
+    "name": "Dino Beganovic",
+    "master": "/assets/people/drivers/dino-beganovic_master.webp",
+    "card": "/assets/people/drivers/dino-beganovic_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.fiaformula2.com/en/drivers/dino-beganovic",
+    "masterSize": 1024,
+    "crop": {
+      "left": 200,
+      "top": 0,
+      "width": 1600,
+      "height": 1600
+    },
+    "face": {
+      "x": 0.29,
+      "y": 0.03,
+      "size": 0.5
+    }
+  },
+  "george-russell": {
+    "name": "George Russell",
+    "master": "/assets/people/drivers/george-russell_master.webp",
+    "card": "/assets/people/drivers/george-russell_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/george-russell",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.205,
+      "y": 0.015,
+      "size": 0.54
+    }
+  },
+  "nico-hulkenberg": {
+    "name": "Nico Hülkenberg",
+    "master": "/assets/people/drivers/nico-hulkenberg_master.webp",
+    "card": "/assets/people/drivers/nico-hulkenberg_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/nico-hulkenberg",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.215,
+      "y": 0,
+      "size": 0.55
+    }
+  },
+  "lewis-hamilton": {
+    "name": "Lewis Hamilton",
+    "master": "/assets/people/drivers/lewis-hamilton_master.webp",
+    "card": "/assets/people/drivers/lewis-hamilton_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/lewis-hamilton",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.215,
+      "y": 0.01,
+      "size": 0.57
+    }
+  },
+  "valtteri-bottas": {
+    "name": "Valtteri Bottas",
+    "master": "/assets/people/drivers/valtteri-bottas_master.webp",
+    "card": "/assets/people/drivers/valtteri-bottas_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/valtteri-bottas",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.225,
+      "y": 0,
+      "size": 0.57
+    }
+  },
+  "charles-leclerc": {
+    "name": "Charles Leclerc",
+    "master": "/assets/people/drivers/charles-leclerc_master.webp",
+    "card": "/assets/people/drivers/charles-leclerc_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/charles-leclerc",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.2,
+      "y": 0,
+      "size": 0.58
+    }
+  },
+  "esteban-ocon": {
+    "name": "Esteban Ocon",
+    "master": "/assets/people/drivers/esteban-ocon_master.webp",
+    "card": "/assets/people/drivers/esteban-ocon_card.webp",
+    "status": "verified",
+    "sourceUrl": "https://www.formula1.com/en/drivers/esteban-ocon",
+    "masterSize": 1024,
+    "crop": {
+      "left": 134,
+      "top": 0,
+      "width": 1069,
+      "height": 1069
+    },
+    "face": {
+      "x": 0.22,
+      "y": 0.005,
+      "size": 0.56
+    }
+  }
+}

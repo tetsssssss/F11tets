@@ -1,0 +1,72 @@
+[
+  {
+    "id": "battery-0",
+    "name": "Panasonic Energy",
+    "attributes": {
+      "Densidade energética": 79,
+      "Potência de descarga": 90,
+      "Regeneração": 84,
+      "Eficiência": 95,
+      "Peso": 89,
+      "Gestão térmica": 83,
+      "Durabilidade": 94,
+      "Confiabilidade": 88
+    }
+  },
+  {
+    "id": "battery-1",
+    "name": "CATL",
+    "attributes": {
+      "Densidade energética": 86,
+      "Potência de descarga": 80,
+      "Regeneração": 91,
+      "Eficiência": 85,
+      "Peso": 79,
+      "Gestão térmica": 90,
+      "Durabilidade": 84,
+      "Confiabilidade": 95
+    }
+  },
+  {
+    "id": "battery-2",
+    "name": "LG Energy Solution",
+    "attributes": {
+      "Densidade energética": 93,
+      "Potência de descarga": 87,
+      "Regeneração": 81,
+      "Eficiência": 92,
+      "Peso": 86,
+      "Gestão térmica": 80,
+      "Durabilidade": 91,
+      "Confiabilidade": 85
+    }
+  },
+  {
+    "id": "battery-3",
+    "name": "Samsung SDI",
+    "attributes": {
+      "Densidade energética": 83,
+      "Potência de descarga": 94,
+      "Regeneração": 88,
+      "Eficiência": 82,
+      "Peso": 93,
+      "Gestão térmica": 87,
+      "Durabilidade": 81,
+      "Confiabilidade": 92
+    }
+  },
+  {
+    "id": "battery-4",
+    "name": "SK On",
+    "attributes": {
+      "Densidade energética": 90,
+      "Potência de descarga": 84,
+      "Regeneração": 95,
+      "Eficiência": 89,
+      "Peso": 83,
+      "Gestão térmica": 94,
+      "Durabilidade": 88,
+      "Confiabilidade": 82
+    }
+  }
+]
