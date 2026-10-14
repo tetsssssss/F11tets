@@ -821,6 +821,18 @@ export default function LiveMap({
               {shot.label}
             </div>
           )}
+          {!clean && own.map((id) => {
+            // Read-only pit status: the engine's real call and the presentation stage, never an invented duration.
+            const call = r.pitCalls[id], c = cars.find((x) => x.id === id);
+            if (!call && (!c || c.pitStage === 'TRACK')) return null;
+            const stage = c && c.pitStage !== 'TRACK' ? { ENTRY: 'ENTRADA NO BOX', STOP: 'PARADA', EXIT: 'SAÍDA' }[c.pitStage] : null;
+            return (
+              <div key={'pit-' + id} className="shot-chip pit-chip" role="status">
+                {driverById[id]?.short ?? id} · BOX{call ? ` V${call.lap} · ${call.compound}` : ''}
+                {stage ? ` · ${stage}` : ''}
+              </div>
+            );
+          })}
           {toasts.slice(photosOnly ? -2 : -3).map((t) => (
             <div key={t.id} className={'map-toast tone-' + t.tone}>
               {t.text}

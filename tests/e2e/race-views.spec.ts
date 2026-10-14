@@ -89,7 +89,7 @@ test('without WebGL the race keeps running in 2D with a notice', async ({ browse
   const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
   await context.addInitScript(() => {
     const original = HTMLCanvasElement.prototype.getContext;
-    HTMLCanvasElement.prototype.getContext = function (type: string, ...rest: any[]) {
+    HTMLCanvasElement.prototype.getContext = function (this: HTMLCanvasElement, type: string, ...rest: any[]) {
       if (/webgl/i.test(type)) return null;
       return (original as any).call(this, type, ...rest);
     } as any;

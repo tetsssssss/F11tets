@@ -1,0 +1,51 @@
+{
+ "report": [
+  {
+   "cam": "tv",
+   "lap": "4/58",
+   "shot": {
+    "kind": "tv",
+    "ids": [
+     "lando-norris",
+     "max-verstappen"
+    ],
+    "label": "TV"
+   },
+   "fps": 4,
+   "drawCalls": 276,
+   "cars": 32,
+   "maxCarPx": 51319,
+   "focusSizes": [
+    {
+     "x": 109,
+     "y": 204,
+     "w": 90,
+     "h": 61
+    },
+    {
+     "x": 90,
+     "y": 210,
+     "w": 100,
+     "h": 69
+    }
+   ]
+  },
+  {
+   "cam": "aerea",
+   "lap": "6/58",
+   "shot": {
+    "kind": "aerea",
+    "ids": [],
+    "label": "Estratégica"
+   },
+   "fps": 19,
+   "drawCalls": 714,
+   "cars": 32,
+   "maxCarPx": 229,
+   "focusSizes": []
+  }
+ ],
+ "errors": [
+  "Failed to load resource: the server responded with a status of 404 (Not Found)"
+ ]
+}

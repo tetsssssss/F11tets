@@ -13,6 +13,7 @@ const ctx = await browser.newContext({ viewport: { width: W, height: H }, device
 const page = await ctx.newPage(); const errors = []; page.on('pageerror', e => errors.push(e.message)); page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
 await page.goto(base + '/corrida-rapida');
 await page.getByLabel(/Espectador/).uncheck();
+if (process.env.CIRCUIT) await page.locator('select').first().selectOption(process.env.CIRCUIT);
 await page.getByRole('button', { name: 'Iniciar corrida rápida', exact: true }).click();
 await page.waitForSelector('.live-car');
 await page.getByRole('button', { name: '3D BABYLON' }).first().click();

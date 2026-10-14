@@ -14,6 +14,7 @@ import {
 } from '../presentation/broadcast-director';
 import { FpsGovernor, hardwareScaling, lowerQuality, type BabylonQuality } from '../presentation/babylon-quality';
 import { visualRaceAngle, visualRacePoint } from '../presentation/race-visual-focus';
+import { THEME_LOOK, sceneryPlan, themeFor, type SceneryItem, type SceneryKind } from '../presentation/scenery-plan';
 import { pitCrewVisible, safetyCarPose } from '../presentation/race-ceremony';
 
 export type RaceBabylonCamera = BabylonCameraChoice;
@@ -120,8 +121,9 @@ function createScene(B:any, canvas: HTMLCanvasElement, geometry: Track2DGeometry
   const grass=material('grass','#235338'), asphalt=material('track','#343c41'), white=material('white','#dde5df'),
     red=material('red','#cb343e'), garage=material('garage','#718e99'), roof=material('roof','#293a48'), rubber=material('rubber','#11171c');
   const bounds = trackBounds(geometry, 30);
+  const theme = themeFor(geometry.circuitId), look = THEME_LOOK[theme];
   const ground = B.MeshBuilder.CreateGround('ground', {width:Math.max(120,bounds.w*.2),height:Math.max(92,bounds.h*.2)},scene);
-  ground.material=grass;
+  ground.material=theme==='park'?grass:material('ground-'+theme,look.ground);ground.isPickable=false;
   const fallbackTrack:any[]=[],scenery:any[]=[],left:any[]=[],right:any[]=[],pts=geometry.points;
   for(let i=0;i<=pts.length;i++){
     const p=pts[i%pts.length],q=pts[(i+1)%pts.length],d=Math.hypot(q.x-p.x,q.y-p.y)||1;
@@ -158,7 +160,7 @@ function createScene(B:any, canvas: HTMLCanvasElement, geometry: Track2DGeometry
   }
   const cam=new B.FreeCamera('tv',new B.Vector3(0,42,-50),scene);
   cam.minZ=.05; cam.maxZ=400;scene.activeCamera=cam;
-  scene.clearColor=new B.Color4(.45,.64,.76,1);
+  scene.clearColor=new B.Color4(look.sky[0],look.sky[1],look.sky[2],1);
   const safetyRoot=new B.TransformNode('safety-car',scene);
   const safetyPaint=material('safety-paint','#e9b538'),safetyGlass=material('safety-glass','#182f3f');
   const safetyBody=B.MeshBuilder.CreateBox('safety-body',{width:1.18,height:.42,depth:2.3},scene);
@@ -179,10 +181,65 @@ function createScene(B:any, canvas: HTMLCanvasElement, geometry: Track2DGeometry
   const shadowSource = B.MeshBuilder.CreateDisc('contact-shadow-source', {radius:1, tessellation:16}, scene);
   shadowSource.rotation.x = Math.PI/2; shadowSource.bakeCurrentTransformIntoVertices();
   shadowSource.material = shadowMat; shadowSource.isPickable = false; shadowSource.setEnabled(false);
-  return {engine,scene,cam,bounds,material,rubber,fallbackTrack,scenery,shadowSource,
+  const rt={engine,scene,cam,bounds,theme,sky:look.sky,material,rubber,fallbackTrack,scenery,shadowSource,sceneryKit:undefined as undefined|{dispose:()=>void;items:number;meshes:number},
     safetyRoot,beacon,models:new Map<string,CarModel>(),
     teamAssets:new Map<string,Promise<any>>(),quality};
+  buildScenery(rt,B,geometry,quality);
+  return rt;
 }
+
+/** Camera-first scenery kit: a handful of shared source meshes drawn as thin instances, split into
+ * four spatial chunks so the frustum can cull what the lens cannot see. Presentation only. */
+function buildScenery(rt:ReturnType<typeof createScene>, B:any, geometry:Track2DGeometry, quality:RaceBabylonQuality){
+  rt.sceneryKit?.dispose();rt.sceneryKit=undefined;
+  const look=THEME_LOOK[rt.theme];
+  const half={x:Math.max(120,rt.bounds.w*.2)/2-1,z:Math.max(92,rt.bounds.h*.2)/2-1};
+  const track=geometry.points.map(point=>xy(point,rt.bounds)),pit=geometry.pitLane.map(point=>xy(point,rt.bounds));
+  const items=sceneryPlan(track,{circuitId:geometry.circuitId,quality,pitLane:pit,half});
+  const root=new B.TransformNode('scenery-kit',rt.scene);
+  const sources:any[]=[];
+  const flat=(_name:string,mesh:any,y:number)=>{mesh.position.y=y;mesh.bakeCurrentTransformIntoVertices();mesh.isPickable=false;mesh.setEnabled(false);mesh.parent=root;sources.push(mesh);return mesh;};
+  const mat=(name:string,hex:string,emissive=false)=>{const m=rt.material('kit-'+name,hex);if(emissive)m.emissiveColor=B.Color3.FromHexString(hex);return m;};
+  const parts:Record<SceneryKind,{mesh:any;material:any;tinted:boolean}[]>={
+    tree:[
+      {mesh:flat('trunk',B.MeshBuilder.CreateCylinder('kit-trunk',{diameterTop:.18,diameterBottom:.28,height:.9,tessellation:5},rt.scene),.45),material:mat('trunk','#5b4430'),tinted:false},
+      {mesh:flat('canopy',B.MeshBuilder.CreateCylinder('kit-canopy',{diameterTop:0,diameterBottom:1.9,height:2.5,tessellation:6},rt.scene),2.1),material:mat('canopy','#ffffff'),tinted:true},
+    ],
+    building:[{mesh:flat('building',B.MeshBuilder.CreateBox('kit-building',{size:1},rt.scene),.5),material:mat('building','#ffffff'),tinted:true}],
+    lamp:[
+      {mesh:flat('pole',B.MeshBuilder.CreateCylinder('kit-pole',{diameter:.09,height:2.7,tessellation:5},rt.scene),1.35),material:mat('pole','#4a535a'),tinted:false},
+      {mesh:flat('lamp',B.MeshBuilder.CreateSphere('kit-lamp',{diameter:.3,segments:4},rt.scene),2.75),material:mat('lamp',look.tones.lamp[0],true),tinted:false},
+    ],
+    dune:[{mesh:flat('dune',B.MeshBuilder.CreateSphere('kit-dune',{diameter:1,segments:4},rt.scene),0),material:mat('dune','#ffffff'),tinted:true}],
+  };
+  const chunkOf=(item:SceneryItem)=>(item.x<0?0:1)+(item.z<0?0:2);
+  const drawn:any[]=[];
+  for(const kind of Object.keys(parts) as SceneryKind[]){
+    const kindItems=items.filter(item=>item.kind===kind);
+    if(!kindItems.length)continue;
+    for(let chunk=0;chunk<4;chunk++){
+      const group=kindItems.filter(item=>chunkOf(item)===chunk);
+      if(!group.length)continue;
+      const matrices=new Float32Array(group.length*16),colors=new Float32Array(group.length*4);
+      group.forEach((item,index)=>{
+        const lampYaw=item.rot;
+        B.Matrix.Compose(new B.Vector3(item.sx,item.sy,item.sz),B.Quaternion.FromEulerAngles(0,lampYaw,0),new B.Vector3(item.x,kind==='dune'?.15:0,item.z)).copyToArray(matrices,index*16);
+        const palette=look.tones[kind],hex=palette[item.tone%palette.length],c=B.Color3.FromHexString(hex);
+        colors.set([c.r,c.g,c.b,1],index*4);
+      });
+      for(const part of parts[kind]){
+        const mesh=part.mesh.clone(part.mesh.name+'-c'+chunk);
+        mesh.parent=root;mesh.material=part.material;mesh.setEnabled(true);mesh.isPickable=false;
+        mesh.thinInstanceSetBuffer('matrix',matrices,16,true);
+        if(part.tinted)mesh.thinInstanceSetBuffer('color',colors,4,true);
+        mesh.thinInstanceRefreshBoundingInfo(true);
+        drawn.push(mesh);
+      }
+    }
+  }
+  rt.sceneryKit={dispose:()=>{drawn.forEach(mesh=>mesh.dispose());sources.forEach(mesh=>mesh.dispose());root.dispose();},items:items.length,meshes:drawn.length};
+}
+
 /** The GLBs are original stylized team models delivered in Marco 56000.
  * One cached container per constructor and quality; each driver gets its own transform.
  * On download/decoder errors, the existing procedural car remains drivable.
@@ -210,6 +267,14 @@ async function loadCircuitModel(rt:ReturnType<typeof createScene>, B:any, id:str
     rt.fallbackTrack.forEach((m:any)=>m.dispose());rt.fallbackTrack.length=0;
     rt.scenery.length=0;
     rt.scenery.push(...result.meshes.filter((mesh:any)=>/^(?:pit_building|pit_roof|grandstand)/.test(mesh.name)));
+    // glTF materials are opaque and shared, so mesh.visibility alone never fades them: give each
+    // near-lens structure its own alpha-blended material so sceneryVisibility really works.
+    for(const mesh of rt.scenery){
+      if(!mesh.material||mesh.metadata?.fadeReady)continue;
+      const own=mesh.material.clone(mesh.name+'-fade');
+      own.transparencyMode=B.Material.MATERIAL_ALPHABLEND;own.backFaceCulling=false;
+      mesh.material=own;mesh.metadata={...(mesh.metadata||{}),fadeReady:true};
+    }
   }catch(error){console.warn('Circuito GLB indisponível, usando malha procedural:',id,error);}
 }
 /** The GLB wheels carry no pivot: group each corner's tyre/rim/hub/lock under a pivot at the tyre centre. */
@@ -261,12 +326,17 @@ function createCar(rt:ReturnType<typeof createScene>, B:any, id:string, color:st
   const crew=new B.TransformNode('pit-crew-'+id,scene);
   crew.parent=root;
   const suit=rt.material('pit-suit-'+id,/^#[\da-f]{6}$/i.test(color)?color:'#d9e2e5');
-  for(const x of [-1.24,1.24])for(const z of [-.79,1.0]){
+  const helmetMat=rt.material('pit-helmet-'+id,'#f6ca59');
+  // Crew size follows the graphics profile (4 to 12 actors); positions are around the car, in car space.
+  const crewSpots:[number,number][]=[[-1.24,-.79],[1.24,-.79],[-1.24,1.0],[1.24,1.0],[0,-1.75],[0,2.05],[-1.9,.1],[1.9,.1],[-1.6,-1.5],[1.6,-1.5],[-1.6,1.9],[1.6,1.9]];
+  const crewCount=quality==='baixo'?4:quality==='medio'?6:quality==='alto'?8:12;
+  crewSpots.slice(0,crewCount).forEach(([x,z],index)=>{
+    const actor=new B.TransformNode('pit-actor-'+index,scene);actor.parent=crew;actor.position.set(x,0,z);actor.metadata={phase:index*.9};
     const torso=B.MeshBuilder.CreateCylinder('pit-mechanic',{diameter:.32,height:.53,tessellation:8},scene);
-    torso.parent=crew;torso.position.set(x,.48,z);torso.material=suit;
+    torso.parent=actor;torso.position.y=.48;torso.material=suit;torso.isPickable=false;
     const helmet=B.MeshBuilder.CreateSphere('pit-helmet',{diameter:.32,segments:8},scene);
-    helmet.parent=crew;helmet.position.set(x,.86,z);helmet.material=rt.material('pit-helmet-'+id,'#f6ca59');
-  }
+    helmet.parent=actor;helmet.position.y=.86;helmet.material=helmetMat;helmet.isPickable=false;
+  });
   crew.setEnabled(false);
   const smoke=B.MeshBuilder.CreateSphere('incident-smoke',{diameter:.72,segments:8},scene);
   smoke.parent=root;smoke.position.set(0,1.18,-.75);smoke.material=rt.material('incident-smoke-'+id,'#788287');smoke.visibility=.62;smoke.setEnabled(false);
@@ -336,6 +406,7 @@ export default function LiveRaceBabylon(props:LiveRaceBabylonProps){
         });
         // Camera rig: exponential smoothing of position, look-at and FOV, with deliberate cuts for big jumps.
         const rig={ready:false,pos:new B.Vector3(),target:new B.Vector3(),fov:.9,kind:'' as string,subject:'',anchor:0,nextCheck:0,cut:new CutFade(false),pending:null as CameraPlan|null};
+        (window as any).__f1BabylonScene=current.scene;
         const governor=new FpsGovernor();
         const instrumentation=new B.SceneInstrumentation(current.scene);instrumentation.captureRenderTime=true;instrument=instrumentation;
         const tmpRay=new B.Ray(B.Vector3.Zero(),B.Vector3.Up(),1);
@@ -357,6 +428,7 @@ export default function LiveRaceBabylon(props:LiveRaceBabylonProps){
             current.quality=p.quality;
             current.engine.setHardwareScalingLevel(hardwareScaling(p.quality,window.devicePixelRatio||1));
             current.engine.resize();
+            buildScenery(current,B,props.geometry,p.quality);
             // GLB detail follows the profile: rebuild cars from the cached containers at the new level.
             for(const [id,model] of [...current.models])if(model.level!==levelOf(p.quality)){
               model.root.dispose();current.models.delete(id);
@@ -384,7 +456,10 @@ export default function LiveRaceBabylon(props:LiveRaceBabylonProps){
             const running=car.car.status==='RUNNING';
             model.root.setEnabled(running || car.pitStage!=='TRACK' || !!car.incident);
             model.crew.setEnabled(pitCrewVisible(car.pitStage));
-            if(pitCrewVisible(car.pitStage) && !p.reduced && !p.paused)model.crew.position.y=.035*Math.sin(now/180);
+            if(pitCrewVisible(car.pitStage) && !p.reduced && !p.paused){
+              // Procedural wheel-gun / jack motion: purely visual, no duration is implied.
+              for(const actor of model.crew.getChildren()){actor.position.y=.04*Math.max(0,Math.sin(now/150+(actor.metadata?.phase??0)));}
+            }
             model.effects.smoke.setEnabled(!!car.incident?.smoke);
             model.effects.dust.setEnabled(!!car.incident?.dust);
             for(const spark of model.effects.sparks)spark.setEnabled(!!car.incident?.sparks);
@@ -424,12 +499,12 @@ export default function LiveRaceBabylon(props:LiveRaceBabylonProps){
           const fallbackSubject=byId.get(p.selected||'')||p.cars.find(car=>p.own.includes(car.id))||p.cars[0];
           let focusCars=p.shot.ids.map(id=>byId.get(id)).filter(Boolean);
           if(!focusCars.length&&p.shot.kind!=='aerea'&&fallbackSubject)focusCars=[fallbackSubject];
-          if(focusCars.length){
+          if(focusCars.length||p.shot.kind==='aerea'){
             const kind=p.shot.kind;
             const compact=(canvas.current?.clientWidth ?? window.innerWidth)<600;
             const points:FocusPoint[]=focusCars.map((car:any)=>{const v=xy(visualRacePoint(car),current.bounds);return {x:v.x,z:v.z,angle:car.angle*Math.PI/180};});
-            const lead=focusCars[0];
-            const aheadPoint=kind==='onboard'?null:xy(p.geometry.at(lead.progress+.012),current.bounds);
+            const lead=focusCars[0]??{id:'',progress:0};
+            const aheadPoint=kind==='onboard'||!focusCars.length?null:xy(p.geometry.at(lead.progress+.012),current.bounds);
             let pitAnchor:{x:number;z:number;nx:number;nz:number}|null=null;
             if(kind==='pit'&&p.geometry.pitLane.length>2){
               const lane=p.geometry.pitLane.map(q=>xy(q,current.bounds));
@@ -479,7 +554,7 @@ export default function LiveRaceBabylon(props:LiveRaceBabylonProps){
             const distance=Math.hypot(Math.max(box.minimumWorld.x-cp.x,0,cp.x-box.maximumWorld.x),Math.max(box.minimumWorld.y-cp.y,0,cp.y-box.maximumWorld.y),Math.max(box.minimumWorld.z-cp.z,0,cp.z-box.maximumWorld.z));
             mesh.visibility=sceneryVisibility(distance,sceneryCamera,mesh.name);
           }
-          current.scene.clearColor=p.wet?new B.Color4(.19,.27,.33,1):new B.Color4(.45,.64,.76,1);
+          current.scene.clearColor=p.wet?new B.Color4(.19,.27,.33,1):new B.Color4(current.sky[0],current.sky[1],current.sky[2],1);
           current.scene.fogMode=p.wet&&p.quality!=='baixo'?B.Scene.FOGMODE_EXP2:B.Scene.FOGMODE_NONE;
           current.scene.fogDensity=p.wet?.012:0;
           current.scene.fogColor=new B.Color3(.25,.33,.39);
@@ -512,7 +587,7 @@ export default function LiveRaceBabylon(props:LiveRaceBabylonProps){
             }
             (window as any).__f1Babylon={fps:Math.round(current.engine.getFps()),shot:p.shot,camera:p.camera,quality:p.quality,canvas:{w:cw,h:ch},
               drawCalls:instrumentation.drawCallsCounter.current,renderMs:Math.round(instrumentation.renderTimeCounter.average*10)/10,activeMeshes:current.scene.getActiveMeshes().length,
-              cameraPos:rig.pos.asArray(),fov:rig.fov,cars:rects};
+              scenery:current.sceneryKit?{items:current.sceneryKit.items,meshes:current.sceneryKit.meshes,theme:current.theme}:null,cameraPos:rig.pos.asArray(),fov:rig.fov,cars:rects};
           }
         });
         setReady(true);
