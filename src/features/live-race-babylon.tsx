@@ -15,7 +15,7 @@ import {
 import { FpsGovernor, hardwareScaling, lowerQuality, type BabylonQuality } from '../presentation/babylon-quality';
 import { visualRaceAngle, visualRacePoint } from '../presentation/race-visual-focus';
 import { layoutRaceTags, TAG_H, TAG_W } from '../presentation/race-tag-layout';
-import { THEME_LOOK, sceneryPlan, themeFor, type SceneryItem, type SceneryKind } from '../presentation/scenery-plan';
+import { THEME_LOOK, groundSize, sceneryPlan, themeFor, type SceneryItem, type SceneryKind } from '../presentation/scenery-plan';
 import { pitCrewVisible, safetyCarPose } from '../presentation/race-ceremony';
 
 export type RaceBabylonCamera = BabylonCameraChoice;
@@ -125,7 +125,7 @@ function createScene(B:any, canvas: HTMLCanvasElement, geometry: Track2DGeometry
     red=material('red','#cb343e'), garage=material('garage','#718e99'), roof=material('roof','#293a48'), rubber=material('rubber','#11171c');
   const bounds = trackBounds(geometry, 30);
   const theme = themeFor(geometry.circuitId), look = THEME_LOOK[theme];
-  const ground = B.MeshBuilder.CreateGround('ground', {width:Math.max(120,bounds.w*.2),height:Math.max(92,bounds.h*.2)},scene);
+  const ground = B.MeshBuilder.CreateGround('ground', groundSize(bounds,geometry.circuitId),scene);
   ground.material=theme==='park'?grass:material('ground-'+theme,look.ground);ground.isPickable=false;
   const fallbackTrack:any[]=[],scenery:any[]=[],left:any[]=[],right:any[]=[],pts=geometry.points;
   for(let i=0;i<=pts.length;i++){
@@ -192,49 +192,105 @@ function createScene(B:any, canvas: HTMLCanvasElement, geometry: Track2DGeometry
 }
 
 /** Camera-first scenery kit: a handful of shared source meshes drawn as thin instances, split into
- * four spatial chunks so the frustum can cull what the lens cannot see. Presentation only. */
+ * spatial chunks so the frustum can cull what the lens cannot see. Presentation only. */
+type KitPart = { mesh: any; material: any; tinted: boolean; place: (item: SceneryItem) => { sx: number; sy: number; sz: number; y: number; rot?: number } };
 function buildScenery(rt:ReturnType<typeof createScene>, B:any, geometry:Track2DGeometry, quality:RaceBabylonQuality){
   rt.sceneryKit?.dispose();rt.sceneryKit=undefined;
   const look=THEME_LOOK[rt.theme];
-  const half={x:Math.max(120,rt.bounds.w*.2)/2-1,z:Math.max(92,rt.bounds.h*.2)/2-1};
+  const ground=groundSize(rt.bounds,geometry.circuitId);
+  const half={x:ground.width/2-1,z:ground.height/2-1};
   const track=geometry.points.map(point=>xy(point,rt.bounds)),pit=geometry.pitLane.map(point=>xy(point,rt.bounds));
   const items=sceneryPlan(track,{circuitId:geometry.circuitId,quality,pitLane:pit,half});
   const root=new B.TransformNode('scenery-kit',rt.scene);
   const sources:any[]=[];
-  const flat=(_name:string,mesh:any,y:number)=>{mesh.position.y=y;mesh.bakeCurrentTransformIntoVertices();mesh.isPickable=false;mesh.setEnabled(false);mesh.parent=root;sources.push(mesh);return mesh;};
-  const mat=(name:string,hex:string,emissive=false)=>{const m=rt.material('kit-'+name,hex);if(emissive)m.emissiveColor=B.Color3.FromHexString(hex);return m;};
-  const parts:Record<SceneryKind,{mesh:any;material:any;tinted:boolean}[]>={
-    tree:[
-      {mesh:flat('trunk',B.MeshBuilder.CreateCylinder('kit-trunk',{diameterTop:.18,diameterBottom:.28,height:.9,tessellation:5},rt.scene),.45),material:mat('trunk','#5b4430'),tinted:false},
-      {mesh:flat('canopy',B.MeshBuilder.CreateCylinder('kit-canopy',{diameterTop:0,diameterBottom:1.9,height:2.5,tessellation:6},rt.scene),2.1),material:mat('canopy','#ffffff'),tinted:true},
-    ],
-    building:[{mesh:flat('building',B.MeshBuilder.CreateBox('kit-building',{size:1},rt.scene),.5),material:mat('building','#ffffff'),tinted:true}],
-    lamp:[
-      {mesh:flat('pole',B.MeshBuilder.CreateCylinder('kit-pole',{diameter:.09,height:2.7,tessellation:5},rt.scene),1.35),material:mat('pole','#4a535a'),tinted:false},
-      {mesh:flat('lamp',B.MeshBuilder.CreateSphere('kit-lamp',{diameter:.3,segments:4},rt.scene),2.75),material:mat('lamp',look.tones.lamp[0],true),tinted:false},
-    ],
-    dune:[{mesh:flat('dune',B.MeshBuilder.CreateSphere('kit-dune',{diameter:1,segments:4},rt.scene),0),material:mat('dune','#ffffff'),tinted:true}],
-  };
-  const chunkOf=(item:SceneryItem)=>(item.x<0?0:1)+(item.z<0?0:2);
+  const wanted=new Set(items.map(item=>item.kind));
+  const flat=(mesh:any,y:number,rx=0)=>{mesh.position.y=y;if(rx)mesh.rotation.x=rx;mesh.bakeCurrentTransformIntoVertices();mesh.isPickable=false;mesh.setEnabled(false);mesh.parent=root;sources.push(mesh);return mesh;};
+  const mat=(name:string,hex:string,tweak?:(m:any)=>void)=>{const m=rt.material('kit-'+name,hex);tweak?.(m);return m;};
+  const cyl=(name:string,opts:any)=>B.MeshBuilder.CreateCylinder('kit-'+name,{tessellation:6,...opts},rt.scene);
+  const box=(name:string)=>B.MeshBuilder.CreateBox('kit-'+name,{size:1},rt.scene);
+  const sphere=(name:string,segments=4)=>B.MeshBuilder.CreateSphere('kit-'+name,{diameter:1,segments},rt.scene);
+  const uniform=(item:SceneryItem)=>({sx:item.sx,sy:item.sy,sz:item.sz,y:0});
+  const white=mat('white','#ffffff'),trunkMat=mat('trunk','#5b4430'),glass=mat('glass','#c9d3d8'),snow=mat('snow','#f2f6f8'),poleMat=mat('pole','#4a535a');
+  const lampMat=mat('lamp',look.tones.lamp[0],(m)=>{m.emissiveColor=B.Color3.FromHexString(look.tones.lamp[0]);});
+  const neonMat=mat('neon','#ffffff',(m)=>{m.emissiveColor=new B.Color3(.55,.55,.55);});
+  const waterMat=mat('water',look.tones.water[0],(m)=>{m.alpha=.88;m.specularColor=new B.Color3(.5,.5,.5);});
+  // Each kind is a short list of shared parts; `place` turns an item into scale + height above ground.
+  const parts:Partial<Record<SceneryKind,KitPart[]>>={};
+  const need=(kind:SceneryKind,build:()=>KitPart[])=>{if(wanted.has(kind))parts[kind]=build();};
+  need('tree',()=>[
+    {mesh:flat(cyl('trunk',{diameterTop:.18,diameterBottom:.28,height:.9,tessellation:5}),.45),material:trunkMat,tinted:false,place:uniform},
+    {mesh:flat(cyl('canopy',{diameterTop:0,diameterBottom:1.9,height:2.5}),2.1),material:white,tinted:true,place:uniform},
+  ]);
+  need('pine',()=>[
+    {mesh:flat(cyl('pine-trunk',{diameterTop:.14,diameterBottom:.22,height:.7,tessellation:5}),.35),material:trunkMat,tinted:false,place:uniform},
+    {mesh:flat(cyl('pine-low',{diameterTop:.2,diameterBottom:1.7,height:2.3,tessellation:7}),1.5),material:white,tinted:true,place:uniform},
+    {mesh:flat(cyl('pine-top',{diameterTop:0,diameterBottom:1.1,height:1.8,tessellation:7}),3.1),material:white,tinted:true,place:uniform},
+  ]);
+  need('palm',()=>[
+    {mesh:flat(cyl('palm-trunk',{diameterTop:.14,diameterBottom:.24,height:3.4,tessellation:5}),1.7),material:mat('palm-trunk','#8a6a48'),tinted:false,place:uniform},
+    {mesh:flat((()=>{const m=sphere('palm-crown',5);m.scaling.set(2.6,.55,2.6);return m;})(),3.45),material:white,tinted:true,place:uniform},
+  ]);
+  const boxPart=(kind:SceneryKind):KitPart[]=>[{mesh:flat(box(kind),.5),material:kind==='neon'?neonMat:white,tinted:true,place:uniform}];
+  need('building',()=>boxPart('building'));
+  need('tower',()=>[
+    ...boxPart('tower'),
+    {mesh:flat(box('tower-cap'),.5),material:glass,tinted:false,place:(item)=>({sx:item.sx*.55,sy:2.2,sz:item.sz*.55,y:item.sy})},
+  ]);
+  need('hangar',()=>[
+    ...boxPart('hangar'),
+    {mesh:flat(box('hangar-roof'),.5),material:mat('hangar-roof','#6c7780'),tinted:false,place:(item)=>({sx:item.sx*1.04,sy:.35,sz:item.sz*1.04,y:item.sy})},
+  ]);
+  need('house',()=>[
+    ...boxPart('house'),
+    {mesh:flat(cyl('roof',{diameterTop:0,diameterBottom:1.4142,height:1,tessellation:4}),.5),material:mat('roof','#a4553f'),tinted:false,place:(item)=>({sx:item.sx*1.1,sy:item.sx*.55,sz:item.sz*1.1,y:item.sy,rot:item.rot+Math.PI/4})},
+  ]);
+  need('neon',()=>boxPart('neon'));
+  need('lamp',()=>[
+    {mesh:flat(cyl('pole',{diameter:.09,height:2.7,tessellation:5}),1.35),material:poleMat,tinted:false,place:uniform},
+    {mesh:flat(sphere('lamp'),2.75),material:lampMat,tinted:false,place:(item)=>({sx:.3,sy:.3,sz:.3,y:0,rot:item.rot})},
+  ]);
+  need('mast',()=>[
+    {mesh:flat(cyl('mast-pole',{diameter:.14,height:4,tessellation:5}),2),material:poleMat,tinted:true,place:uniform},
+    {mesh:flat(box('mast-head'),0),material:lampMat,tinted:false,place:(item)=>({sx:1.3,sy:.45,sz:.35,y:4*item.sy})},
+  ]);
+  need('dune',()=>[{mesh:flat(sphere('dune'),0),material:white,tinted:true,place:(item)=>({sx:item.sx,sy:item.sy,sz:item.sz,y:.15})}]);
+  need('hill',()=>[{mesh:flat(sphere('hill',6),0),material:white,tinted:true,place:(item)=>({sx:item.sx,sy:item.sy*2,sz:item.sz,y:-.2})}]);
+  need('peak',()=>[
+    {mesh:flat(cyl('peak',{diameterTop:0,diameterBottom:1,height:1,tessellation:8}),.5),material:white,tinted:true,place:uniform},
+    {mesh:flat(cyl('peak-snow',{diameterTop:0,diameterBottom:1,height:1,tessellation:8}),.5),material:snow,tinted:false,place:(item)=>({sx:item.sx*.34,sy:item.sy*.34,sz:item.sz*.34,y:item.sy*.66})},
+  ]);
+  need('water',()=>[{mesh:flat(cyl('water',{diameter:1,height:.02,tessellation:28}),0),material:waterMat,tinted:false,place:(item)=>({sx:item.sx,sy:1,sz:item.sz,y:.03})}]);
+  need('yacht',()=>[
+    {mesh:flat(box('hull'),.5),material:white,tinted:true,place:(item)=>({sx:item.sx,sy:.4,sz:item.sz,y:.05})},
+    {mesh:flat(box('cabin'),.5),material:glass,tinted:false,place:(item)=>({sx:item.sx*.7,sy:.4,sz:item.sz*.4,y:.45})},
+  ]);
+  need('ferris',()=>[
+    {mesh:flat(B.MeshBuilder.CreateTorus('kit-wheel',{diameter:1,thickness:.04,tessellation:28},rt.scene),0,Math.PI/2),material:white,tinted:true,place:(item)=>({sx:item.sx,sy:item.sx,sz:item.sx,y:item.sx*.56})},
+    {mesh:flat(B.MeshBuilder.CreateTorus('kit-hub',{diameter:.45,thickness:.03,tessellation:20},rt.scene),0,Math.PI/2),material:white,tinted:true,place:(item)=>({sx:item.sx,sy:item.sx,sz:item.sx,y:item.sx*.56})},
+    {mesh:flat(box('ferris-leg'),.5),material:poleMat,tinted:false,place:(item)=>({sx:.4,sy:item.sx*.56,sz:.4,y:0})},
+  ]);
+  const chunkCount=quality==='baixo'?1:quality==='medio'?2:4;
+  const chunkOf=(item:SceneryItem)=>chunkCount===1?0:chunkCount===2?(item.x<0?0:1):(item.x<0?0:1)+(item.z<0?0:2);
   const drawn:any[]=[];
   for(const kind of Object.keys(parts) as SceneryKind[]){
     const kindItems=items.filter(item=>item.kind===kind);
     if(!kindItems.length)continue;
-    for(let chunk=0;chunk<4;chunk++){
+    for(let chunk=0;chunk<chunkCount;chunk++){
       const group=kindItems.filter(item=>chunkOf(item)===chunk);
       if(!group.length)continue;
-      const matrices=new Float32Array(group.length*16),colors=new Float32Array(group.length*4);
-      group.forEach((item,index)=>{
-        const lampYaw=item.rot;
-        B.Matrix.Compose(new B.Vector3(item.sx,item.sy,item.sz),B.Quaternion.FromEulerAngles(0,lampYaw,0),new B.Vector3(item.x,kind==='dune'?.15:0,item.z)).copyToArray(matrices,index*16);
-        const palette=look.tones[kind],hex=palette[item.tone%palette.length],c=B.Color3.FromHexString(hex);
-        colors.set([c.r,c.g,c.b,1],index*4);
-      });
-      for(const part of parts[kind]){
-        const mesh=part.mesh.clone(part.mesh.name+'-c'+chunk);
+      for(const part of parts[kind]!){
+        const matrices=new Float32Array(group.length*16),colors=new Float32Array(group.length*4);
+        group.forEach((item,index)=>{
+          const spot=part.place(item);
+          B.Matrix.Compose(new B.Vector3(spot.sx,spot.sy,spot.sz),B.Quaternion.FromEulerAngles(0,spot.rot??item.rot,0),new B.Vector3(item.x,spot.y,item.z)).copyToArray(matrices,index*16);
+          const palette=look.tones[kind]??look.tones.tree,c=B.Color3.FromHexString(palette[item.tone%palette.length]);
+          colors.set([c.r,c.g,c.b,1],index*4);
+        });
+        // Each chunk owns its geometry: clones that share one vertex array would also share its instance-buffer binding.
+        const mesh=part.mesh.clone(part.mesh.name+'-c'+chunk);mesh.makeGeometryUnique();
         mesh.parent=root;mesh.material=part.material;mesh.setEnabled(true);mesh.isPickable=false;
-        mesh.thinInstanceSetBuffer('matrix',matrices,16,true);
-        if(part.tinted)mesh.thinInstanceSetBuffer('color',colors,4,true);
+        mesh.thinInstanceSetBuffer('matrix',matrices,16,false);
+        if(part.tinted)mesh.thinInstanceSetBuffer('color',colors,4,false);
         mesh.thinInstanceRefreshBoundingInfo(true);
         drawn.push(mesh);
       }
