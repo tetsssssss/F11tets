@@ -41,8 +41,15 @@ export default function LiveRace({
     [selected, setSelected] = useState<string | null>(null),
     [active, setActive] = useState<string | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
+  const hudRef = useRef<HTMLDivElement>(null);
   // Graphics preference is local to this browser; changing the view never touches career saves.
   useEffect(() => { setRenderMode(readRaceViewMode()); }, []);
+  // On phones the cockpit is one screen tall: bring it flush to the top so the stage, PIT and commands are all reachable.
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia?.('(max-width: 760px), (max-height: 520px) and (orientation: landscape) and (max-width: 1000px)').matches) return;
+    const frame = window.requestAnimationFrame(() => hudRef.current?.scrollIntoView({ block: 'start', behavior: 'auto' }));
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
   function selectView(next: RaceViewMode) {
     setRenderMode(next);
     writeRaceViewMode(next);
@@ -55,7 +62,7 @@ export default function LiveRace({
   }
   // Narrow screens start with the timing folded away so the circuit takes the screen.
   useEffect(() => {
-    if (window.innerWidth <= 900) setTiming('hidden');
+    if (window.innerWidth <= 900 || window.innerHeight <= 520) setTiming('hidden');
   }, []);
   useEffect(() => {
     if (!full) return;
@@ -157,7 +164,7 @@ export default function LiveRace({
   }
   function openFull() {
     // Phones open with the timing folded away so the circuit takes the screen.
-    setTiming(window.innerWidth > 900 ? 'compact' : 'hidden');
+    setTiming(window.innerWidth > 900 && window.innerHeight > 520 ? 'compact' : 'hidden');
     setFull(true);
   }
   // Compact timing: the top five, the player's cars, their team mates and whoever is fighting.
@@ -283,6 +290,7 @@ export default function LiveRace({
     <div className="live-race">
       {finish}
       <div
+        ref={hudRef}
         className={
           'race-hud timing-' +
           timing +

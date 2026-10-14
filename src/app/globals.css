@@ -7542,3 +7542,77 @@ details[open] > summary .supplier-expand {
  .race-hud:not(.is-full):has(> .race-control.is-expanded){height:auto;min-height:calc(100dvh - 54px);grid-template-rows:auto minmax(295px, 46dvh) auto auto}
  .race-hud.is-full:has(> .race-control.is-expanded){grid-template-rows:auto minmax(0,1fr) auto auto;overflow:auto}
 }
+
+/* MARCO 61000 — Sprint 01: phone cockpit that fits ONE screen (stage dominant, controls reachable).
+   Layout only: no DOM removed, race engine untouched. */
+.race-hud { scroll-margin-top: 0; }
+@media (max-width: 760px) and (orientation: portrait) {
+  .race-hud:not(.is-full), .race-hud:not(.is-full):has(> .race-control) {
+    height: 100vh; height: 100svh; height: 100dvh;
+    min-height: 0; max-height: none;
+    margin: 0 0 -8px;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    grid-template-rows: auto minmax(150px, 1fr) auto auto;
+  }
+  .race-hud:not(.is-full):has(> .race-control.is-expanded) {
+    height: 100dvh; min-height: 0;
+    grid-template-rows: auto minmax(150px, 1fr) minmax(0, 42dvh) auto;
+  }
+  .race-hud:not(.is-full) .race-control.is-expanded { overflow: hidden; display: flex; flex-direction: column; min-height: 0; }
+  .race-hud:not(.is-full) .race-control.is-expanded .race-control-content { max-height: none; flex: 1 1 auto; min-height: 0; }
+  .race-hud .hud-top { padding: 3px 6px; gap: 4px 6px; }
+  .race-hud .hud-lap { display: flex; align-items: baseline; gap: 5px; }
+  .race-hud .hud-lap b { font-size: 22px; }
+  .race-hud .hud-pace { gap: 4px; }
+  .race-hud .hud-pace > .button, .race-hud .mobile-speed-control select, .race-mobile-views button { min-height: 44px; }
+  .race-hud .engineer-advice { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+  .race-hud .hud-stage { min-height: 150px; }
+}
+/* Landscape phones: stage on the left, commands in a column on the right. */
+@media (max-height: 520px) and (orientation: landscape) and (max-width: 1000px) {
+  .race-hud:not(.is-full), .race-hud:not(.is-full):has(> .race-control), .race-hud:not(.is-full):has(> .race-control.is-expanded) {
+    height: 100vh; height: 100dvh; min-height: 0; max-height: none; width: 100%;
+    margin: 0 0 -8px;
+    grid-template-columns: minmax(0, 1fr) clamp(232px, 36vw, 300px);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-template-areas: 'stage head' 'stage dock' 'rc dock';
+    gap: 4px;
+  }
+  .race-hud:not(.is-full) > .hud-top { grid-area: head; flex-wrap: wrap; align-content: start; }
+  .race-hud:not(.is-full) > .hud-stage { grid-area: stage; min-height: 0; min-width: 0; }
+  .race-hud:not(.is-full) > .race-control { grid-area: rc; min-width: 0; }
+  .race-hud:not(.is-full) > .hud-dock { grid-area: dock; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+  .race-hud:not(.is-full) .race-control.is-expanded { max-height: 55dvh; overflow: auto; }
+  .race-hud:not(.is-full) .hud-where, .race-hud:not(.is-full) .hud-weather { display: none; }
+  .race-hud:not(.is-full) .race-mobile-views { order: 1; flex: 1 1 100%; }
+  .race-hud:not(.is-full) .hud-pace { order: 2; flex: 1 1 100%; }
+  .race-hud:not(.is-full) .hud-tools { order: 0; }
+  .race-hud:not(.is-full) .command-card { grid-template-areas: 'strip more' 'cmds cmds'; }
+  .race-hud:not(.is-full) .engineer-advice { display: none; }
+  .race-hud .hud-pace > .button, .race-hud .mobile-speed-control select, .race-mobile-views button { min-height: 40px; }
+}
+/* Landscape phones (up to 1000px wide) use the compact shell: sidebar becomes a drawer. */
+@media (max-height: 520px) and (orientation: landscape) and (max-width: 1000px) {
+  .sidebar { transform: translateX(-100%); transition: transform 0.2s; width: min(84vw, 280px); }
+  .sidebar.open { transform: translateX(0); }
+  .sidebar-backdrop { position: fixed; inset: 0; background: #000b; z-index: 29; }
+  .main-shell { margin-left: 0; min-width: 0; overflow-x: clip; }
+  .mobile-menu { display: inline-flex; width: 44px; height: 44px; }
+  .mobile-close { display: inline-flex; position: absolute; right: 4px; top: 4px; width: 44px; height: 44px; }
+  .topbar { height: 46px; padding: 0 10px; }
+  .topbar-right .top-date, .topbar-right .profile-initials, .top-brand { display: none; }
+  .main-content { padding: 8px 10px 14px; min-width: 0; }
+}
+@media (max-height: 520px) and (orientation: landscape) and (max-width: 1000px) {
+  .race-hud:not(.is-full) .hud-pace .speed-controls { display: none; }
+  .race-hud:not(.is-full) .mobile-speed-control { display: flex; flex: 1 0 96px; min-width: 0; align-items: center; gap: 6px; }
+  .race-hud:not(.is-full) .mobile-speed-control span { display: none; }
+  .race-hud:not(.is-full) .mobile-speed-control select { flex: 1; min-width: 64px; border-radius: 7px; padding: 0 5px; background: #1b303b; border: 1px solid #4b6672; color: #fff; font-weight: 800; font-size: 13px; }
+  .race-hud .view-bar .view-camera span, .race-hud .view-bar .view-quality span { display: none; }
+  .race-hud .view-bar { gap: 4px; padding: 4px; }
+  .race-hud .view-bar button, .race-hud .view-bar select { min-height: 38px; font-size: 11px; }
+  .race-hud:not(.is-full) .driver-strip { gap: 5px; }
+  .race-hud:not(.is-full) .strip-id strong { font-size: 17px; }
+  .race-hud:not(.is-full) .strip-stat:not(.strip-pos) { display: none; }
+  .race-hud:not(.is-full) .five-commands button { font-size: 10px; letter-spacing: 0; padding: 3px 0; }
+}
