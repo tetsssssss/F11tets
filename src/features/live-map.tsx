@@ -178,8 +178,18 @@ export default function LiveMap({
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
+  // The in-game setting and the OS "reduce motion" preference both switch nonessential motion off.
+  const [systemReduced, setSystemReduced] = useState(false);
+  useEffect(() => {
+    const media = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+    if (!media) return;
+    setSystemReduced(media.matches);
+    const listen = () => setSystemReduced(media.matches);
+    media.addEventListener?.('change', listen);
+    return () => media.removeEventListener?.('change', listen);
+  }, []);
   const own = controlledIds(save),
-    reduced = save.preferences.reducedMotion;
+    reduced = save.preferences.reducedMotion || systemReduced;
   useEffect(() => {
     if (reduced) return;
     // Camera easing: quick enough to keep up with a car, slow enough never to teleport.
@@ -654,7 +664,7 @@ export default function LiveMap({
           {renderMode === 'babylon' && <label className="view-camera"><span>CÂMERA 3D</span><select aria-label="Câmera Babylon" value={babylonCamera} onChange={e => setBabylonCamera(e.target.value as RaceBabylonCamera)}>{BABYLON_CAMERA_CHOICES.map(choice => <option key={choice} value={choice}>{BABYLON_CAMERA_LABELS[choice]}</option>)}</select></label>}
           {renderMode === 'babylon' && <label className="view-auto-quality" title="Reduz a qualidade 3D sozinho se a fluidez cair por vários segundos"><input type="checkbox" checked={autoQuality} onChange={e => chooseAutoQuality(e.target.checked)} /><span>AUTO-QUALIDADE</span></label>}
           {renderMode === 'babylon' && qualityNotice && <span className="view-quality-notice" role="status">{qualityNotice}</span>}
-          {renderMode === 'babylon' && <label className="view-quality"><span>QUALIDADE 3D</span><select aria-label="Qualidade Babylon" value={babylonQuality} onChange={e => setBabylonQuality(e.target.value as RaceBabylonQuality)}><option value="baixo">Baixa</option><option value="medio">Média</option><option value="alto">Alta</option><option value="ultra">Ultra</option></select></label>}
+          {renderMode === 'babylon' && <label className="view-quality view-quality-3d"><span>QUALIDADE 3D</span><select aria-label="Qualidade Babylon" value={babylonQuality} onChange={e => setBabylonQuality(e.target.value as RaceBabylonQuality)}><option value="baixo">Baixa</option><option value="medio">Média</option><option value="alto">Alta</option><option value="ultra">Ultra</option></select></label>}
           {renderMode === '2d' && <label className="view-quality">
             <span>FPS</span>
             <select
@@ -669,7 +679,7 @@ export default function LiveMap({
           </label>}
           {onFull && !full && (
             <button className="view-full" aria-label="Tela cheia do mapa" onClick={onFull}>
-              ⛶ TELA CHEIA DO MAPA
+              ⛶<span className="view-full-label"> TELA CHEIA DO MAPA</span>
             </button>
           )}
         </div>

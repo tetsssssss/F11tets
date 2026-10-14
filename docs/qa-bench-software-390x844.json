@@ -1,0 +1,313 @@
+{
+ "env": {
+  "viewport": "390x844",
+  "quality": "baixo",
+  "rendering": "SwiftShader software",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.0.0 Safari/537.36",
+  "seconds": 120
+ },
+ "summary": {
+  "samples": 23,
+  "meanP50ms": 259.4,
+  "meanP95ms": 488.4,
+  "meanFps": 4.6,
+  "maxHeapMB": 99.4,
+  "errors": []
+ },
+ "events": [
+  {
+   "tag": "3d",
+   "frames": 62,
+   "p50ms": 66.6,
+   "p95ms": 550,
+   "fps": 5.7,
+   "heapMB": 98.1,
+   "drawCalls": 501,
+   "renderMs": 18.4,
+   "shot": "tv",
+   "lap": "2/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 14,
+   "p50ms": 366.6,
+   "p95ms": 633.3,
+   "fps": 2.8,
+   "heapMB": 82,
+   "drawCalls": 342,
+   "renderMs": 15.8,
+   "shot": "duelo",
+   "lap": "3/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 24,
+   "p50ms": 183.4,
+   "p95ms": 283.4,
+   "fps": 4.8,
+   "heapMB": 77.6,
+   "drawCalls": 282,
+   "renderMs": 12.6,
+   "shot": "duelo",
+   "lap": "4/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 33,
+   "p50ms": 150,
+   "p95ms": 249.9,
+   "fps": 6.6,
+   "heapMB": 99.4,
+   "drawCalls": 204,
+   "renderMs": 9.8,
+   "shot": "duelo",
+   "lap": "5/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 36,
+   "p50ms": 133.3,
+   "p95ms": 250,
+   "fps": 7.2,
+   "heapMB": 93.8,
+   "drawCalls": 174,
+   "renderMs": 8.1,
+   "shot": "duelo",
+   "lap": "6/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 43,
+   "p50ms": 116.6,
+   "p95ms": 233.3,
+   "fps": 8.6,
+   "heapMB": 75,
+   "drawCalls": 143,
+   "renderMs": 7,
+   "shot": "duelo",
+   "lap": "7/58"
+  },
+  {
+   "tag": "pit-call"
+  },
+  {
+   "tag": "3d",
+   "frames": 40,
+   "p50ms": 116.7,
+   "p95ms": 183.4,
+   "fps": 7.7,
+   "heapMB": 77.6,
+   "drawCalls": 497,
+   "renderMs": 6.4,
+   "shot": "duelo",
+   "lap": "8/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 12,
+   "p50ms": 399.9,
+   "p95ms": 550,
+   "fps": 2.5,
+   "heapMB": 74.6,
+   "drawCalls": 519,
+   "renderMs": 6.6,
+   "shot": "duelo",
+   "lap": "9/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 11,
+   "p50ms": 483.2,
+   "p95ms": 633.4,
+   "fps": 2.2,
+   "heapMB": 80.8,
+   "drawCalls": 600,
+   "renderMs": 6.7,
+   "shot": "duelo",
+   "lap": "10/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 13,
+   "p50ms": 383.3,
+   "p95ms": 966.6,
+   "fps": 2.4,
+   "heapMB": 82.1,
+   "drawCalls": 675,
+   "renderMs": 6.8,
+   "shot": "duelo",
+   "lap": "10/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 14,
+   "p50ms": 366.6,
+   "p95ms": 683.3,
+   "fps": 2.9,
+   "heapMB": 84.4,
+   "drawCalls": 591,
+   "renderMs": 6.9,
+   "shot": "duelo",
+   "lap": "11/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 18,
+   "p50ms": 300,
+   "p95ms": 600,
+   "fps": 3.4,
+   "heapMB": 82,
+   "drawCalls": 470,
+   "renderMs": 6.9,
+   "shot": "duelo",
+   "lap": "12/58"
+  },
+  {
+   "tag": "2d",
+   "frames": 43,
+   "p50ms": 66.7,
+   "p95ms": 350,
+   "fps": 9.1,
+   "heapMB": 36.1,
+   "drawCalls": 567,
+   "renderMs": 6.9,
+   "shot": "duelo",
+   "lap": "13/58"
+  },
+  {
+   "tag": "switched-back-to-3d"
+  },
+  {
+   "tag": "3d",
+   "frames": 40,
+   "p50ms": 166.6,
+   "p95ms": 433.4,
+   "fps": 5,
+   "heapMB": 95.5,
+   "drawCalls": 327,
+   "renderMs": 13.3,
+   "shot": "duelo",
+   "lap": "15/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 15,
+   "p50ms": 333.4,
+   "p95ms": 433.4,
+   "fps": 3,
+   "heapMB": 76.4,
+   "drawCalls": 543,
+   "renderMs": 12.9,
+   "shot": "duelo",
+   "lap": "16/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 14,
+   "p50ms": 366.6,
+   "p95ms": 466.7,
+   "fps": 2.8,
+   "heapMB": 79.4,
+   "drawCalls": 531,
+   "renderMs": 12.6,
+   "shot": "duelo",
+   "lap": "16/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 17,
+   "p50ms": 283.4,
+   "p95ms": 499.9,
+   "fps": 3.5,
+   "heapMB": 78.8,
+   "drawCalls": 445,
+   "renderMs": 11.9,
+   "shot": "duelo",
+   "lap": "17/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 17,
+   "p50ms": 299.9,
+   "p95ms": 633.3,
+   "fps": 3.5,
+   "heapMB": 82.5,
+   "drawCalls": 440,
+   "renderMs": 11.4,
+   "shot": "duelo",
+   "lap": "18/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 14,
+   "p50ms": 350,
+   "p95ms": 666.6,
+   "fps": 2.7,
+   "heapMB": 80,
+   "drawCalls": 574,
+   "renderMs": 11.1,
+   "shot": "duelo",
+   "lap": "19/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 13,
+   "p50ms": 366.7,
+   "p95ms": 533.2,
+   "fps": 2.6,
+   "heapMB": 85,
+   "drawCalls": 497,
+   "renderMs": 11,
+   "shot": "duelo",
+   "lap": "20/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 44,
+   "p50ms": 66.6,
+   "p95ms": 383.3,
+   "fps": 8.4,
+   "heapMB": 85.9,
+   "drawCalls": 89,
+   "renderMs": 9.2,
+   "shot": "duelo",
+   "lap": "21/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 56,
+   "p50ms": 50.1,
+   "p95ms": 333.3,
+   "fps": 11.3,
+   "heapMB": 83.8,
+   "drawCalls": 451,
+   "renderMs": 7.5,
+   "shot": "duelo",
+   "lap": "22/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 15,
+   "p50ms": 316.7,
+   "p95ms": 666.7,
+   "fps": 3.1,
+   "heapMB": 86.9,
+   "drawCalls": 467,
+   "renderMs": 7.6,
+   "shot": "duelo",
+   "lap": "23/58"
+  },
+  {
+   "tag": "3d",
+   "frames": 17,
+   "p50ms": 300,
+   "p95ms": 366.7,
+   "fps": 3.4,
+   "heapMB": 89.6,
+   "drawCalls": 477,
+   "renderMs": 7.7,
+   "shot": "duelo",
+   "lap": "24/58"
+  }
+ ]
+}

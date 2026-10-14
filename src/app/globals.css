@@ -7631,3 +7631,11 @@ details[open] > summary .supplier-expand {
 }
 .race-babylon-tags { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 4; }
 .race-babylon-tag { position: absolute; left: 0; top: 0; display: none; box-sizing: border-box; padding: 2px 5px; border-left: 3px solid #fff; border-radius: 4px; background: #0b161dd9; color: #f1f6f9; font: 800 11px/16px Inter, system-ui, sans-serif; letter-spacing: .03em; white-space: nowrap; text-align: center; will-change: transform; }
+/* Phones: keep every 3D control (camera, auto-quality, quality) reachable without scrolling the toolbar. */
+@media (max-width: 600px) {
+  .race-hud .view-bar .view-full-label, .race-hud .view-bar .view-auto-quality span { display: none; }
+  .race-hud .view-bar .view-full { min-width: 44px; padding: 0 10px; }
+  .race-hud .view-bar .view-auto-quality { min-width: 44px; justify-content: center; padding: 0 6px; }
+  .race-hud .view-bar select { max-width: 112px; }
+}
+@container (max-width: 700px) { .view-bar .view-quality.view-quality-3d { display: flex; } }

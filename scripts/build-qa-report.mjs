@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { execSync } from 'node:child_process';
-const [after, before, unit, out] = process.argv.slice(2);
+const [after, before, unit, out, finalRaceViews, benchFile] = process.argv.slice(2);
 const sha = (f) => crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
 function e2e(file) {
   if (!file || !fs.existsSync(file) || !fs.statSync(file).size) return null;
@@ -25,9 +25,10 @@ const report = {
     note: 'Nenhum Xiaomi/Android real foi usado. FPS abaixo NAO comprova 30 FPS em celular.' },
   versions: { package: JSON.parse(fs.readFileSync('package.json', 'utf8')).version, serviceWorkerCache: 'f1-universe-static-61000-v1', commit: execSync('git rev-parse HEAD').toString().trim() },
   unitTests: { total: num('tests'), pass: num('pass'), fail: num('fail'), durationMs: Math.round(num('duration_ms')), baselineTotal: 281 },
-  e2e: { after: e2e(after), baselineBeforeChanges: e2e(before), note: 'Specs antigas que falham sao as mesmas do baseline 60300 (seletores desatualizados); race-views.spec.ts e novo.' },
+  e2e: { fullSuiteAfter: e2e(after), baselineBeforeChanges: e2e(before), finalRaceViewsSequential: e2e(finalRaceViews), note: 'Specs antigas que falham sao as mesmas do baseline 60300 (seletores desatualizados); race-views.spec.ts e novo.' },
   viewportMatrix: metrics && metrics.filter((r) => r.tag && r.tag !== 'errors').map((r) => ({ viewport: r.viewport, mode: r.tag, horizontalOverflowPx: r.sw - r.cw, hud: r.hud, canvas: r.canvas ?? null })),
   cameraRun: cam && { viewport: '390x844', rendering: 'software', shots: cam.report.map((r) => ({ camera: r.cam, shot: r.shot?.kind, focusIds: r.shot?.ids, focusCarPx: r.focusSizes, drawCalls: r.drawCalls })), errors: cam.errors },
+  benchmark: benchFile && fs.existsSync(benchFile) ? JSON.parse(fs.readFileSync(benchFile, 'utf8')).summary : null,
   hashes: Object.fromEntries(files.map((f) => [f, sha(f)])),
   assets: { glb: 67, teams: 16, circuits: 35, verifier: 'scripts/verify-3d-assets.mjs -> 3D_ASSETS_OK' },
   saveCompatibility: 'Dominio/saves nao foram alterados; testes de persistencia, save-writer e migracao do baseline continuam passando (ver unitTests).',

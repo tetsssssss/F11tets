@@ -44,12 +44,27 @@ export default function LiveRace({
   const hudRef = useRef<HTMLDivElement>(null);
   // Graphics preference is local to this browser; changing the view never touches career saves.
   useEffect(() => { setRenderMode(readRaceViewMode()); }, []);
-  // On phones the cockpit is one screen tall: bring it flush to the top so the stage, PIT and commands are all reachable.
+  // On phones the cockpit is one screen tall: keep it flush to the top so the stage, PIT and commands are all reachable.
+  // Re-aligned after layout shifts (view switch, rotation) only while the page header is just above it; a deliberate scroll stays.
+  const phoneQuery = '(max-width: 760px), (max-height: 520px) and (orientation: landscape) and (max-width: 1000px)';
+  const alignHud = useRef((force: boolean) => {
+    const hud = hudRef.current;
+    if (!hud || typeof window === 'undefined' || !window.matchMedia?.(phoneQuery).matches || hud.classList.contains('is-full')) return;
+    const top = hud.getBoundingClientRect().top;
+    if (force || (Math.abs(top) > 2 && top < window.innerHeight * 0.3 && top > -window.innerHeight * 0.3)) hud.scrollIntoView({ block: 'start', behavior: 'auto' });
+  });
   useEffect(() => {
-    if (typeof window === 'undefined' || !window.matchMedia?.('(max-width: 760px), (max-height: 520px) and (orientation: landscape) and (max-width: 1000px)').matches) return;
-    const frame = window.requestAnimationFrame(() => hudRef.current?.scrollIntoView({ block: 'start', behavior: 'auto' }));
-    return () => window.cancelAnimationFrame(frame);
+    const frame = window.requestAnimationFrame(() => alignHud.current(true));
+    let timer = 0;
+    const later = () => { window.clearTimeout(timer); timer = window.setTimeout(() => alignHud.current(false), 250); };
+    window.addEventListener('resize', later);
+    window.addEventListener('orientationchange', later);
+    return () => { window.cancelAnimationFrame(frame); window.clearTimeout(timer); window.removeEventListener('resize', later); window.removeEventListener('orientationchange', later); };
   }, []);
+  useEffect(() => {
+    const timer = window.setTimeout(() => alignHud.current(false), 120);
+    return () => window.clearTimeout(timer);
+  }, [renderMode]);
   function selectView(next: RaceViewMode) {
     setRenderMode(next);
     writeRaceViewMode(next);

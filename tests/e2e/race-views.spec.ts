@@ -48,11 +48,11 @@ test('driver controls (PIT) and Race Control stay reachable with the 3D stage on
   const vp = page.viewportSize()!;
   const pit = page.locator('.five-commands button', { hasText: 'PIT' }).first();
   await expect(pit).toBeVisible();
-  const box = (await pit.boundingBox())!;
-  // Phones (portrait or landscape) must show the whole cockpit on one screen; desktop pages may scroll.
+    // Phones (portrait or landscape) must show the whole cockpit on one screen; desktop pages may scroll.
   if (vp.width <= 1000) {
-    expect(box.y + box.height, 'PIT button inside the viewport').toBeLessThanOrEqual(vp.height + 1);
-    expect(box.x + box.width).toBeLessThanOrEqual(vp.width + 1);
+    // The cockpit re-aligns itself shortly after a view switch; poll instead of racing it.
+    await expect.poll(async () => { const b = (await pit.boundingBox())!; return Math.round(b.y + b.height); }, { message: 'PIT button inside the viewport', timeout: 8000 }).toBeLessThanOrEqual(vp.height + 1);
+    expect((await pit.boundingBox())!.x + (await pit.boundingBox())!.width).toBeLessThanOrEqual(vp.width + 1);
   }
   const canvas = (await page.locator('.race-babylon canvas').boundingBox())!;
   expect(canvas.height, 'stage keeps a usable height').toBeGreaterThan(vp.height > vp.width ? 300 : 170);
@@ -142,8 +142,8 @@ test('reduced motion: cameras cut without fades and cars keep rendering', async 
   for (const cam of ['seguir', 'aerea', 'tv']) {
     await select.selectOption(cam);
     await page.waitForTimeout(900);
-    const opacity = await page.locator('.race-babylon-cut').evaluate((el) => getComputedStyle(el).opacity + '/' + getComputedStyle(el).display);
-    expect(opacity === '0/none' || opacity === '0/block').toBeTruthy();
+    const cut = await page.locator('.race-babylon-cut').evaluate((el) => ({ opacity: getComputedStyle(el).opacity, display: getComputedStyle(el).display }));
+    expect(cut.display === 'none' || cut.opacity === '0', JSON.stringify(cut)).toBeTruthy();
   }
   await expect.poll(() => page.evaluate(() => Object.keys((window as any).__f1Babylon?.cars ?? {}).length)).toBe(32);
   expect(errors).toEqual([]);

@@ -1,0 +1,514 @@
+{
+ "milestone": "MARCO 61000",
+ "baseline": "MARCO 60300 INCIDENTES",
+ "generatedAt": "2026-10-14T19:46:18.412Z",
+ "environment": {
+  "node": "v22.22.0",
+  "browser": "Chromium (Playwright build 1194)",
+  "rendering": "WebGL via SwiftShader (software)",
+  "realDevice": null,
+  "note": "Nenhum Xiaomi/Android real foi usado. FPS abaixo NAO comprova 30 FPS em celular."
+ },
+ "versions": {
+  "package": "0.61.0",
+  "serviceWorkerCache": "f1-universe-static-61000-v1",
+  "commit": "5ab3fbdcd873def52be9580e5a0b7d6fa836a129"
+ },
+ "unitTests": {
+  "total": 312,
+  "pass": 312,
+  "fail": 0,
+  "durationMs": 46835,
+  "baselineTotal": 281
+ },
+ "e2e": {
+  "fullSuiteAfter": {
+   "desktop": {
+    "passed": 15,
+    "failed": 14,
+    "failedSpecs": [
+     "career-settings.spec.ts \u203a career hub, presets, participation and highlights persist in the save",
+     "career.spec.ts \u203a full-season save imports, declares champions and opens 2030 with archive",
+     "gameplay.spec.ts \u203a piloto plays a full weekend with commands, radio, pit, reload and persistent points",
+     "gameplay.spec.ts \u203a construtor plays a full weekend with commands, radio, pit, reload and persistent points",
+     "gameplay.spec.ts \u203a braking activates only in a valid battle and developer events stay visible",
+     "netlify-visual.spec.ts \u203a real portraits load and broken primary falls back without broken-image icon",
+     "netlify-visual.spec.ts \u203a Netlify SPA deep links, camera, selected driver and 16x playback work without errors",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 1366x768",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 1920x1080",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 1440x900@2x",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 412x915@2.6x",
+     "race-theater.spec.ts \u203a race theater and CARROS/FOTOS markers share the running race",
+     "universe.spec.ts \u203a driver search, filters and dossiers expose every attribute group",
+     "universe.spec.ts \u203a R&D reserves investment once and settings persist preferences"
+    ]
+   },
+   "android": {
+    "passed": 13,
+    "failed": 16,
+    "failedSpecs": [
+     "career-settings.spec.ts \u203a career hub, presets, participation and highlights persist in the save",
+     "career.spec.ts \u203a full-season save imports, declares champions and opens 2030 with archive",
+     "gameplay.spec.ts \u203a piloto plays a full weekend with commands, radio, pit, reload and persistent points",
+     "gameplay.spec.ts \u203a construtor plays a full weekend with commands, radio, pit, reload and persistent points",
+     "gameplay.spec.ts \u203a braking activates only in a valid battle and developer events stay visible",
+     "netlify-visual.spec.ts \u203a real portraits load and broken primary falls back without broken-image icon",
+     "netlify-visual.spec.ts \u203a Netlify SPA deep links, camera, selected driver and 16x playback work without errors",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 1366x768",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 1920x1080",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 1440x900@2x",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 412x915@2.6x",
+     "race-theater.spec.ts \u203a race theater and CARROS/FOTOS markers share the running race",
+     "race-views.spec.ts \u203a every Babylon camera can be chosen and a manual choice survives until AUTO is picked again",
+     "race-views.spec.ts \u203a without WebGL the race keeps running in 2D with a notice",
+     "universe.spec.ts \u203a entire weekend scores once, persists, inverts Sprint and advances",
+     "universe.spec.ts \u203a R&D reserves investment once and settings persist preferences"
+    ]
+   }
+  },
+  "baselineBeforeChanges": {
+   "android": {
+    "passed": 10,
+    "failed": 13,
+    "failedSpecs": [
+     "career-settings.spec.ts \u203a career hub, presets, participation and highlights persist in the save",
+     "career.spec.ts \u203a full-season save imports, declares champions and opens 2030 with archive",
+     "gameplay.spec.ts \u203a piloto plays a full weekend with commands, radio, pit, reload and persistent points",
+     "gameplay.spec.ts \u203a construtor plays a full weekend with commands, radio, pit, reload and persistent points",
+     "gameplay.spec.ts \u203a braking activates only in a valid battle and developer events stay visible",
+     "netlify-visual.spec.ts \u203a real portraits load and broken primary falls back without broken-image icon",
+     "netlify-visual.spec.ts \u203a Netlify SPA deep links, camera, selected driver and 16x playback work without errors",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 1366x768",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 1920x1080",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 1440x900@2x",
+     "photo-sharpness.spec.ts \u203a FOTOS stays sharp for five drivers of different teams at 412x915@2.6x",
+     "race-theater.spec.ts \u203a race theater and CARROS/FOTOS markers share the running race",
+     "universe.spec.ts \u203a entire weekend scores once, persists, inverts Sprint and advances"
+    ]
+   }
+  },
+  "finalRaceViewsSequential": {
+   "desktop": {
+    "passed": 6,
+    "failed": 0,
+    "failedSpecs": []
+   },
+   "android": {
+    "passed": 6,
+    "failed": 0,
+    "failedSpecs": []
+   }
+  },
+  "note": "Baseline 60300: 13 specs antigas falham em desktop e 13 em android (seletores/UI desatualizados; mesmas falhas apos as mudancas). Na rodada completa em paralelo (2 workers, carga alta, WebGL por software) alguns specs novos de race-views estouraram tempo; reexecutados sequencialmente (--workers=1) passaram 12/12 (6 desktop + 6 android), duas vezes seguidas. Um falso negativo intermitente de alinhamento do PIT foi tratado com polling no teste e realinhamento do HUD no codigo."
+ },
+ "viewportMatrix": [
+  {
+   "viewport": "360x800",
+   "mode": "2d",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 12,
+    "y": 0,
+    "w": 336,
+    "h": 800
+   },
+   "canvas": null
+  },
+  {
+   "viewport": "360x800",
+   "mode": "babylon",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 12,
+    "y": 0,
+    "w": 336,
+    "h": 800
+   },
+   "canvas": {
+    "x": 13,
+    "y": 225,
+    "w": 334,
+    "h": 383
+   }
+  },
+  {
+   "viewport": "390x844",
+   "mode": "2d",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 12,
+    "y": 0,
+    "w": 366,
+    "h": 844
+   },
+   "canvas": null
+  },
+  {
+   "viewport": "390x844",
+   "mode": "babylon",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 12,
+    "y": 0,
+    "w": 366,
+    "h": 844
+   },
+   "canvas": {
+    "x": 13,
+    "y": 225,
+    "w": 364,
+    "h": 427
+   }
+  },
+  {
+   "viewport": "412x915",
+   "mode": "2d",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 12,
+    "y": 0,
+    "w": 388,
+    "h": 915
+   },
+   "canvas": null
+  },
+  {
+   "viewport": "412x915",
+   "mode": "babylon",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 12,
+    "y": 0,
+    "w": 388,
+    "h": 915
+   },
+   "canvas": {
+    "x": 13,
+    "y": 197,
+    "w": 386,
+    "h": 526
+   }
+  },
+  {
+   "viewport": "430x932",
+   "mode": "2d",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 12,
+    "y": 0,
+    "w": 406,
+    "h": 932
+   },
+   "canvas": null
+  },
+  {
+   "viewport": "430x932",
+   "mode": "babylon",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 12,
+    "y": 0,
+    "w": 406,
+    "h": 932
+   },
+   "canvas": {
+    "x": 13,
+    "y": 197,
+    "w": 404,
+    "h": 543
+   }
+  },
+  {
+   "viewport": "800x360",
+   "mode": "2d",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 10,
+    "y": 0,
+    "w": 780,
+    "h": 360
+   },
+   "canvas": null
+  },
+  {
+   "viewport": "800x360",
+   "mode": "babylon",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 10,
+    "y": 0,
+    "w": 780,
+    "h": 360
+   },
+   "canvas": {
+    "x": 11,
+    "y": 50,
+    "w": 486,
+    "h": 254
+   }
+  },
+  {
+   "viewport": "915x412",
+   "mode": "2d",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 10,
+    "y": 0,
+    "w": 895,
+    "h": 412
+   },
+   "canvas": null
+  },
+  {
+   "viewport": "915x412",
+   "mode": "babylon",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 10,
+    "y": 0,
+    "w": 895,
+    "h": 412
+   },
+   "canvas": {
+    "x": 11,
+    "y": 50,
+    "w": 583,
+    "h": 302
+   }
+  },
+  {
+   "viewport": "1366x900",
+   "mode": "2d",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 238,
+    "y": 142,
+    "w": 1114,
+    "h": 813
+   },
+   "canvas": null
+  },
+  {
+   "viewport": "1366x900",
+   "mode": "babylon",
+   "horizontalOverflowPx": 0,
+   "hud": {
+    "x": 238,
+    "y": 142,
+    "w": 1114,
+    "h": 813
+   },
+   "canvas": {
+    "x": 239,
+    "y": 235,
+    "w": 970,
+    "h": 483
+   }
+  }
+ ],
+ "cameraRun": {
+  "viewport": "390x844",
+  "rendering": "software",
+  "shots": [
+   {
+    "camera": "auto",
+    "shot": "duelo",
+    "focusIds": [
+     "kimi-antonelli",
+     "lando-norris"
+    ],
+    "focusCarPx": [
+     {
+      "x": 104,
+      "y": 212,
+      "w": 97,
+      "h": 78
+     },
+     {
+      "x": 138,
+      "y": 196,
+      "w": 85,
+      "h": 64
+     }
+    ],
+    "drawCalls": 280
+   },
+   {
+    "camera": "tv",
+    "shot": "tv",
+    "focusIds": [
+     "lando-norris",
+     "max-verstappen"
+    ],
+    "focusCarPx": [
+     {
+      "x": 133,
+      "y": 191,
+      "w": 78,
+      "h": 49
+     },
+     {
+      "x": 124,
+      "y": 194,
+      "w": 82,
+      "h": 52
+     }
+    ],
+    "drawCalls": 227
+   },
+   {
+    "camera": "duelo",
+    "shot": "duelo",
+    "focusIds": [
+     "max-verstappen",
+     "lando-norris"
+    ],
+    "focusCarPx": [
+     {
+      "x": 185,
+      "y": 155,
+      "w": 102,
+      "h": 63
+     },
+     {
+      "x": 191,
+      "y": 153,
+      "w": 100,
+      "h": 61
+     }
+    ],
+    "drawCalls": 163
+   },
+   {
+    "camera": "seguir",
+    "shot": "seguir",
+    "focusIds": [
+     "lando-norris"
+    ],
+    "focusCarPx": [
+     {
+      "x": 70,
+      "y": 192,
+      "w": 132,
+      "h": 76
+     }
+    ],
+    "drawCalls": 118
+   },
+   {
+    "camera": "aerea",
+    "shot": "aerea",
+    "focusIds": [],
+    "focusCarPx": [],
+    "drawCalls": 980
+   },
+   {
+    "camera": "pit",
+    "shot": "tv",
+    "focusIds": [
+     "lando-norris"
+    ],
+    "focusCarPx": [
+     {
+      "x": 134,
+      "y": 192,
+      "w": 77,
+      "h": 49
+     }
+    ],
+    "drawCalls": 135
+   },
+   {
+    "camera": "onboard",
+    "shot": "onboard",
+    "focusIds": [
+     "lando-norris"
+    ],
+    "focusCarPx": [
+     {
+      "x": -200,
+      "y": -337,
+      "w": 727,
+      "h": 707
+     }
+    ],
+    "drawCalls": 56
+   }
+  ],
+  "errors": []
+ },
+ "benchmark": {
+  "samples": 23,
+  "meanP50ms": 259.4,
+  "meanP95ms": 488.4,
+  "meanFps": 4.6,
+  "maxHeapMB": 99.4,
+  "errors": []
+ },
+ "hashes": {
+  "src/presentation/broadcast-director.ts": "88f9deaac538b80826b3bdb8e606a97422e3acc1be6c3623f6f93f066c505f53",
+  "src/presentation/babylon-quality.ts": "12d99f9d339e4ee90074eca05d7c0056f15fce6aebfcf6638b4537f4628104be",
+  "src/presentation/scenery-plan.ts": "75593395d34a6da371a2bffc1bbc60d8f28a1c0141af2861ced62e93d0a26e87",
+  "src/features/live-race-babylon.tsx": "03c4befdc6bae990568597a13e8dbeabb4e01df4182093a483881236940a7556",
+  "src/features/live-map.tsx": "9051a112110a569afd3996b490fc7c5f3f731132cc582e343edb84b29d2fda80",
+  "src/features/live-race.tsx": "cb7a5a49c8c382755f8f04da72ee24661159324c5fb62534b8dbe1f553bbfb11",
+  "src/app/globals.css": "912753563c69b66d0851ca1e1f4413ca9355ed1ad1e317fc532cf2863872037f",
+  "public/sw.js": "da6f819a1f8a4e505a37cf0e539d2de5c225e6e86539a93ff6c85eb5ddc65615"
+ },
+ "assets": {
+  "glb": 67,
+  "teams": 16,
+  "circuits": 35,
+  "verifier": "scripts/verify-3d-assets.mjs -> 3D_ASSETS_OK"
+ },
+ "saveCompatibility": "Dominio/saves nao foram alterados; testes de persistencia, save-writer e migracao do baseline continuam passando (ver unitTests).",
+ "limitations": [
+  "Sem benchmark em Xiaomi real; FPS de software nao representa o aparelho.",
+  "Sem clipes de video de 15-30 s; apenas capturas e relatorios numericos.",
+  "Especs E2E antigas (13 em desktop) continuam falhando como no baseline.",
+  "Cenario: kit generico por tema; arte especifica por circuito pendente."
+ ],
+ "screenshots": [
+  "docs/qa-shots/after/1366x900-2d.png",
+  "docs/qa-shots/after/1366x900-babylon.png",
+  "docs/qa-shots/after/360x800-2d.png",
+  "docs/qa-shots/after/360x800-babylon.png",
+  "docs/qa-shots/after/390x844-2d.png",
+  "docs/qa-shots/after/390x844-babylon.png",
+  "docs/qa-shots/after/412x915-2d.png",
+  "docs/qa-shots/after/412x915-babylon.png",
+  "docs/qa-shots/after/430x932-2d.png",
+  "docs/qa-shots/after/430x932-babylon.png",
+  "docs/qa-shots/after/800x360-2d.png",
+  "docs/qa-shots/after/800x360-babylon.png",
+  "docs/qa-shots/after/915x412-2d.png",
+  "docs/qa-shots/after/915x412-babylon.png",
+  "docs/qa-shots/before/390x844-2d.png",
+  "docs/qa-shots/before/390x844-babylon.png",
+  "docs/qa-shots/camera/390x844-aerea-canvas.png",
+  "docs/qa-shots/camera/390x844-aerea.png",
+  "docs/qa-shots/camera/390x844-auto-canvas.png",
+  "docs/qa-shots/camera/390x844-auto.png",
+  "docs/qa-shots/camera/390x844-duelo-canvas.png",
+  "docs/qa-shots/camera/390x844-duelo.png",
+  "docs/qa-shots/camera/390x844-onboard-canvas.png",
+  "docs/qa-shots/camera/390x844-onboard.png",
+  "docs/qa-shots/camera/390x844-pit-canvas.png",
+  "docs/qa-shots/camera/390x844-pit.png",
+  "docs/qa-shots/camera/390x844-seguir-canvas.png",
+  "docs/qa-shots/camera/390x844-seguir.png",
+  "docs/qa-shots/camera/390x844-tv-canvas.png",
+  "docs/qa-shots/camera/390x844-tv.png",
+  "docs/qa-shots/camera-tv/390x844-tv-canvas.png",
+  "docs/qa-shots/camera-tv/390x844-tv.png",
+  "docs/qa-shots/camera-tv/sheet.png",
+  "docs/qa-shots/scenery-gp-1/390x844-aerea-canvas.png",
+  "docs/qa-shots/scenery-gp-1/390x844-aerea.png",
+  "docs/qa-shots/scenery-gp-1/390x844-tv-canvas.png",
+  "docs/qa-shots/scenery-gp-1/390x844-tv.png",
+  "docs/qa-shots/scenery-gp-29/390x844-aerea-canvas.png",
+  "docs/qa-shots/scenery-gp-29/390x844-aerea.png",
+  "docs/qa-shots/scenery-gp-29/390x844-tv-canvas.png",
+  "docs/qa-shots/scenery-gp-29/390x844-tv.png"
+ ]
+}

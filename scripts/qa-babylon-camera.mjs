@@ -10,7 +10,8 @@ fs.mkdirSync(out, { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.CHROME || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome',
   args: ['--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist','--no-sandbox'] });
 const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1, hasTouch: W < 1000, isMobile: W < 1000 });
-const page = await ctx.newPage(); const errors = []; page.on('pageerror', e => errors.push(e.message)); page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
+const page = await ctx.newPage(); const errors = []; page.on('pageerror', e => errors.push(e.message)); page.on('response', r => { if (r.status() >= 400) errors.push('HTTP ' + r.status() + ' ' + r.url()); });
+page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
 await page.goto(base + '/corrida-rapida');
 await page.getByLabel(/Espectador/).uncheck();
 if (process.env.CIRCUIT) await page.locator('select').first().selectOption(process.env.CIRCUIT);
